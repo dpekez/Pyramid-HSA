@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7705483A2191A73F0008CB4B /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770548392191A73F0008CB4B /* CompanyTableViewCell.swift */; };
+		770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770A563321A83BED00BD4FB9 /* Assets.xcassets */; };
+		77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77104306220A258600344821 /* DetailViewParagraphs.swift */; };
+		7710430E220B085900344821 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710430D220B085900344821 /* EventData.swift */; };
+		7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86321A49FA400DA424D /* FilterTableViewController.swift */; };
+		7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86521A4B6E900DA424D /* UserDefaultsController.swift */; };
+		7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */; };
+		7757CE1E21CB140100DDF260 /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 7757CE1D21CB140100DDF260 /* CompanyDetails.json */; };
+		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
+		7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
+		7757CE3021CFBD9100DDF260 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */; };
+		7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE3221CFBD9100DDF260 /* TodayViewController.swift */; };
+		7757CE3621CFBD9100DDF260 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7757CE3421CFBD9100DDF260 /* MainInterface.storyboard */; };
+		7757CE3A21CFBD9100DDF260 /* Countdown Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7764F2072211EC89009D7E9C /* CompanyDetailRearranged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */; };
+		7764F20D2212184C009D7E9C /* JSON_Import_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F20C2212184C009D7E9C /* JSON_Import_Test.swift */; };
+		7764F20F22122B00009D7E9C /* PyramidFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */; };
+		776ADD0021ADD66600173150 /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ADCFF21ADD66600173150 /* CompanyDetail.swift */; };
+		776ADD5321ADE03400173150 /* Pyramid_HSA_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ADD5221ADE03400173150 /* Pyramid_HSA_UITests.swift */; };
+		776E035F21919B6700989FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E035E21919B6700989FB1 /* AppDelegate.swift */; };
+		776E036121919B6700989FB1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E036021919B6700989FB1 /* MapViewController.swift */; };
+		776E036621919B6700989FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E036421919B6700989FB1 /* Main.storyboard */; };
+		776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E036921919B6800989FB1 /* LaunchScreen.storyboard */; };
+		77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */; };
+		77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */; };
+		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
+		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7757CE3821CFBD9100DDF260 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776E035321919B6700989FB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7757CE2C21CFBD9100DDF260;
+			remoteInfo = "Countdown Widget";
+		};
+		776ADD4721ADDFF900173150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776E035321919B6700989FB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 776E035A21919B6700989FB1;
+			remoteInfo = "Pyramid HSA";
+		};
+		776ADD5521ADE03400173150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776E035321919B6700989FB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 776E035A21919B6700989FB1;
+			remoteInfo = "Pyramid HSA";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7757CE3E21CFBD9100DDF260 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7757CE3A21CFBD9100DDF260 /* Countdown Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		770548392191A73F0008CB4B /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		770A563321A83BED00BD4FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77104306220A258600344821 /* DetailViewParagraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewParagraphs.swift; sourceTree = "<group>"; };
+		7710430D220B085900344821 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		7721A86321A49FA400DA424D /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
+		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
+		7757CE1D21CB140100DDF260 /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
+		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
+		7757CE2521CD963E00DDF260 /* PyramidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidColor.swift; sourceTree = "<group>"; };
+		7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Countdown Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		7757CE3221CFBD9100DDF260 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		7757CE3521CFBD9100DDF260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7757CE3721CFBD9100DDF260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailRearranged.swift; sourceTree = "<group>"; };
+		7764F20C2212184C009D7E9C /* JSON_Import_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_Import_Test.swift; sourceTree = "<group>"; };
+		7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidFaculty.swift; sourceTree = "<group>"; };
+		776ADCFF21ADD66600173150 /* CompanyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
+		776ADD4221ADDFF900173150 /* Pyramid HSA Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pyramid HSA Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776ADD4621ADDFF900173150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776ADD5021ADE03400173150 /* Pyramid HSA UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pyramid HSA UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776ADD5221ADE03400173150 /* Pyramid_HSA_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pyramid_HSA_UITests.swift; sourceTree = "<group>"; };
+		776ADD5421ADE03400173150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776E035B21919B6700989FB1 /* Pyramid HSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pyramid HSA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776E035E21919B6700989FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		776E036021919B6700989FB1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		776E036521919B6700989FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		776E036A21919B6800989FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		776E036C21919B6800989FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesSplitViewController.swift; sourceTree = "<group>"; };
+		77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
+		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7757CE2A21CFBD9100DDF260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7757CE3021CFBD9100DDF260 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD3F21ADDFF900173150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD4D21ADE03400173150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776E035821919B6700989FB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7710A6FF21BD9FD0008DE062 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7757CE1D21CB140100DDF260 /* CompanyDetails.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7757CE2E21CFBD9100DDF260 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7757CE3121CFBD9100DDF260 /* Countdown Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7757CE3221CFBD9100DDF260 /* TodayViewController.swift */,
+				7757CE3421CFBD9100DDF260 /* MainInterface.storyboard */,
+				7757CE3721CFBD9100DDF260 /* Info.plist */,
+			);
+			path = "Countdown Widget";
+			sourceTree = "<group>";
+		};
+		776ADD4321ADDFF900173150 /* Pyramid HSA Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7764F20C2212184C009D7E9C /* JSON_Import_Test.swift */,
+				776ADD4621ADDFF900173150 /* Info.plist */,
+			);
+			path = "Pyramid HSA Tests";
+			sourceTree = "<group>";
+		};
+		776ADD5121ADE03400173150 /* Pyramid HSA UITests */ = {
+			isa = PBXGroup;
+			children = (
+				776ADD5221ADE03400173150 /* Pyramid_HSA_UITests.swift */,
+				776ADD5421ADE03400173150 /* Info.plist */,
+			);
+			path = "Pyramid HSA UITests";
+			sourceTree = "<group>";
+		};
+		776E035221919B6700989FB1 = {
+			isa = PBXGroup;
+			children = (
+				776E035D21919B6700989FB1 /* Pyramid HSA */,
+				776ADD4321ADDFF900173150 /* Pyramid HSA Tests */,
+				776ADD5121ADE03400173150 /* Pyramid HSA UITests */,
+				7757CE3121CFBD9100DDF260 /* Countdown Widget */,
+				7757CE2E21CFBD9100DDF260 /* Frameworks */,
+				776E035C21919B6700989FB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		776E035C21919B6700989FB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				776E035B21919B6700989FB1 /* Pyramid HSA.app */,
+				776ADD4221ADDFF900173150 /* Pyramid HSA Tests.xctest */,
+				776ADD5021ADE03400173150 /* Pyramid HSA UITests.xctest */,
+				7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		776E035D21919B6700989FB1 /* Pyramid HSA */ = {
+			isa = PBXGroup;
+			children = (
+				776E035E21919B6700989FB1 /* AppDelegate.swift */,
+				77CC962E21A203B00048CF38 /* Companydetail */,
+				77CC962D21A2032B0048CF38 /* Companylist */,
+				77CC963321A2180C0048CF38 /* Util */,
+				7710A6FF21BD9FD0008DE062 /* Resources */,
+				770A563321A83BED00BD4FB9 /* Assets.xcassets */,
+				776E036421919B6700989FB1 /* Main.storyboard */,
+				776E036921919B6800989FB1 /* LaunchScreen.storyboard */,
+				776E036C21919B6800989FB1 /* Info.plist */,
+			);
+			path = "Pyramid HSA";
+			sourceTree = "<group>";
+		};
+		77CC962D21A2032B0048CF38 /* Companylist */ = {
+			isa = PBXGroup;
+			children = (
+				77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */,
+				7721A86321A49FA400DA424D /* FilterTableViewController.swift */,
+				77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */,
+				770548392191A73F0008CB4B /* CompanyTableViewCell.swift */,
+				77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */,
+			);
+			path = Companylist;
+			sourceTree = "<group>";
+		};
+		77CC962E21A203B00048CF38 /* Companydetail */ = {
+			isa = PBXGroup;
+			children = (
+				7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */,
+				77104306220A258600344821 /* DetailViewParagraphs.swift */,
+				7757CE2321CD6A6C00DDF260 /* CircularBars.swift */,
+			);
+			path = Companydetail;
+			sourceTree = "<group>";
+		};
+		77CC963321A2180C0048CF38 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7710430D220B085900344821 /* EventData.swift */,
+				776E036021919B6700989FB1 /* MapViewController.swift */,
+				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
+				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
+				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
+				7721A86521A4B6E900DA424D /* UserDefaultsController.swift */,
+				7757CE2521CD963E00DDF260 /* PyramidColor.swift */,
+				7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7757CE2C21CFBD9100DDF260 /* Countdown Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7757CE3B21CFBD9100DDF260 /* Build configuration list for PBXNativeTarget "Countdown Widget" */;
+			buildPhases = (
+				7757CE2921CFBD9100DDF260 /* Sources */,
+				7757CE2A21CFBD9100DDF260 /* Frameworks */,
+				7757CE2B21CFBD9100DDF260 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Countdown Widget";
+			productName = "Countdown Widget";
+			productReference = 7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		776ADD4121ADDFF900173150 /* Pyramid HSA Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776ADD4921ADDFF900173150 /* Build configuration list for PBXNativeTarget "Pyramid HSA Tests" */;
+			buildPhases = (
+				776ADD3E21ADDFF900173150 /* Sources */,
+				776ADD3F21ADDFF900173150 /* Frameworks */,
+				776ADD4021ADDFF900173150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				776ADD4821ADDFF900173150 /* PBXTargetDependency */,
+			);
+			name = "Pyramid HSA Tests";
+			productName = "Pyramid HSA Tests";
+			productReference = 776ADD4221ADDFF900173150 /* Pyramid HSA Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		776ADD4F21ADE03400173150 /* Pyramid HSA UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776ADD5721ADE03400173150 /* Build configuration list for PBXNativeTarget "Pyramid HSA UITests" */;
+			buildPhases = (
+				776ADD4C21ADE03400173150 /* Sources */,
+				776ADD4D21ADE03400173150 /* Frameworks */,
+				776ADD4E21ADE03400173150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				776ADD5621ADE03400173150 /* PBXTargetDependency */,
+			);
+			name = "Pyramid HSA UITests";
+			productName = "Pyramid HSA UITests";
+			productReference = 776ADD5021ADE03400173150 /* Pyramid HSA UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		776E035A21919B6700989FB1 /* Pyramid HSA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776E036F21919B6800989FB1 /* Build configuration list for PBXNativeTarget "Pyramid HSA" */;
+			buildPhases = (
+				776E035721919B6700989FB1 /* Sources */,
+				776E035821919B6700989FB1 /* Frameworks */,
+				776E035921919B6700989FB1 /* Resources */,
+				7757CE3E21CFBD9100DDF260 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7757CE3921CFBD9100DDF260 /* PBXTargetDependency */,
+			);
+			name = "Pyramid HSA";
+			productName = penta;
+			productReference = 776E035B21919B6700989FB1 /* Pyramid HSA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		776E035321919B6700989FB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Dejan Pekez";
+				TargetAttributes = {
+					7757CE2C21CFBD9100DDF260 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					776ADD4121ADDFF900173150 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 776E035A21919B6700989FB1;
+					};
+					776ADD4F21ADE03400173150 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 776E035A21919B6700989FB1;
+					};
+					776E035A21919B6700989FB1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 776E035621919B6700989FB1 /* Build configuration list for PBXProject "Pyramid HSA" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 776E035221919B6700989FB1;
+			productRefGroup = 776E035C21919B6700989FB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				776E035A21919B6700989FB1 /* Pyramid HSA */,
+				776ADD4121ADDFF900173150 /* Pyramid HSA Tests */,
+				776ADD4F21ADE03400173150 /* Pyramid HSA UITests */,
+				7757CE2C21CFBD9100DDF260 /* Countdown Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7757CE2B21CFBD9100DDF260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7757CE3621CFBD9100DDF260 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD4021ADDFF900173150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD4E21ADE03400173150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776E035921919B6700989FB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7757CE1E21CB140100DDF260 /* CompanyDetails.json in Resources */,
+				776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */,
+				770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */,
+				776E036621919B6700989FB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7757CE2921CFBD9100DDF260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD3E21ADDFF900173150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7764F20D2212184C009D7E9C /* JSON_Import_Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776ADD4C21ADE03400173150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776ADD5321ADE03400173150 /* Pyramid_HSA_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		776E035721919B6700989FB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */,
+				7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */,
+				7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */,
+				77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */,
+				77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */,
+				7705483A2191A73F0008CB4B /* CompanyTableViewCell.swift in Sources */,
+				776E035F21919B6700989FB1 /* AppDelegate.swift in Sources */,
+				7764F20F22122B00009D7E9C /* PyramidFaculty.swift in Sources */,
+				7764F2072211EC89009D7E9C /* CompanyDetailRearranged.swift in Sources */,
+				776ADD0021ADD66600173150 /* CompanyDetail.swift in Sources */,
+				7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */,
+				77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */,
+				776E036121919B6700989FB1 /* MapViewController.swift in Sources */,
+				7710430E220B085900344821 /* EventData.swift in Sources */,
+				77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */,
+				7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */,
+				77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7757CE3921CFBD9100DDF260 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7757CE2C21CFBD9100DDF260 /* Countdown Widget */;
+			targetProxy = 7757CE3821CFBD9100DDF260 /* PBXContainerItemProxy */;
+		};
+		776ADD4821ADDFF900173150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 776E035A21919B6700989FB1 /* Pyramid HSA */;
+			targetProxy = 776ADD4721ADDFF900173150 /* PBXContainerItemProxy */;
+		};
+		776ADD5621ADE03400173150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 776E035A21919B6700989FB1 /* Pyramid HSA */;
+			targetProxy = 776ADD5521ADE03400173150 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7757CE3421CFBD9100DDF260 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7757CE3521CFBD9100DDF260 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		776E036421919B6700989FB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776E036521919B6700989FB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		776E036921919B6800989FB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776E036A21919B6800989FB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7757CE3C21CFBD9100DDF260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Countdown Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.penta.Countdown-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7757CE3D21CFBD9100DDF260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Countdown Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.penta.Countdown-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		776ADD4A21ADDFF900173150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Pyramid HSA Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.Pyramid-HSA-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pyramid HSA.app/Pyramid HSA";
+			};
+			name = Debug;
+		};
+		776ADD4B21ADDFF900173150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Pyramid HSA Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.Pyramid-HSA-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pyramid HSA.app/Pyramid HSA";
+			};
+			name = Release;
+		};
+		776ADD5821ADE03400173150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Pyramid HSA UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.Pyramid-HSA-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pyramid HSA";
+			};
+			name = Debug;
+		};
+		776ADD5921ADE03400173150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "Pyramid HSA UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pekez.Pyramid-HSA-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pyramid HSA";
+			};
+			name = Release;
+		};
+		776E036D21919B6800989FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		776E036E21919B6800989FB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		776E037021919B6800989FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "$(SRCROOT)/pyramid hsa/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pekez.penta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		776E037121919B6800989FB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DG8R32K4AA;
+				INFOPLIST_FILE = "$(SRCROOT)/pyramid hsa/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pekez.penta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7757CE3B21CFBD9100DDF260 /* Build configuration list for PBXNativeTarget "Countdown Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7757CE3C21CFBD9100DDF260 /* Debug */,
+				7757CE3D21CFBD9100DDF260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776ADD4921ADDFF900173150 /* Build configuration list for PBXNativeTarget "Pyramid HSA Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776ADD4A21ADDFF900173150 /* Debug */,
+				776ADD4B21ADDFF900173150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776ADD5721ADE03400173150 /* Build configuration list for PBXNativeTarget "Pyramid HSA UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776ADD5821ADE03400173150 /* Debug */,
+				776ADD5921ADE03400173150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776E035621919B6700989FB1 /* Build configuration list for PBXProject "Pyramid HSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776E036D21919B6800989FB1 /* Debug */,
+				776E036E21919B6800989FB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776E036F21919B6800989FB1 /* Build configuration list for PBXNativeTarget "Pyramid HSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776E037021919B6800989FB1 /* Debug */,
+				776E037121919B6800989FB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 776E035321919B6700989FB1 /* Project object */;
+}
