@@ -388,11 +388,74 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="vES-7q-cfs" kind="relationship" relationship="viewControllers" id="SMh-8P-YjK"/>
+                        <segue destination="7Jd-VK-MIR" kind="relationship" relationship="viewControllers" id="3Ey-Xx-P53"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2" y="105"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="DcM-3k-5Om">
+            <objects>
+                <collectionViewController id="7Jd-VK-MIR" customClass="EventsCollectionViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wYR-0c-HFa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lQl-zu-n9d">
+                            <size key="itemSize" width="308" height="287"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0YB-yF-w5r" customClass="EventCollectionViewCell" customModule="Pyramid_HSA" customModuleProvider="target">
+                                <rect key="frame" x="21" y="0.0" width="333" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="333" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQw-9Y-kH8">
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="151"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-gO-DMd">
+                                            <rect key="frame" x="20" y="166" width="119" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-Ph-9wm">
+                                            <rect key="frame" x="20" y="220" width="293" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="customSize" width="333" height="280"/>
+                                <connections>
+                                    <outlet property="bodyLabel" destination="d5b-Ph-9wm" id="bP8-Nq-qUL"/>
+                                    <outlet property="headerLabel" destination="jWq-gO-DMd" id="FTD-s7-sdo"/>
+                                    <outlet property="image" destination="cQw-9Y-kH8" id="U8p-ZT-SQu"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7Jd-VK-MIR" id="Dgf-lR-kQb"/>
+                            <outlet property="delegate" destination="7Jd-VK-MIR" id="J1V-E8-6Nn"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Events" image="first" id="nnA-iY-2Zx"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYK-yA-6Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813.60000000000002" y="104.7976011994003"/>
         </scene>
         <!--Companies-->
         <scene sceneID="m51-7J-PcU">
@@ -415,7 +478,7 @@
                     <tabBarItem key="tabBarItem" title="Firmen" image="second" id="1lb-gl-4I5" userLabel="Companies"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OdO-fW-h2L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

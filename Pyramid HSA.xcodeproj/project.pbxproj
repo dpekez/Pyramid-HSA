@@ -30,6 +30,8 @@
 		776E036121919B6700989FB1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E036021919B6700989FB1 /* MapViewController.swift */; };
 		776E036621919B6700989FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E036421919B6700989FB1 /* Main.storyboard */; };
 		776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E036921919B6800989FB1 /* LaunchScreen.storyboard */; };
+		777246CC221369C100C40074 /* EventsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246CB221369C100C40074 /* EventsCollectionViewController.swift */; };
+		777246CE2213714800C40074 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246CD2213714800C40074 /* EventCollectionViewCell.swift */; };
 		77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */; };
 		77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */; };
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
@@ -105,6 +107,8 @@
 		776E036521919B6700989FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		776E036A21919B6800989FB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776E036C21919B6800989FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777246CB221369C100C40074 /* EventsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewController.swift; sourceTree = "<group>"; };
+		777246CD2213714800C40074 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesSplitViewController.swift; sourceTree = "<group>"; };
 		77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				776E035E21919B6700989FB1 /* AppDelegate.swift */,
+				777246CA221369A100C40074 /* Events */,
 				77CC962E21A203B00048CF38 /* Companydetail */,
 				77CC962D21A2032B0048CF38 /* Companylist */,
 				77CC963321A2180C0048CF38 /* Util */,
@@ -225,6 +230,15 @@
 				776E036C21919B6800989FB1 /* Info.plist */,
 			);
 			path = "Pyramid HSA";
+			sourceTree = "<group>";
+		};
+		777246CA221369A100C40074 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				777246CB221369C100C40074 /* EventsCollectionViewController.swift */,
+				777246CD2213714800C40074 /* EventCollectionViewCell.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		77CC962D21A2032B0048CF38 /* Companylist */ = {
@@ -463,7 +477,9 @@
 				776ADD0021ADD66600173150 /* CompanyDetail.swift in Sources */,
 				7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */,
 				77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */,
+				777246CE2213714800C40074 /* EventCollectionViewCell.swift in Sources */,
 				776E036121919B6700989FB1 /* MapViewController.swift in Sources */,
+				777246CC221369C100C40074 /* EventsCollectionViewController.swift in Sources */,
 				7710430E220B085900344821 /* EventData.swift in Sources */,
 				77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */,
 				7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */,
