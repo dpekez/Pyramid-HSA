@@ -12,11 +12,25 @@ private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
 
-    let dummyInfo = ["info1", "info2", "info3"]
+    let dummyEventHeader = ["Event 1", "Event 2", "Event 3", "Event 4", "Event 5"]
+    let dummyEventBody = ["Info …", "Info …", "Info …", "Info …", "Info …"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+//        let statWindow = UIApplication.shared.value(forKey:"statusBarWindow") as! UIView
+//        let statusBar = statWindow.subviews[0] as UIView
+//        statusBar.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.3)
+        
+//        self.preferredStatusBarStyle
+//        navigationController?.navigationBar.barTintColor = PyramidColor.pyramidBlue
+//        let blurEffect = UIBlurEffect(style: .regular)
+//        let blurredStatusBar = UIVisualEffectView(effect: blurEffect)
+//        blurredStatusBar.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(blurredStatusBar)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,7 +58,7 @@ class EventsCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyInfo.count
+        return dummyEventHeader.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,8 +66,8 @@ class EventsCollectionViewController: UICollectionViewController {
             fatalError("dequed cell is not an instance of EventCollectionViewCell")
         }
     
-        cell.headerLabel.text = "lol"
-        cell.bodyLabel.text = "haha infos"
+        cell.headerLabel.text = dummyEventHeader[indexPath.row]
+        cell.bodyLabel.text = dummyEventBody[indexPath.row]
     
         return cell
     }
