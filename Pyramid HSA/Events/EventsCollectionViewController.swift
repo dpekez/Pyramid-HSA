@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 class EventsCollectionViewController: UICollectionViewController {
 
     let dummyEventHeader = ["Event 1", "Event 2", "Event 3", "Event 4", "Event 5"]
-    let dummyEventBody = ["Info …", "Info …", "Info …", "Info …", "Info …"]
+    let dummyEventBody = ["Dummy Info 1 …", "Dummy Info 2 …", "Dummy Info 3 …", "Dummy Info 4 …", "Dummy Info 5 …"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
