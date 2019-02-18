@@ -19,18 +19,22 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>training</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Events</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.pekez.penta.show.events</string>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>layers</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Companies</string>
 			<key>UIApplicationShortcutItemType</key>
