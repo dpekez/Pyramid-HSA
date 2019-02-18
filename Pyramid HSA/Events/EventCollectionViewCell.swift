@@ -12,6 +12,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()

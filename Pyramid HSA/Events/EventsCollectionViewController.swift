@@ -11,9 +11,16 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
-
-    let dummyEventHeader = ["Event 1", "Event 2", "Event 3", "Event 4", "Event 5"]
-    let dummyEventBody = ["Dummy Info 1 …", "Dummy Info 2 …", "Dummy Info 3 …", "Dummy Info 4 …", "Dummy Info 5 …"]
+    let eventHeader = ["Catch it if you can",
+                    "Workshop",
+                    "Torwandschießen",
+                    "Bewerbungsbilder"]
+    let eventBody = ["Kurzvorstellungsgespräche\n…",
+                    "Die perfekte Bewerbung\n…",
+                    "Treffe ins Loch und gewinne\n…",
+                    "Kostenlose Bewerbungsbilder\n…"]
+    let eventLocation = ["M1.02 (M-Gebäude)", "M1.01 (M-Gebäude)", "Zwischen den Messezelten", "Irgendwo"]
+    let eventImage = ["catchit", "workshop", "football", "shooting"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +65,7 @@ class EventsCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyEventHeader.count
+        return eventHeader.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,8 +73,10 @@ class EventsCollectionViewController: UICollectionViewController {
             fatalError("dequed cell is not an instance of EventCollectionViewCell")
         }
     
-        cell.headerLabel.text = dummyEventHeader[indexPath.row]
-        cell.bodyLabel.text = dummyEventBody[indexPath.row]
+        cell.headerLabel.text = eventHeader[indexPath.row]
+        cell.bodyLabel.text = eventBody[indexPath.row]
+        cell.locationLabel.text = eventLocation[indexPath.row]
+        cell.image.image = UIImage(named: eventImage[indexPath.row])
     
         return cell
     }
