@@ -21,8 +21,12 @@ class CountdownCircleView: UIView {
     private var timer = Timer()
     private var countdownTime = Int()
     private let circleHeadings = ["days", "hours", "minutes", "seconds"]
+    private let countdown = Countdown()
     
     func create() {
+        setCountdownTime()
+        runTimer()
+        
         for i in 0...3 {
             let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
             let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
@@ -31,14 +35,13 @@ class CountdownCircleView: UIView {
             layer.addSublayer(circleBackgroundShape)
             layer.addSublayer(circleForegroundShape)
             
-            
             setHeaderLabel(withText: circleHeadings[i], atXPos: xOffset * i)
         }
         
-        setCountLabel(label: &daysLabel, atXPos: 0, withInitialCount: countdownTime / 86400)
-        setCountLabel(label: &hoursLabel, atXPos: xOffset, withInitialCount: countdownTime / 3600 % 24)
-        setCountLabel(label: &minutesLabel, atXPos: xOffset * 2, withInitialCount: countdownTime / 60 % 60)
-        setCountLabel(label: &secondsLabel, atXPos: xOffset * 3, withInitialCount: countdownTime % 60)
+        setCountLabel(label: &daysLabel, atXPos: 0)
+        setCountLabel(label: &hoursLabel, atXPos: xOffset)
+        setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
+        setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
     }
     
     private func createCircularPath(withXOffset offset: Int) -> CGPath {
@@ -90,12 +93,12 @@ class CountdownCircleView: UIView {
         self.shapeLayer.add(animation, forKey: key)
     }
     
-    private func setCountLabel(label: inout UILabel, atXPos xPos: Int, withInitialCount count: Int) {
+    private func setCountLabel(label: inout UILabel, atXPos xPos: Int) {
         label = UILabel(frame: CGRect(x: xPos, y: yPosCenter, width: 80, height: 18))
         label.font = UIFont(name: label.font.fontName, size: 24)
         label.textColor = PyramidColor.pyramidMidBlue
         label.textAlignment = .center
-        label.text = String(count)
+        label.text = "0"
         addSubview(label)
     }
     
@@ -108,10 +111,8 @@ class CountdownCircleView: UIView {
         addSubview(label)
     }
     
-    
-    func initCountdown(seconds: Int) {
-        countdownTime = seconds
-        runTimer()
+    private func setCountdownTime() {
+        countdownTime = countdown.getTimeDiff()
     }
     
     private func runTimer() {
@@ -119,8 +120,11 @@ class CountdownCircleView: UIView {
     }
 
     @objc private func updateLabels() {
-        countdownTime = Countdown().getTimeDiff()
+        setCountdownTime()
         secondsLabel.text = "\(countdownTime % 60)"
+        minutesLabel.text = "\(countdownTime / 60 % 60)"
+        hoursLabel.text = "\(countdownTime / 3600 % 24)"
+        daysLabel.text = "\(countdownTime / 86400)"
         
         if countdownTime < 0 {
             timer.invalidate()
@@ -128,18 +132,6 @@ class CountdownCircleView: UIView {
         
         if countdownTime % 60 == 59 {
             addShapeLayerAnimation(forKey: "seconds")
-        }
-        
-        if (countdownTime + 1) % 60 == 0 {
-            minutesLabel.text = "\(countdownTime / 60 % 60)"
-        }
-        
-        if (countdownTime / 60 + 1) % 60 == 0 {
-            hoursLabel.text = "\(countdownTime / 3600 % 24)"
-        }
-        
-        if (countdownTime / 3600 + 1) % 24 == 0 {
-            daysLabel.text = "\(countdownTime / 86400)"
         }
     }
 

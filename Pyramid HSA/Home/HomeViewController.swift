@@ -13,8 +13,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countDownCircleView.initCountdown(seconds: Countdown().getTimeDiff())
         countDownCircleView.create()
-        
     }
 }
