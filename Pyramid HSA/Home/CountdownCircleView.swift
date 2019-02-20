@@ -29,7 +29,7 @@ class CountdownCircleView: UIView {
             for i in 0...3 {
                 let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
                 let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
-                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: calcStrokeLength(for: circleHeadings[i]))
+                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: calcStrokeLength(for: circleHeadings[i]), animationKey: circleHeadings[i])
                 
                 layer.addSublayer(circleBackgroundShape)
                 layer.addSublayer(circleForegroundShape)
@@ -80,19 +80,32 @@ class CountdownCircleView: UIView {
         shapeLayer.lineWidth = barWidth
         shapeLayer.lineCap = .round
         
-        if key != "" {
-            addShapeLayerAnimation(forKey: key)
+        if key == "seconds" {
+            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getSecondDiff()))
+        } else if key == "minutes" {
+            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getMinuteDiff()))
+        } else if key == "hours" {
+            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getHourDiff()))
         }
         
         return shapeLayer
     }
     
-    private func addShapeLayerAnimation(forKey key: String) {
+    private func addShapeLayerAnimation(forKey key: String, duration: Float) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         
-        animation.fromValue = 1
+        if key == "seconds" {
+            animation.fromValue = duration / 60
+            animation.duration = CFTimeInterval(duration)
+        } else if key == "minutes" {
+            animation.fromValue = duration / 60
+            animation.duration = CFTimeInterval(duration * 60)
+        } else if key == "hours" {
+            animation.fromValue = duration / 24
+            animation.duration = CFTimeInterval(duration * 60 * 24)
+        }
+        
         animation.toValue = 0
-        animation.duration = CFTimeInterval(10)
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
 
@@ -127,10 +140,27 @@ class CountdownCircleView: UIView {
             return
         }
         
-        secondsLabel.text = "\(countdown.getSecondDiff())"
-        minutesLabel.text = "\(countdown.getMinuteDiff())"
-        hoursLabel.text = "\(countdown.getHourDiff())"
-        daysLabel.text = "\(countdown.getDayDiff())"
+        let secondsDiff = countdown.getSecondDiff()
+        let minutesDiff = countdown.getMinuteDiff()
+        let hoursDiff = countdown.getHourDiff()
+        let daysDiff = countdown.getDayDiff()
+        
+        secondsLabel.text = "\(secondsDiff)"
+        if secondsDiff == 59 {
+            addShapeLayerAnimation(forKey: "seconds", duration: 60)
+        }
+        
+        minutesLabel.text = "\(minutesDiff)"
+        if minutesDiff == 59 {
+            addShapeLayerAnimation(forKey: "minutes", duration: 60 * 60)
+        }
+        
+        hoursLabel.text = "\(hoursDiff)"
+        if hoursDiff == 23 {
+            addShapeLayerAnimation(forKey: "hours", duration: 60 * 60 * 24)
+        }
+        
+        daysLabel.text = "\(daysDiff)"
     }
 
 }
