@@ -42,7 +42,6 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <variation key="widthClass=regular" axis="horizontal"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6jO-2B-7KK">
                                                 <rect key="frame" x="37.5" y="290" width="300" height="289.5"/>
