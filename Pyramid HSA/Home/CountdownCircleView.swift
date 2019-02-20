@@ -156,7 +156,7 @@ class CountdownCircleView: UIView {
         }
         
         hoursLabel.text = "\(hoursDiff)"
-        if hoursDiff == 23 {
+        if hoursDiff == 0 {
             addShapeLayerAnimation(forKey: "hours", duration: 60 * 60 * 24)
         }
         
