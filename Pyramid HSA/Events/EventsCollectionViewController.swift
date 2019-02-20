@@ -19,7 +19,7 @@ class EventsCollectionViewController: UICollectionViewController {
                     "Die perfekte Bewerbung\n…",
                     "Treffe ins Loch und gewinne\n…",
                     "Kostenlose Bewerbungsbilder\n…"]
-    let eventLocation = ["M1.02 (M-Gebäude)", "M1.01 (M-Gebäude)", "Zwischen den Messezelten", "Irgendwo"]
+    let eventLocation = ["M1.02 (M-Gebäude)", "M1.01 (M-Gebäude)", "Zwischen W- und J-Bau", "Irgendwo"]
     let eventImage = ["catchit", "workshop", "football", "shooting"]
     
     override func viewDidLoad() {
