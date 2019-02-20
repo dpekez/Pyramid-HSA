@@ -19,12 +19,10 @@ class CountdownCircleView: UIView {
     private var minutesLabel = UILabel()
     private var secondsLabel = UILabel()
     private var timer = Timer()
-    private var countdownTime = Int()
     private let circleHeadings = ["days", "hours", "minutes", "seconds"]
     private let countdown = Countdown()
     
     func create() {
-        setCountdownTime()
         runTimer()
         
         for i in 0...3 {
@@ -86,7 +84,7 @@ class CountdownCircleView: UIView {
         
         animation.fromValue = fromValue
         animation.toValue = 0
-        animation.duration = CFTimeInterval(countdownTime % 60)
+        animation.duration = CFTimeInterval(10)
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
 
@@ -111,28 +109,15 @@ class CountdownCircleView: UIView {
         addSubview(label)
     }
     
-    private func setCountdownTime() {
-        countdownTime = countdown.getTimeDiff()
-    }
-    
     private func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CountdownCircleView.updateLabels)), userInfo: nil, repeats: true)
     }
 
     @objc private func updateLabels() {
-        setCountdownTime()
-        secondsLabel.text = "\(countdownTime % 60)"
-        minutesLabel.text = "\(countdownTime / 60 % 60)"
-        hoursLabel.text = "\(countdownTime / 3600 % 24)"
-        daysLabel.text = "\(countdownTime / 86400)"
-        
-        if countdownTime < 0 {
-            timer.invalidate()
-        }
-        
-        if countdownTime % 60 == 59 {
-            addShapeLayerAnimation(forKey: "seconds")
-        }
+        secondsLabel.text = "\(countdown.getSecondDiff())"
+        minutesLabel.text = "\(countdown.getMinuteDiff())"
+        hoursLabel.text = "\(countdown.getHourDiff())"
+        daysLabel.text = "\(countdown.getDayDiff())"
     }
 
 }
