@@ -29,7 +29,7 @@ class CountdownCircleView: UIView {
             for i in 0...3 {
                 let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
                 let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
-                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: 0.75)
+                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: calcStrokeLength(for: circleHeadings[i]))
                 
                 layer.addSublayer(circleBackgroundShape)
                 layer.addSublayer(circleForegroundShape)
@@ -43,6 +43,21 @@ class CountdownCircleView: UIView {
             setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
         } else {
             self.isHidden = true
+        }
+    }
+    
+    private func calcStrokeLength(for string: String) -> CGFloat {
+        switch string {
+        case "days":
+            return CGFloat(countdown.getDayDiff()) / 365.0
+        case "hours":
+            return CGFloat(countdown.getHourDiff()) / 24.0
+        case "minutes":
+            return CGFloat(countdown.getMinuteDiff()) / 60.0
+        case "seconds":
+            return CGFloat(countdown.getSecondDiff()) / 60.0
+        default:
+            return 1
         }
     }
     
@@ -74,19 +89,8 @@ class CountdownCircleView: UIView {
     
     private func addShapeLayerAnimation(forKey key: String) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        var fromValue = 1
         
-//        if key == "seconds" {
-//            fromValue = Double((countdownTime % 60) / 60)
-//        } else if key == "minutes" {
-//            fromValue = Double((countdownTime / 60 % 60) / 60)
-//        } else if key == "hours" {
-//            fromValue = Double((countdownTime / 3600 % 24) / 60)
-//        } else {
-//            fromValue = Double((countdownTime / 86400) / 365)
-//        }
-        
-        animation.fromValue = fromValue
+        animation.fromValue = 1
         animation.toValue = 0
         animation.duration = CFTimeInterval(10)
         animation.fillMode = CAMediaTimingFillMode.forwards
