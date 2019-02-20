@@ -580,23 +580,25 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-gO-DMd">
-                                                        <rect key="frame" x="8" y="8" width="304" height="25"/>
+                                                        <rect key="frame" x="8" y="8" width="304" height="27"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="25" id="zd6-uv-fHq"/>
+                                                            <constraint firstAttribute="height" constant="27" id="zd6-uv-fHq"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-Ph-9wm">
-                                                        <rect key="frame" x="8" y="41" width="304" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-Ph-9wm">
+                                                        <rect key="frame" x="8" y="43" width="304" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="e5j-gQ-dqt"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meQ-dO-tGA">
-                                                        <rect key="frame" x="278" y="82" width="34" height="10"/>
+                                                        <rect key="frame" x="8" y="82" width="304" height="10"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -605,9 +607,13 @@
                                                 <constraints>
                                                     <constraint firstItem="jWq-gO-DMd" firstAttribute="leading" secondItem="eNf-Mb-0FL" secondAttribute="leading" constant="8" id="0r8-wW-oGU"/>
                                                     <constraint firstAttribute="trailing" secondItem="jWq-gO-DMd" secondAttribute="trailing" constant="8" id="8vM-1X-eOt"/>
+                                                    <constraint firstItem="d5b-Ph-9wm" firstAttribute="leading" secondItem="eNf-Mb-0FL" secondAttribute="leading" constant="8" id="9VY-F1-anS"/>
+                                                    <constraint firstItem="meQ-dO-tGA" firstAttribute="leading" secondItem="eNf-Mb-0FL" secondAttribute="leading" constant="8" id="Dyr-W5-Kbw"/>
                                                     <constraint firstAttribute="trailing" secondItem="meQ-dO-tGA" secondAttribute="trailing" constant="8" id="V7O-bN-T0i"/>
+                                                    <constraint firstItem="d5b-Ph-9wm" firstAttribute="top" secondItem="jWq-gO-DMd" secondAttribute="bottom" constant="8" id="dHt-5P-VtJ"/>
                                                     <constraint firstAttribute="bottom" secondItem="meQ-dO-tGA" secondAttribute="bottom" constant="8" id="mKz-3G-8w0"/>
                                                     <constraint firstItem="jWq-gO-DMd" firstAttribute="top" secondItem="eNf-Mb-0FL" secondAttribute="top" constant="8" id="vJx-iV-yh4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="d5b-Ph-9wm" secondAttribute="trailing" constant="8" id="zcK-Mm-VcQ"/>
                                                 </constraints>
                                             </view>
                                             <constraints>
@@ -860,6 +866,6 @@
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ld7-hr-i8H"/>
+        <segue reference="oOd-Gh-ySv"/>
     </inferredMetricsTieBreakers>
 </document>
