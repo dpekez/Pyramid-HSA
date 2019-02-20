@@ -23,7 +23,9 @@ class CountdownCircleView: UIView {
     private let countdown = Countdown()
     
     func create() {
-        runTimer()
+        if countdown.eventIsCommingUp() {
+            runTimer()
+        }
         
         for i in 0...3 {
             let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
@@ -114,6 +116,11 @@ class CountdownCircleView: UIView {
     }
 
     @objc private func updateLabels() {
+        if !countdown.eventIsCommingUp() {
+            timer.invalidate()
+            return
+        }
+        
         secondsLabel.text = "\(countdown.getSecondDiff())"
         minutesLabel.text = "\(countdown.getMinuteDiff())"
         hoursLabel.text = "\(countdown.getHourDiff())"
