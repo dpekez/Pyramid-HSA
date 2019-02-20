@@ -25,23 +25,25 @@ class CountdownCircleView: UIView {
     func create() {
         if countdown.eventIsCommingUp() {
             runTimer()
-        }
-        
-        for i in 0...3 {
-            let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
-            let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
-            let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: 0.75)
             
-            layer.addSublayer(circleBackgroundShape)
-            layer.addSublayer(circleForegroundShape)
+            for i in 0...3 {
+                let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
+                let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
+                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: 0.75)
+                
+                layer.addSublayer(circleBackgroundShape)
+                layer.addSublayer(circleForegroundShape)
+                
+                setHeaderLabel(withText: circleHeadings[i], atXPos: xOffset * i)
+            }
             
-            setHeaderLabel(withText: circleHeadings[i], atXPos: xOffset * i)
+            setCountLabel(label: &daysLabel, atXPos: 0)
+            setCountLabel(label: &hoursLabel, atXPos: xOffset)
+            setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
+            setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
+        } else {
+            self.isHidden = true
         }
-        
-        setCountLabel(label: &daysLabel, atXPos: 0)
-        setCountLabel(label: &hoursLabel, atXPos: xOffset)
-        setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
-        setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
     }
     
     private func createCircularPath(withXOffset offset: Int) -> CGPath {
