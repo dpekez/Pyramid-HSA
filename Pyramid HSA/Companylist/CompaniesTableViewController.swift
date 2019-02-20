@@ -11,7 +11,8 @@ import UIKit
 class CompaniesTableViewController: UITableViewController {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var searchFooter: SearchFooter!
-
+    @IBOutlet weak var filterButton: UIBarButtonItem!
+    
     var companies = [CompanyDetailRearranged]()
     var filteredCompanies = [CompanyDetailRearranged]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -93,24 +94,37 @@ class CompaniesTableViewController: UITableViewController {
     
     func filterForBranch() {
         let defaults = UserDefaultsController.shared
+        var filterIsActive = false
         
         if defaults.architectureIsOn {
             companies.removeAll(where: { $0.interestDict[.architecture] == 0 } )
+            filterIsActive = true
         }
         if defaults.electricalEngineeringIsOn {
             companies.removeAll(where: { $0.interestDict[.electricalEngineering] == 0 } )
+            filterIsActive = true
         }
         if defaults.designIsOn {
             companies.removeAll(where: { $0.interestDict[.design] == 0 } )
+            filterIsActive = true
         }
         if defaults.computerScienceIsOn {
             companies.removeAll(where: { $0.interestDict[.computerScience] == 0 } )
+            filterIsActive = true
         }
         if defaults.mechanicalEngineeringIsOn {
             companies.removeAll(where: { $0.interestDict[.mechanicalEngineering] == 0 } )
+            filterIsActive = true
         }
         if defaults.businessAdministrationIsOn {
             companies.removeAll(where: { $0.interestDict[.businessAdministration] == 0 } )
+            filterIsActive = true
+        }
+        
+        if filterIsActive {
+            filterButton.title = "•Filter"
+        } else {
+            filterButton.title = "Filter"
         }
     }
     

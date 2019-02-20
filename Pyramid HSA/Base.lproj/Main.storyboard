@@ -518,6 +518,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterButton" destination="829-yI-Bra" id="rHO-Jx-D0W"/>
                         <outlet property="searchFooter" destination="NJj-Xu-Ih4" id="XUN-DH-OgN"/>
                         <outlet property="table" destination="Pgp-ty-BW1" id="jAm-v9-yNM"/>
                     </connections>
