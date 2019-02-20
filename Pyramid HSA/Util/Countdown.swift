@@ -45,14 +45,14 @@ class Countdown {
     }
     
     func eventIsCommingUp() -> Bool {
-        return !eventIsLive()
+        return Date() < startDate
     }
     
     func eventIsLive() -> Bool {
-        return Date() > startDate && !eventIsOver()
+        return Date() >= startDate && !eventIsOver()
     }
     
     func eventIsOver() -> Bool {
-        return Date() > endDate
+        return Date() >= endDate
     }
 }
