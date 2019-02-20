@@ -28,16 +28,31 @@ class Countdown {
         endDate = calendar.date(from: endDateComponents)!
     }
     
-    func getTimeDiff() -> Int {
-        let timeIntervalDiff = startDate.timeIntervalSince(Date())
-        let timeDiff = floor(timeIntervalDiff)
-        return Int(timeDiff)
+    func getDayDiff() -> Int {
+        return Calendar.current.dateComponents([.day], from: Date(), to: startDate).day ?? 0
     }
     
-//    func getCurrentDate() -> Date {
-//        // make sure we define time only down to minutes or the displayed calculation will be off by 1 minute
-//        let currentDateComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
-//        return calendar.date(from: currentDateComponents)!
-//    }
+    func getHourDiff() -> Int {
+        return Calendar.current.dateComponents([.day, .hour], from: Date(), to: startDate).hour ?? 0
+    }
     
+    func getMinuteDiff() -> Int {
+        return Calendar.current.dateComponents([.day, .hour, .minute], from: Date(), to: startDate).minute ?? 0
+    }
+    
+    func getSecondDiff() -> Int {
+        return Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(), to: startDate).second ?? 0
+    }
+    
+    func eventIsCommingUp() -> Bool {
+        return !eventIsLive()
+    }
+    
+    func eventIsLive() -> Bool {
+        return Date() > startDate && !eventIsOver()
+    }
+    
+    func eventIsOver() -> Bool {
+        return Date() > endDate
+    }
 }
