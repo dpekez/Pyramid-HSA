@@ -17,6 +17,7 @@ class FilterTableViewController: UITableViewController {
     @IBOutlet weak var businessAdministrationSwitch: UISwitch!
     
     private let userDefaults = UserDefaultsController.shared
+    var updateHandler: (() -> Void)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,25 +32,31 @@ class FilterTableViewController: UITableViewController {
     
     @IBAction func architectureChanged(_ sender: UISwitch) {
         userDefaults.architectureIsOn = sender.isOn
+        updateHandler()
     }
     
     @IBAction func electricalEngineeringChanged(_ sender: UISwitch) {
         userDefaults.electricalEngineeringIsOn = sender.isOn
+        updateHandler()
     }
     
     @IBAction func designChanged(_ sender: UISwitch) {
         userDefaults.designIsOn = sender.isOn
+        updateHandler()
     }
     
     @IBAction func computerScienceChanged(_ sender: UISwitch) {
         userDefaults.computerScienceIsOn = sender.isOn
+        updateHandler()
     }
     
     @IBAction func mechanicalEngineeringChanged(_ sender: UISwitch) {
         userDefaults.mechanicalEngineeringIsOn = sender.isOn
+        updateHandler()
     }
     
     @IBAction func businessAdministrationChanged(_ sender: UISwitch) {
         userDefaults.businessAdministrationIsOn = sender.isOn
+        updateHandler()
     }
 }

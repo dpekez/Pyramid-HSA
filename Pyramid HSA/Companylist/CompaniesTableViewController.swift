@@ -157,8 +157,6 @@ class CompaniesTableViewController: UITableViewController {
     // MARK: Segues
     
     @IBAction func filterViewUnwindAction(unwindSegue: UIStoryboardSegue) {
-        createCompanyListArray()
-        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -173,6 +171,12 @@ class CompaniesTableViewController: UITableViewController {
             } else {
                 companyDetailVC.title = companies[myIndex.row].name
                 companyDetailVC.companyDetail = companies[myIndex.row]
+            }
+        } else if segue.identifier == "filterSegue" {
+            let filterVC = segue.destination as! FilterTableViewController
+            filterVC.updateHandler = {
+                self.createCompanyListArray()
+                self.tableView.reloadData()
             }
         }
     }

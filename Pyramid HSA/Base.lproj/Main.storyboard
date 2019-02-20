@@ -212,9 +212,9 @@
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T5d-dA-BxO">
                             <rect key="frame" x="0.0" y="345" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Apply"/>
+                            <state key="normal" title="Finished"/>
                             <connections>
-                                <segue destination="iiz-CV-f6U" kind="unwind" unwindAction="filterViewUnwindActionWithUnwindSegue:" id="fSR-5P-rpC"/>
+                                <segue destination="iiz-CV-f6U" kind="unwind" unwindAction="filterViewUnwindActionWithUnwindSegue:" id="tf1-yT-WO5"/>
                             </connections>
                         </button>
                         <sections>
@@ -432,7 +432,7 @@
                             <outlet property="delegate" destination="pTV-6g-T3H" id="P0h-bG-nzN"/>
                         </connections>
                     </tableView>
-                    <value key="contentSizeForViewInPopover" type="size" width="250" height="420"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="270" height="420"/>
                     <connections>
                         <outlet property="architectureSwitch" destination="a7k-VR-f5d" id="Oxp-4v-UiJ"/>
                         <outlet property="businessAdministrationSwitch" destination="Cdf-Vu-zlR" id="0Yc-2P-4zC"/>
@@ -511,7 +511,7 @@
                     <navigationItem key="navigationItem" title="Companies" id="T1Q-S3-Hrd">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="829-yI-Bra">
                             <connections>
-                                <segue destination="pTV-6g-T3H" kind="popoverPresentation" identifier="" popoverAnchorBarButtonItem="829-yI-Bra" id="hz9-1e-dMW">
+                                <segue destination="pTV-6g-T3H" kind="popoverPresentation" identifier="filterSegue" popoverAnchorBarButtonItem="829-yI-Bra" id="hz9-1e-dMW">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -861,6 +861,6 @@
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jMj-cR-Zj0"/>
+        <segue reference="TBs-sm-ehS"/>
     </inferredMetricsTieBreakers>
 </document>
