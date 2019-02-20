@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var countDownCircleView: CountdownCircleView!
     
+    @IBAction func partnerViewUnwindAction(unwindSegue: UIStoryboardSegue) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         countDownCircleView.create()
