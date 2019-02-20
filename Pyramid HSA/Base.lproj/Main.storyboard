@@ -669,7 +669,7 @@
         <scene sceneID="snW-sl-gZR">
             <objects>
                 <navigationController title="Firmen" automaticallyAdjustsScrollViewInsets="NO" id="poy-UH-4aK" userLabel="Companies" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Firmen" image="second" id="1lb-gl-4I5" userLabel="Companies"/>
+                    <tabBarItem key="tabBarItem" title="Firmen" id="1lb-gl-4I5" userLabel="Companies"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OdO-fW-h2L">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -855,12 +855,11 @@
         <image name="kuka" width="300" height="51.5"/>
         <image name="layers" width="30" height="30"/>
         <image name="man" width="300" height="166.5"/>
-        <image name="second" width="30" height="30"/>
         <image name="sortimo" width="100" height="38.5"/>
         <image name="training" width="30" height="30"/>
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TBs-sm-ehS"/>
+        <segue reference="ld7-hr-i8H"/>
     </inferredMetricsTieBreakers>
 </document>
