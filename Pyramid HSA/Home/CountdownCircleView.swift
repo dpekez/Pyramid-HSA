@@ -123,7 +123,6 @@ class CountdownCircleView: UIView {
         label.font = UIFont(name: label.font.fontName, size: 24)
         label.textColor = PyramidColor.pyramidMidBlue
         label.textAlignment = .center
-        label.text = "0"
         addSubview(label)
     }
     
