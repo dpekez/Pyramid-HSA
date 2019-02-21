@@ -85,7 +85,7 @@ class CompaniesTableViewController: UITableViewController {
             shareContent += "\nDu hast die Pyramid-App noch nicht?\n"
             shareContent += "Jetzt schnell für iOS oder Android herunterladen:\n"
             shareContent += "iOS: https://itunes.apple.com/app/id1442865279"
-            shareContent += "\nAndroid: wer hat schon ein Android ;)"
+            shareContent += "\nAndroid: ;)"
             
             let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
             self.present(activityViewController, animated: true, completion: nil)
