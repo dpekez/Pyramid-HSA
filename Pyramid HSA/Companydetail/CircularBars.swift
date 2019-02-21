@@ -15,7 +15,7 @@ class CircularBars: UIView {
     private let barWidth: CGFloat = 8
     private let strokeStart: CGFloat = 0
     private let animationDuration: CFTimeInterval = 1
-    private let barBackgroundColor = PyramidColor.customGrey
+    private let barBackgroundColor = PyramidColor.customGrey.cgColor
     private var interestRatings = [PyramidFaculty: CGFloat]()
     private let interest: [PyramidFaculty] = [.architecture, .electricalEngineering, .design, .computerScience,
                                       .mechanicalEngineering, .businessAdministration]

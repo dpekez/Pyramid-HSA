@@ -9,7 +9,7 @@
 import UIKit
 
 struct PyramidColor {
-    static let customGrey = UIColor(white: 0.7, alpha: 0.3).cgColor
+    static let customGrey = UIColor(white: 0.7, alpha: 0.3)
     
     // #C5C8E6
     static let pyramidBrighterBlue = UIColor(red:0.77, green:0.78, blue:0.90, alpha:1.0)
