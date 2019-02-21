@@ -81,6 +81,14 @@
                                     <constraint firstAttribute="bottom" secondItem="aH6-0Y-93p" secondAttribute="bottom" id="ir9-eM-Tao"/>
                                 </constraints>
                             </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIc-a9-V4K" userLabel="top bar blur">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nRx-pU-S3k">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AR1-nW-a6Y" userLabel="hsa + partner">
                                 <rect key="frame" x="27.5" y="548" width="320" height="60"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BqS-sJ-K4I">
@@ -187,7 +195,11 @@
                             <constraint firstItem="AR1-nW-a6Y" firstAttribute="trailing" secondItem="gtw-9W-Mw2" secondAttribute="trailing" id="DxN-lm-JmH"/>
                             <constraint firstItem="rZb-B6-ECs" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="G7N-G5-oec"/>
                             <constraint firstItem="rZb-B6-ECs" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="KQ5-vd-h9g"/>
+                            <constraint firstItem="IIc-a9-V4K" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="X4t-Ny-Rda"/>
+                            <constraint firstItem="IIc-a9-V4K" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="Z4G-Ak-fNp"/>
+                            <constraint firstItem="IIc-a9-V4K" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="top" id="eA5-cC-S2s"/>
                             <constraint firstItem="rZb-B6-ECs" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="gPa-lr-gSx"/>
+                            <constraint firstItem="IIc-a9-V4K" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="rb0-kr-s0o"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="AR1-nW-a6Y" secondAttribute="bottom" constant="10" id="tTp-K6-Lig"/>
                             <constraint firstAttribute="bottom" secondItem="rZb-B6-ECs" secondAttribute="bottom" id="uAt-E9-bG0"/>
                         </constraints>
@@ -343,6 +355,14 @@
                                     <constraint firstAttribute="bottom" secondItem="u57-UV-Npb" secondAttribute="bottom" id="dae-fC-wvg"/>
                                 </constraints>
                             </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1Z-le-ng0" userLabel="top bar blur">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Ei-Iu-eLc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWb-84-X9Z">
                                 <rect key="frame" x="127.5" y="780" width="120" height="50"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OSI-Bz-Od9">
@@ -377,12 +397,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="P1Z-le-ng0" firstAttribute="top" secondItem="FdG-Wz-1G0" secondAttribute="top" id="8wX-cC-YYR"/>
                             <constraint firstItem="zWb-84-X9Z" firstAttribute="centerX" secondItem="FdG-Wz-1G0" secondAttribute="centerX" id="NHj-hF-Vxj"/>
+                            <constraint firstItem="P1Z-le-ng0" firstAttribute="leading" secondItem="FdG-Wz-1G0" secondAttribute="leading" id="Nbr-RB-1kj"/>
                             <constraint firstItem="4Ka-0P-8ST" firstAttribute="bottom" secondItem="zWb-84-X9Z" secondAttribute="bottom" constant="20" id="Sh9-vf-e8D"/>
                             <constraint firstAttribute="bottom" secondItem="LTh-Cl-Knp" secondAttribute="bottom" id="a5K-Wy-Ra9"/>
+                            <constraint firstItem="P1Z-le-ng0" firstAttribute="bottom" secondItem="4Ka-0P-8ST" secondAttribute="top" id="caa-y6-HSe"/>
                             <constraint firstItem="LTh-Cl-Knp" firstAttribute="leading" secondItem="4Ka-0P-8ST" secondAttribute="leading" id="fJ6-BU-iZ5"/>
                             <constraint firstItem="4Ka-0P-8ST" firstAttribute="trailing" secondItem="LTh-Cl-Knp" secondAttribute="trailing" id="hDl-cT-Sda"/>
                             <constraint firstAttribute="top" secondItem="LTh-Cl-Knp" secondAttribute="top" id="ldt-nf-1ba"/>
+                            <constraint firstAttribute="trailing" secondItem="P1Z-le-ng0" secondAttribute="trailing" id="oVj-aD-rIq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ka-0P-8ST"/>
                     </view>
