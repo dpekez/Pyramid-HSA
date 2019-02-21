@@ -9,55 +9,84 @@
 import UIKit
 
 class CountdownCircleView: UIView {
-    private let yPosCenter = 36
+    private let yPosCenter = 36 + 35
     private let xOffset = 80
     private let circleRadius: CGFloat = 36
     private let barWidth: CGFloat = 4
-    private var shapeLayer = CAShapeLayer()
-    private var daysLabel = UILabel()
-    private var hoursLabel = UILabel()
-    private var minutesLabel = UILabel()
-    private var secondsLabel = UILabel()
     private var timer = Timer()
-    private let circleHeadings = ["days", "hours", "minutes", "seconds"]
     private let countdown = Countdown()
+    private var secondsLabel = UILabel()
+    private var minutesLabel = UILabel()
+    private var hoursLabel = UILabel()
+    private var daysLabel = UILabel()
+    private var secondsShapeLayer = CAShapeLayer()
+    private var minutesShapeLayer = CAShapeLayer()
+    private var hoursShapeLayer = CAShapeLayer()
+    private var daysShapeLayer = CAShapeLayer()
+    private var secondsProgress: Int = -1 {
+        willSet(newValue) {
+            secondsShapeLayer.strokeEnd = CGFloat(newValue) / 60.0
+            secondsLabel.text = "\(newValue)"
+        }
+    }
+    private var minutesProgress: Int = -1 {
+        willSet(newValue) {
+            if newValue != minutesProgress {
+                minutesShapeLayer.strokeEnd = CGFloat(newValue) / 60.0
+                minutesLabel.text = "\(newValue)"
+            }
+        }
+    }
+    private var hoursProgress: Int = -1 {
+        willSet(newValue) {
+            if newValue != hoursProgress {
+                hoursShapeLayer.strokeEnd = CGFloat(newValue) / 24.0
+                hoursLabel.text = "\(newValue)"
+            }
+        }
+    }
+    private var daysProgress: Int = -1 {
+        willSet(newValue) {
+            if newValue != daysProgress {
+                daysShapeLayer.strokeEnd = CGFloat(newValue) / 365.0
+                daysLabel.text = "\(newValue)"
+            }
+        }
+    }
+    private enum TimeUnit: String {
+        case seconds = "seconds"
+        case minutes = "minutes"
+        case hours = "hours"
+        case days = "days"
+    }
+    private let timeUnits: [TimeUnit] = [.days, .hours, .minutes, .seconds]
     
     func create() {
         if countdown.eventIsCommingUp() {
             runTimer()
-            
+            var circlePaths: [CGPath] = []
             for i in 0...3 {
                 let circlePath = createCircularPath(withXOffset: 40 + xOffset * i)
-                let circleBackgroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.customGrey)
-                let circleForegroundShape = createShapeLayer(withPath: circlePath, color: PyramidColor.pyramidBrightBlue.cgColor, strokeEnd: calcStrokeLength(for: circleHeadings[i]), animationKey: circleHeadings[i])
-                
+                circlePaths.append(circlePath)
+                let circleBackgroundShape = createShapeLayer(withPath: circlePath)
                 layer.addSublayer(circleBackgroundShape)
-                layer.addSublayer(circleForegroundShape)
-                
-                setHeaderLabel(withText: circleHeadings[i], atXPos: xOffset * i)
+                setHeaderLabel(withText: timeUnits[i].rawValue, atXPos: xOffset * i)
             }
-            
+            setShapeLayer(withPath: circlePaths[0], forShape: &daysShapeLayer)
+            setShapeLayer(withPath: circlePaths[1], forShape: &hoursShapeLayer)
+            setShapeLayer(withPath: circlePaths[2], forShape: &minutesShapeLayer)
+            setShapeLayer(withPath: circlePaths[3], forShape: &secondsShapeLayer)
+            layer.addSublayer(secondsShapeLayer)
+            layer.addSublayer(minutesShapeLayer)
+            layer.addSublayer(hoursShapeLayer)
+            layer.addSublayer(daysShapeLayer)
             setCountLabel(label: &daysLabel, atXPos: 0)
             setCountLabel(label: &hoursLabel, atXPos: xOffset)
             setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
             setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
+            setTitleLabel()
         } else {
             self.isHidden = true
-        }
-    }
-    
-    private func calcStrokeLength(for string: String) -> CGFloat {
-        switch string {
-        case "days":
-            return CGFloat(countdown.getDayDiff()) / 365.0
-        case "hours":
-            return CGFloat(countdown.getHourDiff()) / 24.0
-        case "minutes":
-            return CGFloat(countdown.getMinuteDiff()) / 60.0
-        case "seconds":
-            return CGFloat(countdown.getSecondDiff()) / 60.0
-        default:
-            return 1
         }
     }
     
@@ -71,45 +100,22 @@ class CountdownCircleView: UIView {
             ).cgPath
     }
     
-    private func createShapeLayer(withPath path: CGPath, color: CGColor, strokeEnd: CGFloat = 1, animationKey key: String = "") -> CAShapeLayer {
-        shapeLayer = CAShapeLayer()
-        shapeLayer.path = path
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = color
-        shapeLayer.strokeEnd = strokeEnd
-        shapeLayer.lineWidth = barWidth
-        shapeLayer.lineCap = .round
-        
-        if key == "seconds" {
-            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getSecondDiff()))
-        } else if key == "minutes" {
-            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getMinuteDiff()))
-        } else if key == "hours" {
-            addShapeLayerAnimation(forKey: key, duration: Float(countdown.getHourDiff()))
-        }
-        
-        return shapeLayer
+    private func createShapeLayer(withPath path: CGPath) -> CAShapeLayer {
+        let shape = CAShapeLayer()
+        shape.path = path
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = PyramidColor.customGrey.cgColor
+        shape.lineWidth = barWidth
+        shape.lineCap = .round
+        return shape
     }
     
-    private func addShapeLayerAnimation(forKey key: String, duration: Float) {
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        
-        if key == "seconds" {
-            animation.fromValue = duration / 60
-            animation.duration = CFTimeInterval(duration)
-        } else if key == "minutes" {
-            animation.fromValue = duration / 60
-            animation.duration = CFTimeInterval(duration * 60)
-        } else if key == "hours" {
-            animation.fromValue = duration / 24
-            animation.duration = CFTimeInterval(duration * 60 * 24)
-        }
-        
-        animation.toValue = 0
-        animation.fillMode = CAMediaTimingFillMode.forwards
-        animation.isRemovedOnCompletion = false
-
-        self.shapeLayer.add(animation, forKey: key)
+    private func setShapeLayer(withPath path: CGPath, forShape shape: inout CAShapeLayer) {
+        shape.path = path
+        shape.fillColor = UIColor.clear.cgColor
+        shape.strokeColor = PyramidColor.pyramidBlue.cgColor
+        shape.lineWidth = barWidth
+        shape.lineCap = .round
     }
     
     private func setCountLabel(label: inout UILabel, atXPos xPos: Int) {
@@ -122,45 +128,33 @@ class CountdownCircleView: UIView {
     }
     
     private func setHeaderLabel(withText text: String, atXPos xPos: Int) {
-        let label = UILabel(frame: CGRect(x: xPos, y: 0, width: 80, height: 18))
+        let label = UILabel(frame: CGRect(x: xPos, y: 35, width: 80, height: 18))
         label.font = UIFont(name: label.font.fontName, size: 10)
-        label.textColor = PyramidColor.pyramidBlue
+        label.textColor = PyramidColor.pyramidDarkBlue
         label.textAlignment = .center
         label.text = text
         addSubview(label)
     }
     
+    private func setTitleLabel() {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
+        label.font = UIFont.boldSystemFont(ofSize: 27)
+        label.text = "Countdown"
+        addSubview(label)
+    }
+    
     private func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CountdownCircleView.updateLabels)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CountdownCircleView.updateProgress)), userInfo: nil, repeats: true)
     }
 
-    @objc private func updateLabels() {
+    @objc private func updateProgress() {
         if !countdown.eventIsCommingUp() {
             timer.invalidate()
             return
         }
-        
-        let secondsDiff = countdown.getSecondDiff()
-        let minutesDiff = countdown.getMinuteDiff()
-        let hoursDiff = countdown.getHourDiff()
-        let daysDiff = countdown.getDayDiff()
-        
-        secondsLabel.text = "\(secondsDiff)"
-        if secondsDiff == 59 {
-            addShapeLayerAnimation(forKey: "seconds", duration: 60)
-        }
-        
-        minutesLabel.text = "\(minutesDiff)"
-        if minutesDiff == 59 {
-            addShapeLayerAnimation(forKey: "minutes", duration: 60 * 60)
-        }
-        
-        hoursLabel.text = "\(hoursDiff)"
-        if hoursDiff == 0 {
-            addShapeLayerAnimation(forKey: "hours", duration: 60 * 60 * 24)
-        }
-        
-        daysLabel.text = "\(daysDiff)"
+        secondsProgress = countdown.getSecondDiff()
+        minutesProgress = countdown.getMinuteDiff()
+        hoursProgress = countdown.getHourDiff()
+        daysProgress = countdown.getDayDiff()
     }
-
 }
