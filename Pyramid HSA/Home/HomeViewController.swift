@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countDownCircleView.create()
-        partnerButton.setTitle("Unsere\nPartner", for: .normal)
+        partnerButton.setTitle("Unsere\nPartner …", for: .normal)
     }
     
     private func openURL(string: String) {

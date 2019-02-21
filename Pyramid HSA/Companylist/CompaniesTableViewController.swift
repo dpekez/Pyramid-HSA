@@ -70,17 +70,22 @@ class CompaniesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
-            var shareContent = "Look at this Company I've just found in the Pyramid App:\n"
+        let share = UITableViewRowAction(style: .normal, title: "Teilen …") { action, index in
+            var shareContent = "Schau mal was ich gerade für eine interessante Firma auf der Pyramid gefunden habe:\n"
             
             if self.isSearching() {
                 shareContent += self.filteredCompanies[index.row].name + "\n"
-                shareContent += self.filteredCompanies[index.row].homepage
+                shareContent += self.filteredCompanies[index.row].homepage + "\n"
             }
             else {
                 shareContent += self.companies[index.row].name + "\n"
-                shareContent += self.companies[index.row].homepage
+                shareContent += self.companies[index.row].homepage + "\n"
             }
+            
+            shareContent += "\nDu hast die Pyramid-App noch nicht?\n"
+            shareContent += "Jetzt schnell für iOS oder Android herunterladen:\n"
+            shareContent += "iOS: https://itunes.apple.com/app/id1442865279"
+            shareContent += "\nAndroid: wer hat schon ein Android ;)"
             
             let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
             self.present(activityViewController, animated: true, completion: nil)
@@ -133,7 +138,7 @@ class CompaniesTableViewController: UITableViewController {
     private func setUpSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for company…"
+        searchController.searchBar.placeholder = "Nach Firma suchen …"
 //        searchController.searchBar.scopeButtonTitles = ["Name", "Location", "PLZ"]
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false

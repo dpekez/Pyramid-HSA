@@ -54,10 +54,10 @@ class CountdownCircleView: UIView {
         }
     }
     private enum TimeUnit: String {
-        case seconds = "seconds"
-        case minutes = "minutes"
-        case hours = "hours"
-        case days = "days"
+        case seconds = "Sekunden"
+        case minutes = "Minuten"
+        case hours = "Stunden"
+        case days = "Tage"
     }
     private let timeUnits: [TimeUnit] = [.days, .hours, .minutes, .seconds]
     
@@ -128,7 +128,7 @@ class CountdownCircleView: UIView {
     
     private func setHeaderLabel(withText text: String, atXPos xPos: Int) {
         let label = UILabel(frame: CGRect(x: xPos, y: 35, width: 80, height: 18))
-        label.font = UIFont(name: label.font.fontName, size: 10)
+        label.font = UIFont(name: label.font.fontName, size: 9)
         label.textColor = PyramidColor.pyramidDarkBlue
         label.textAlignment = .center
         label.text = text

@@ -9,10 +9,10 @@
 import UIKit
 
 enum PyramidFaculty: String {
-    case architecture = "Architecture"
-    case businessAdministration = "Business"
-    case computerScience = "Computer Science"
-    case design = "Design"
-    case electricalEngineering = "Electrical Eng."
-    case mechanicalEngineering = "Mechanical Eng."
+    case architecture = "Architektur"
+    case businessAdministration = "Wirtschaft"
+    case computerScience = "Informatik"
+    case design = "Gestaltung"
+    case electricalEngineering = "Elektrotechnik"
+    case mechanicalEngineering = "Maschinenbau"
 }

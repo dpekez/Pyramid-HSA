@@ -25,11 +25,11 @@ class DetailViewParagraphs {
     func buildDetailParagraph() -> NSMutableAttributedString {
         let detailSectionHeader = "Details" + "\n"
         
-        let branchTitle = "Branches" + "\n"
-        let productTitle = "Products" + "\n"
-        let subsidiaryTitle = "Subsidiaries" + "\n"
-        let revenueTitle = "Revenue" + "\n"
-        let employeeCountTitle = "Employees" + "\n"
+        let branchTitle = "Branchen" + "\n"
+        let productTitle = "Produkte" + "\n"
+        let subsidiaryTitle = "Standorte" + "\n"
+        let revenueTitle = "Umsatz" + "\n"
+        let employeeCountTitle = "Mitarbeiterzahl" + "\n"
 
         let string = NSMutableAttributedString(string: detailSectionHeader, attributes: sectionHeaderStyle)
         
@@ -54,17 +54,17 @@ class DetailViewParagraphs {
     func buildTrainingParagraph() -> NSMutableAttributedString {
         let trainingSectionHeader = "Training" + "\n"
         
-        let entryAsTitle = "Entry as" + "\n"
-        let qualificationTitle = "Qualification" + "\n"
-        let foreignCountryTitle = "Foreign Country" + "\n"
-        let internshipTitle = "Internship" + "\n"
-        let internshipBenefitsTitle = "Internship Benefits" + "\n"
-        let internshipInfoTitle = "Internship Info" + "\n"
-        let thesisTitle = "Thesis" + "\n"
-        let thesisBenefitTitle = "Thesis Benefit" + "\n"
-        let workingStudentTitle = "Working Student" + "\n"
-        let workingStudentBenefitTitle = "Working Student Benefit" + "\n"
-        let workingStudentInfoTitle = "" + "\n"
+        let entryAsTitle = "Einstiegsmöglichkeiten" + "\n"
+        let qualificationTitle = "Zusatzqualifikation" + "\n"
+        let foreignCountryTitle = "Ausland" + "\n"
+        let internshipTitle = "Praktika" + "\n"
+        let internshipBenefitsTitle = "Praktika Vergütung" + "\n"
+        let internshipInfoTitle = "Praktika Info" + "\n"
+        let thesisTitle = "Bachelor-/ Master-Thesis" + "\n"
+        let thesisBenefitTitle = "Thesis Vergütung" + "\n"
+        let workingStudentTitle = "Werkstudent" + "\n"
+        let workingStudentBenefitTitle = "Werkstudent Vergütung" + "\n"
+        let workingStudentInfoTitle = "Werkstudent Info" + "\n"
         
         let string = NSMutableAttributedString(string: trainingSectionHeader, attributes: sectionHeaderStyle)
         
@@ -105,17 +105,17 @@ class DetailViewParagraphs {
     }
     
     func buildContactParagraph() -> NSMutableAttributedString {
-        let contactSectionHeader = "Contact" + "\n"
+        let contactSectionHeader = "Kontakt" + "\n"
         
         let homepageTitle = "Homepage" + "\n"
-        let adressTitle = "Adress" + "\n"
+        let adressTitle = "Adresse" + "\n"
         let personTitle = "Person" + "\n"
-        let subdivisionTitle = "Subdivision" + "\n"
-        let officeTitle = "Office" + "\n"
-        let responsibilityTitle = "Responsibility" + "\n"
-        let phoneNumberTitle = "Phone Number" + "\n"
-        let mobileNumberTitle = "Mobile Number" + "\n"
-        let faxNumberTitle = "Fax Number" + "\n"
+        let subdivisionTitle = "Bereich" + "\n"
+        let officeTitle = "Posten" + "\n"
+        let responsibilityTitle = "Zuständig für" + "\n"
+        let phoneNumberTitle = "Telefon" + "\n"
+        let mobileNumberTitle = "Mobil" + "\n"
+        let faxNumberTitle = "Fax" + "\n"
         let mailTitle = "Mail" + "\n"
         
         let string = NSMutableAttributedString(string: contactSectionHeader, attributes: sectionHeaderStyle)
