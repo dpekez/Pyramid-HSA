@@ -36,7 +36,7 @@
 			<key>UIApplicationShortcutItemIconFile</key>
 			<string>layers</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Companies</string>
+			<string>Firmen</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>com.pekez.penta.show.companies</string>
 		</dict>
