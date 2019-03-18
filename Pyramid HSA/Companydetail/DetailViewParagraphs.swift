@@ -14,7 +14,7 @@ class DetailViewParagraphs {
         .foregroundColor: PyramidColor.pyramidBlue
     ]
     let titleHeaderStyle: [NSAttributedString.Key: Any] = [
-        .font: UIFont.boldSystemFont(ofSize: 16)
+        .font: UIFont.boldSystemFont(ofSize: 12)
     ]
     let textStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.systemFont(ofSize: 12)
@@ -52,19 +52,19 @@ class DetailViewParagraphs {
     }
     
     func buildTrainingParagraph() -> NSMutableAttributedString {
-        let trainingSectionHeader = "Training" + "\n"
+        let trainingSectionHeader = "Training\n"
         
-        let entryAsTitle = "Einstiegsmöglichkeiten" + "\n"
-        let qualificationTitle = "Zusatzqualifikation" + "\n"
-        let foreignCountryTitle = "Ausland" + "\n"
-        let internshipTitle = "Praktika" + "\n"
-        let internshipBenefitsTitle = "Praktika Vergütung" + "\n"
-        let internshipInfoTitle = "Praktika Info" + "\n"
-        let thesisTitle = "Bachelor-/ Master-Thesis" + "\n"
-        let thesisBenefitTitle = "Thesis Vergütung" + "\n"
-        let workingStudentTitle = "Werkstudent" + "\n"
-        let workingStudentBenefitTitle = "Werkstudent Vergütung" + "\n"
-        let workingStudentInfoTitle = "Werkstudent Info" + "\n"
+        let entryAsTitle = "Einstiegsmöglichkeiten\n"
+        let qualificationTitle = "Zusatzqualifikation\n"
+        let foreignCountryTitle = "Ausland\n"
+        let internshipTitle = "Praktika: "
+        let internshipBenefitsTitle = "Praktika Vergütung: "
+        let internshipInfoTitle = "Praktika Info\n"
+        let thesisTitle = "Bachelor-/ Master-Thesis: "
+        let thesisBenefitTitle = "Thesis Vergütung: "
+        let workingStudentTitle = "Werkstudent: "
+        let workingStudentBenefitTitle = "Werkstudent Vergütung: "
+        let workingStudentInfoTitle = "Werkstudent Info\n"
         
         let string = NSMutableAttributedString(string: trainingSectionHeader, attributes: sectionHeaderStyle)
         
