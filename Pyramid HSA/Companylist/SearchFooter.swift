@@ -25,16 +25,16 @@ class SearchFooter: UIView {
     }
     
     func setNotFiltering(_ totalItemCount: Int) {
-        label.text = "\(totalItemCount) Companies"
+        label.text = "\(totalItemCount) Firmen"
     }
     
     func setIsFilteringToShow(filteredItemCount: Int, of totalItemCount: Int) {
         if (filteredItemCount == totalItemCount) {
             setNotFiltering(totalItemCount)
         } else if (filteredItemCount == 0) {
-            label.text = "No Result"
+            label.text = "Kein Ergebnis"
         } else {
-            label.text = "\(filteredItemCount) of \(totalItemCount) Companies"
+            label.text = "\(filteredItemCount) von \(totalItemCount) Firmen"
         }
     }
 }
