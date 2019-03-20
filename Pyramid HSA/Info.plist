@@ -26,6 +26,14 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
+			<string>layers</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Firmen</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.pekez.penta.show.companies</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
 			<string>training</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Events</string>
@@ -33,12 +41,12 @@
 			<string>com.pekez.penta.show.events</string>
 		</dict>
 		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>layers</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Firmen</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>com.pekez.penta.show.companies</string>
+			<string>com.pekez.penta.show.map</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Anfahrt</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>map</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

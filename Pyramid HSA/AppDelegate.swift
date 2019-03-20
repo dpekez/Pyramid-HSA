@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     enum QuickAction: String {
         case companies = "com.pekez.penta.show.companies"
         case events = "com.pekez.penta.show.events"
+        case map = "com.pekez.penta.show.map"
         
         init?(identifier: String) {
             self.init(rawValue: identifier)
@@ -50,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBarController.selectedIndex = 1
         case .events:
             tabBarController.selectedIndex = 2
+        case .map:
+            tabBarController.selectedIndex = 3
         }
         
         return true
