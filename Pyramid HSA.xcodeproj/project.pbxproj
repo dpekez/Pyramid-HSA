@@ -13,6 +13,7 @@
 		7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86321A49FA400DA424D /* FilterTableViewController.swift */; };
 		7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86521A4B6E900DA424D /* UserDefaultsController.swift */; };
 		7722343E223FFD9300219CEC /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 7722343D223FFD9300219CEC /* CompanyDetails.json */; };
+		772234412242492500219CEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772234402242492500219CEC /* MapViewController.swift */; };
 		7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */; };
 		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
 		7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
@@ -85,6 +86,7 @@
 		7721A86321A49FA400DA424D /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		7722343D223FFD9300219CEC /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
+		772234402242492500219CEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
 		7757CE2521CD963E00DDF260 /* PyramidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidColor.swift; sourceTree = "<group>"; };
@@ -116,7 +118,6 @@
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
 		77F3D04C2219CDE800704DBA /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
-		77F3D04E221AB55A00704DBA /* map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +159,14 @@
 				7722343D223FFD9300219CEC /* CompanyDetails.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7722343F2242490100219CEC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				772234402242492500219CEC /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		7757CE2E21CFBD9100DDF260 /* Frameworks */ = {
@@ -223,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				776E035E21919B6700989FB1 /* AppDelegate.swift */,
+				7722343F2242490100219CEC /* Map */,
 				777246CA221369A100C40074 /* Events */,
 				77CC962E21A203B00048CF38 /* Companydetail */,
 				77CC962D21A2032B0048CF38 /* Companylist */,
@@ -280,7 +290,6 @@
 		77CC963321A2180C0048CF38 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				77F3D04E221AB55A00704DBA /* map.swift */,
 				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
 				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
@@ -493,6 +502,7 @@
 				776ADD0021ADD66600173150 /* CompanyDetail.swift in Sources */,
 				77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */,
 				7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */,
+				772234412242492500219CEC /* MapViewController.swift in Sources */,
 				77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */,
 				777246CE2213714800C40074 /* EventCollectionViewCell.swift in Sources */,
 				776E036121919B6700989FB1 /* HomeViewController.swift in Sources */,
