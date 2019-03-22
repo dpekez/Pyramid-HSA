@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aH6-0Y-93p">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bsj-zm-W5i">
                                                 <rect key="frame" x="27.5" y="326" width="320" height="202.5"/>
@@ -61,7 +61,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-ev-l8d">
-                                                <rect key="frame" x="27.5" y="620" width="320" height="60"/>
+                                                <rect key="frame" x="27.5" y="600" width="320" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pLq-gb-JDh">
                                                         <rect key="frame" x="270" y="10" width="40" height="40"/>
@@ -70,6 +70,11 @@
                                                             <constraint firstAttribute="height" constant="40" id="btn-Az-NYa"/>
                                                         </constraints>
                                                         <state key="normal" image="info"/>
+                                                        <connections>
+                                                            <segue destination="C1u-Nj-fgO" kind="popoverPresentation" popoverAnchorView="pLq-gb-JDh" id="Plt-16-RTz">
+                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                            </segue>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctr-sT-2BE" userLabel="settings">
                                                         <rect key="frame" x="210" y="10" width="40" height="40"/>
@@ -119,12 +124,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GFW-ev-l8d" secondAttribute="bottom" constant="90" id="5PD-W2-LY6"/>
                                             <constraint firstItem="bsj-zm-W5i" firstAttribute="top" secondItem="M4A-P5-vik" secondAttribute="bottom" constant="50" id="6Nl-Z0-VFV"/>
-                                            <constraint firstAttribute="bottom" secondItem="GFW-ev-l8d" secondAttribute="bottom" constant="80" id="CPq-UH-KTI"/>
                                             <constraint firstItem="Rvl-1Z-OXw" firstAttribute="top" secondItem="aH6-0Y-93p" secondAttribute="top" constant="60" id="NIP-E0-9J2"/>
                                             <constraint firstItem="M4A-P5-vik" firstAttribute="top" secondItem="Rvl-1Z-OXw" secondAttribute="bottom" constant="41" id="Odg-vI-COX"/>
                                             <constraint firstItem="bsj-zm-W5i" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="Pbm-Zs-7lM"/>
-                                            <constraint firstAttribute="height" constant="760" id="Pqb-B8-xYd"/>
+                                            <constraint firstAttribute="height" constant="750" id="Pqb-B8-xYd"/>
                                             <constraint firstItem="M4A-P5-vik" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="QwF-jc-udh"/>
                                             <constraint firstItem="GFW-ev-l8d" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="cmC-C9-Dbh"/>
                                             <constraint firstItem="Rvl-1Z-OXw" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="ul2-DQ-Mm2"/>
@@ -225,19 +230,106 @@
             </objects>
             <point key="canvasLocation" x="-2039.2" y="753.37331334332839"/>
         </scene>
+        <!--Imprint-->
+        <scene sceneID="8an-yN-O2G">
+            <objects>
+                <viewController id="C1u-Nj-fgO" userLabel="Imprint" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIB-0r-vid">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Impressum
+Firmenkontaktmesse Pyramid
+Hochschule für Angewandte Wissenschaften Augsburg
+
+An der Hochschule 1
+86161 Augsburg
+
+Tel: 0821 5586-3257
+Fax: 0821 5586-3142
+E-Mail: kontakt@pyramid-hsa.de
+
+Die Hochschule für angewandte Wissenschaften Augsburg ist eine Körperschaft des öffentlichen Rechts. Sie wird durch ihren Präsidenten Prof. Dr. Gordon Thomas Rohrmair gesetzlich vertreten.
+
+Umsatzsteuer-Identifikationsnummer
+Umsatzsteuer-Identifikationsnummer gem. § 27 Umsatzsteuergesetz (UStG): DE 811335517
+
+Copyright
+Firmenkontaktmesse Pyramid
+
+Technische Umsetzung
+Dejan Pekez
+dejan.pekez@hs-augsburg.de
+
+Rechtliche Hinweise
+1. Inhalt des Onlineangebotes
+Die Firmenkontaktmesse Pyramid übernimmt weder Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen, noch für das Ausbleiben jeglicher Art von technischer Störung. Haftungsansprüche, welche sich auf Schäden materieller oder ideeler Art beziehen, die durch Nutzung oder Nichtnutzung der angebotenen Informationen bzw. durch Nichtnutzung fehlerhafter oder unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden seitens der Firmenkontaktmesse Pyramid vorliegt.
+Alle Angebote sind freibleibend und unverbindlich. Die Firmenkontaktmesse Pyramid behält es sich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen
+
+2. Urheber- und Kennzeichenrecht
+Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechtes und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind.
+Das Urheberrecht für veröffentlichte, von der Firmenkontaktmesse Pyramid selbst erstellte Inhalte und Objekte bleibt allein bei der Firmenkontaktmesse Pyramid. Eine Vervielfältigung oder Verwendung solcher Grafiken und Texte in anderen elektronischen oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung der Firmenkontaktmesse Pyramid nicht gestattet.
+
+3. Verweise und Links
+Diese Website enthält auch Links oder Verweise auf Websites Dritter, die außerhalb des Verantwortungsbereiches der Firmenkontaktmesse Pyramid liegen. Die Firmenkontaktmesse Pyramid erklärt daher ausdrücklich, dass zum Zeitpunkt der Verlinkung die entsprechenden Seiten frei von illegalen Inhalten waren. Auf die aktuelle und zukünftige Gestaltung sowie die Inhalte der verlinkten Seiten hat die Firmenkontaktmesse Pyramid keinen Einfluss und distanziert sich daher ausdrücklich von allen Inhalten aller verlinkten Seiten. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde.
+
+4. Ressourcen
+Glyphen:
+Good Boy License / icons8.com
+Instagram und Facebook Logo:
+commons.wikimedia.org
+Eventbilder:
+Designed by katemangostar / www.freepik.com
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62m-T2-9l9" userLabel="x">
+                                <rect key="frame" x="315" y="40" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BE2-dY-IdF"/>
+                                    <constraint firstAttribute="width" constant="40" id="ewp-gf-zW7"/>
+                                </constraints>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <segue destination="WQg-iB-BF5" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="zGQ-gQ-TNv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bv9-1P-dpx" firstAttribute="top" secondItem="3zx-Lx-l5y" secondAttribute="top" constant="40" id="HMv-3u-lPE"/>
+                            <constraint firstItem="3zx-Lx-l5y" firstAttribute="trailing" secondItem="Bv9-1P-dpx" secondAttribute="trailing" id="Lfr-e8-f4C"/>
+                            <constraint firstItem="3zx-Lx-l5y" firstAttribute="trailing" secondItem="62m-T2-9l9" secondAttribute="trailing" constant="20" id="UxC-GC-oyb"/>
+                            <constraint firstItem="62m-T2-9l9" firstAttribute="top" secondItem="3zx-Lx-l5y" secondAttribute="top" constant="20" id="Y7N-UB-Z94"/>
+                            <constraint firstItem="Bv9-1P-dpx" firstAttribute="leading" secondItem="3zx-Lx-l5y" secondAttribute="leading" id="hhF-bB-vFR"/>
+                            <constraint firstAttribute="bottom" secondItem="Bv9-1P-dpx" secondAttribute="bottom" id="xgm-9k-MaH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3zx-Lx-l5y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRS-8h-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WQg-iB-BF5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1252" y="1585"/>
+        </scene>
         <!--Partner-->
         <scene sceneID="doa-ac-WM5">
             <objects>
                 <viewController title="Partner" id="t5Y-JV-b36" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FdG-Wz-1G0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTh-Cl-Knp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u57-UV-Npb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="940"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-UR-CfL">
                                                 <rect key="frame" x="39" y="60" width="297.5" height="677"/>
@@ -350,7 +442,7 @@
                                         <constraints>
                                             <constraint firstItem="FVQ-UR-CfL" firstAttribute="top" secondItem="u57-UV-Npb" secondAttribute="top" constant="60" id="Hhr-ju-OIP"/>
                                             <constraint firstItem="FVQ-UR-CfL" firstAttribute="centerX" secondItem="u57-UV-Npb" secondAttribute="centerX" id="YRI-iD-AB3"/>
-                                            <constraint firstAttribute="height" constant="1000" id="u8P-Wd-4Im"/>
+                                            <constraint firstAttribute="height" constant="940" id="u8P-Wd-4Im"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -370,44 +462,24 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWb-84-X9Z">
-                                <rect key="frame" x="127.5" y="780" width="120" height="50"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OSI-Bz-Od9">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-BA-40i">
-                                            <rect key="frame" x="26" y="10" width="68" height="30"/>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                            <state key="normal" title="Schließen"/>
-                                            <connections>
-                                                <segue destination="biy-84-xdO" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="kiO-qs-iUA"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="gX5-BA-40i" firstAttribute="centerY" secondItem="OSI-Bz-Od9" secondAttribute="centerY" id="auN-2g-3xI"/>
-                                        <constraint firstItem="gX5-BA-40i" firstAttribute="centerX" secondItem="OSI-Bz-Od9" secondAttribute="centerX" id="vcn-xQ-R7E"/>
-                                    </constraints>
-                                </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-ox-S9E" userLabel="x">
+                                <rect key="frame" x="315" y="40" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="1kL-cx-5jA"/>
-                                    <constraint firstAttribute="height" constant="50" id="EJe-Sn-pun"/>
+                                    <constraint firstAttribute="height" constant="40" id="U6L-LJ-yvT"/>
+                                    <constraint firstAttribute="width" constant="40" id="cnF-CS-K0D"/>
                                 </constraints>
-                                <blurEffect style="light"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </visualEffectView>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <segue destination="biy-84-xdO" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="suc-by-FPC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="P1Z-le-ng0" firstAttribute="top" secondItem="FdG-Wz-1G0" secondAttribute="top" id="8wX-cC-YYR"/>
-                            <constraint firstItem="zWb-84-X9Z" firstAttribute="centerX" secondItem="FdG-Wz-1G0" secondAttribute="centerX" id="NHj-hF-Vxj"/>
                             <constraint firstItem="P1Z-le-ng0" firstAttribute="leading" secondItem="FdG-Wz-1G0" secondAttribute="leading" id="Nbr-RB-1kj"/>
-                            <constraint firstItem="4Ka-0P-8ST" firstAttribute="bottom" secondItem="zWb-84-X9Z" secondAttribute="bottom" constant="20" id="Sh9-vf-e8D"/>
+                            <constraint firstItem="4Ka-0P-8ST" firstAttribute="trailing" secondItem="4FD-ox-S9E" secondAttribute="trailing" constant="20" id="XVG-38-0mc"/>
+                            <constraint firstItem="4FD-ox-S9E" firstAttribute="top" secondItem="P1Z-le-ng0" secondAttribute="bottom" constant="20" id="YM3-tV-BxM"/>
                             <constraint firstAttribute="bottom" secondItem="LTh-Cl-Knp" secondAttribute="bottom" id="a5K-Wy-Ra9"/>
                             <constraint firstItem="P1Z-le-ng0" firstAttribute="bottom" secondItem="4Ka-0P-8ST" secondAttribute="top" id="caa-y6-HSe"/>
                             <constraint firstItem="LTh-Cl-Knp" firstAttribute="leading" secondItem="4Ka-0P-8ST" secondAttribute="leading" id="fJ6-BU-iZ5"/>
@@ -417,12 +489,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ka-0P-8ST"/>
                     </view>
-                    <size key="freeformSize" width="375" height="850"/>
+                    <size key="freeformSize" width="375" height="800"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-pn-28R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="biy-84-xdO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1252" y="799"/>
+            <point key="canvasLocation" x="-1252" y="753"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="vhQ-Pv-cpM">
@@ -1117,6 +1189,7 @@
         <image name="abele" width="150" height="30.5"/>
         <image name="aldi" width="48" height="57.599998474121094"/>
         <image name="area" width="11.520000457763672" height="5.814000129699707"/>
+        <image name="cancel" width="30" height="30"/>
         <image name="digatus" width="100" height="20.5"/>
         <image name="dynamicengineering" width="100" height="30.5"/>
         <image name="erhardtleimer" width="150" height="30.5"/>
