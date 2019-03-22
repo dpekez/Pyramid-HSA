@@ -11,16 +11,42 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class EventsCollectionViewController: UICollectionViewController {
-    let eventHeader = ["Catch it if you can",
-                    "Workshop",
-                    "Torwandschießen",
-                    "Bewerbungsbilder"]
-    let eventBody = ["Kurzvorstellungsgespräche\n…",
-                    "Die perfekte Bewerbung\n…",
-                    "Treffe ins Loch und gewinne\n…",
-                    "Kostenlose Bewerbungsbilder\n…"]
-    let eventLocation = ["M1.02 (M-Gebäude)", "M1.01 (M-Gebäude)", "Zwischen W- und J-Bau", "Irgendwo"]
-    let eventImage = ["catchit", "workshop", "football", "shooting"]
+    let eventHeader = [
+        "Workshop",
+        "Workshop",
+        "Studentenversorgung",
+        "Gewinnspiel",
+        "Bewerbungsfotos",
+        "Jobwall",
+        "Catch it if you can"
+    ]
+    let eventBody = [
+        "Einsatz von virtuellen Techniken bei MAN Energy Solutions (Herr Knödler, MAN Energy Solutions)",
+        "Bewerbungs-ABC (Herr Owen / Frau Neamtu, Digatus IT Group AG)",
+        "Auch für die Verpflegung ist gesorgt",
+        "Bei unserem Gewinnspiel am FCA Stand warten viele großartige Preise auf dich",
+        "Ihr erhaltet kostenlose Bewerbungsfotos von einem professionellen Fotografen",
+        "An der Jobwall werden aktuelle Stellenangebote unserer Firmen veröffentlicht",
+        "Lerne in Kurzvorstellungsgesprächen viele spannende Firmen kennen"
+    ]
+    let eventLocation = [
+        "11:00 Uhr | M1.01",
+        "13:00 Uhr | M1.01",
+        "10-15 Uhr | L-Bau Foyer & W3.13",
+        "10-15 Uhr | Zwischen W- und J-Bau",
+        "10-15 Uhr | M 1.02",
+        "10-15 Uhr | Eingang M-Bau",
+        "Nur mit Anmeldung | W3.01"
+    ]
+    let eventImage = [
+        "workshop",
+        "bewerbung",
+        "food",
+        "football",
+        "shooting",
+        "jobs",
+        "catchit"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
