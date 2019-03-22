@@ -76,7 +76,7 @@ class CompaniesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let share = UITableViewRowAction(style: .normal, title: "Teilen …") { action, index in
-            var shareContent = "Schau mal was ich gerade für eine interessante Firma auf der Pyramid gefunden habe:\n"
+            var shareContent = "Diese Firma habe ich gerade auf der Pyramid gefunden:\n"
             
             if self.isSearching() {
                 shareContent += self.filteredCompanies[index.row].name + "\n"
@@ -88,7 +88,7 @@ class CompaniesTableViewController: UITableViewController {
             }
             
             shareContent += "\nDu hast die Pyramid-App noch nicht?\n"
-            shareContent += "Jetzt schnell für iOS oder Android herunterladen:\n"
+            shareContent += "Jetzt für iOS oder Android herunterladen:\n"
             shareContent += "iOS: https://itunes.apple.com/app/id1442865279"
             shareContent += "\nAndroid: ;)"
             
