@@ -65,6 +65,11 @@ class CompaniesTableViewController: UITableViewController {
         
         cell.nameLabel.text = company.name
         cell.logoImageView.image = UIImage(named: "\(company.id)")
+        
+        cell.backgroundColor = UIColor.white
+        if company.id == 274 || company.id == 296 {
+            cell.backgroundColor = PyramidColor.pyramidBrighterBlue
+        }
 
         return cell
     }
