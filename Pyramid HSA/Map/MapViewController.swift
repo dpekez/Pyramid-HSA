@@ -10,32 +10,59 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
-
     @IBOutlet weak var map: MKMapView!
-    var mapCam: MKMapCamera?
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         map.delegate = self
         setUpMap()
-        createPlacemark()
+        createPointAnnotation()
         createOverlay()
     }
     
-    private func setUpMap() {
-        let location = CLLocationCoordinate2DMake(48.3586, 10.9063)
-        let distance = CLLocationDistance(310)
-        let pitch = CGFloat(0)
-        let heading = CLLocationDirection(85)
-        
-        mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
-        
-        map.setCamera(mapCam!, animated: false)
-//        map.isUserInteractionEnabled = false;
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationAuthorizationStatus()
     }
     
-    func createPlacemark() {
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            map.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    private func setUpMap() {
+        let location = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+        let distance = CLLocationDistance(290)
+        let pitch = CGFloat(0)
+        let heading = CLLocationDirection(0)
         
+        let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
+        
+        map.setCamera(mapCam, animated: false)
+    }
+    
+    func createPointAnnotation() {
+        let annotationM = MKPointAnnotation()
+        let annotationL = MKPointAnnotation()
+        let annotationTentA = MKPointAnnotation()
+        let annotationTentB = MKPointAnnotation()
+        let annotationW = MKPointAnnotation()
+        
+        annotationM.coordinate = CLLocationCoordinate2D(latitude: 48.358564, longitude: 10.906355)
+        annotationL.coordinate = CLLocationCoordinate2D(latitude: 48.358908, longitude: 10.905958)
+        annotationTentA.coordinate = CLLocationCoordinate2D(latitude: 48.358602, longitude: 10.905878)
+        annotationTentB.coordinate = CLLocationCoordinate2D(latitude: 48.358860, longitude: 10.906377)
+        annotationW.coordinate = CLLocationCoordinate2D(latitude: 48.358496, longitude: 10.907053)
+        
+        map.addAnnotation(annotationM)
+        map.addAnnotation(annotationL)
+        map.addAnnotation(annotationTentA)
+        map.addAnnotation(annotationTentB)
+        map.addAnnotation(annotationW)
     }
     
     func createOverlay() {
@@ -84,9 +111,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let polygonRenderer = MKPolygonRenderer(overlay: overlay)
-        polygonRenderer.fillColor = PyramidColor.pyramidBrighterBlue.withAlphaComponent(0.5)
+        polygonRenderer.fillColor = PyramidColor.pyramidBrighterBlue.withAlphaComponent(0.3)
         polygonRenderer.strokeColor = PyramidColor.pyramidDarkBlue
-        polygonRenderer.lineWidth = 3
+        polygonRenderer.lineWidth = 2
         
         return polygonRenderer
     }
