@@ -7,23 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var countDownCircleView: CountdownCircleView!
+    @IBOutlet weak var map: MKMapView!
     
     @IBAction func pyramidHeader(_ sender: Any) {
         openURL(string: "https://www.pyramid-hsa.de")
     }
     @IBAction func hsaIcon(_ sender: Any) {
         openURL(string: "https://www.hs-augsburg.de")
-    }
-    
-    @IBAction func fbIcon(_ sender: Any) {
-        openURL(string: "https://www.facebook.com/Firmenkontaktmesse.Pyramid/")
-    }
-    
-    @IBAction func igIcon(_ sender: Any) {
-        openURL(string: "https://www.instagram.com/pyramid_hsa/")
     }
     
     @IBAction func partnerViewUnwindAction(unwindSegue: UIStoryboardSegue) {
