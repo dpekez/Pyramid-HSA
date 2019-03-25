@@ -138,6 +138,7 @@ class CountdownCircleView: UIView {
     private func setTitleLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
         label.font = UIFont.boldSystemFont(ofSize: 27)
+        label.textColor = PyramidColor.pyramidBlue
         label.text = "Countdown"
         addSubview(label)
     }
