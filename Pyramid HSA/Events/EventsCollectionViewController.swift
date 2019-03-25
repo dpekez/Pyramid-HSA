@@ -39,7 +39,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "Nur mit Anmeldung | W3.01"
     ]
     let eventImage = [
-        "workshop",
+        "virtual",
         "bewerbung",
         "food",
         "football",
