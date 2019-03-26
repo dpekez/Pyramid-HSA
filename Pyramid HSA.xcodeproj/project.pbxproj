@@ -13,7 +13,7 @@
 		7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86321A49FA400DA424D /* FilterTableViewController.swift */; };
 		7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86521A4B6E900DA424D /* UserDefaultsController.swift */; };
 		7722343E223FFD9300219CEC /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 7722343D223FFD9300219CEC /* CompanyDetails.json */; };
-		772234412242492500219CEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772234402242492500219CEC /* MapViewController.swift */; };
+		772234412242492500219CEC /* AvenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772234402242492500219CEC /* AvenueViewController.swift */; };
 		7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */; };
 		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
 		7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
@@ -39,6 +39,7 @@
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
 		77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
+		77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3856E224AD46300CE322F /* MapViewOverlays.swift */; };
 		77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +88,7 @@
 		7721A86321A49FA400DA424D /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		7722343D223FFD9300219CEC /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
-		772234402242492500219CEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		772234402242492500219CEC /* AvenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvenueViewController.swift; sourceTree = "<group>"; };
 		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
 		7757CE2521CD963E00DDF260 /* PyramidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidColor.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
 		77F3856D224ACB5D00CE322F /* hsa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hsa.gpx; sourceTree = "<group>"; };
+		77F3856E224AD46300CE322F /* MapViewOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewOverlays.swift; sourceTree = "<group>"; };
 		77F3D04C2219CDE800704DBA /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,12 +166,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7722343F2242490100219CEC /* Map */ = {
+		7722343F2242490100219CEC /* Avenue */ = {
 			isa = PBXGroup;
 			children = (
-				772234402242492500219CEC /* MapViewController.swift */,
+				772234402242492500219CEC /* AvenueViewController.swift */,
 			);
-			path = Map;
+			path = Avenue;
 			sourceTree = "<group>";
 		};
 		7757CE2E21CFBD9100DDF260 /* Frameworks */ = {
@@ -236,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				776E035E21919B6700989FB1 /* AppDelegate.swift */,
-				7722343F2242490100219CEC /* Map */,
+				7722343F2242490100219CEC /* Avenue */,
 				777246CA221369A100C40074 /* Events */,
 				77CC962E21A203B00048CF38 /* Companydetail */,
 				77CC962D21A2032B0048CF38 /* Companylist */,
@@ -302,6 +304,7 @@
 				7757CE2521CD963E00DDF260 /* PyramidColor.swift */,
 				7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */,
 				77F3D04C2219CDE800704DBA /* Countdown.swift */,
+				77F3856E224AD46300CE322F /* MapViewOverlays.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -512,7 +515,7 @@
 				776ADD0021ADD66600173150 /* CompanyDetail.swift in Sources */,
 				77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */,
 				7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */,
-				772234412242492500219CEC /* MapViewController.swift in Sources */,
+				772234412242492500219CEC /* AvenueViewController.swift in Sources */,
 				77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */,
 				777246CE2213714800C40074 /* EventCollectionViewCell.swift in Sources */,
 				77B249E62247B073000E9143 /* AboutTableViewController.swift in Sources */,
@@ -520,6 +523,7 @@
 				777246CC221369C100C40074 /* EventsCollectionViewController.swift in Sources */,
 				77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */,
 				7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */,
+				77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */,
 				77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,7 +33,7 @@
                                                         <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Fg-230">
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Fg-230" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="40.5" width="320" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="320" id="8b1-OH-oFs"/>
@@ -163,22 +163,22 @@
             </objects>
             <point key="canvasLocation" x="-2486" y="1646"/>
         </scene>
-        <!--Sonstiges-->
+        <!--About-->
         <scene sceneID="W2B-K1-CGc">
             <objects>
-                <tableViewController title="Sonstiges" id="Uii-5f-RaZ" customClass="AboutTableViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YeF-yk-k1h">
+                <tableViewController title="Sonstiges" id="Uii-5f-RaZ" userLabel="About" customClass="AboutTableViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YeF-yk-k1h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="TDo-Ab-jYV">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lqC-yj-4v9">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lqC-yj-4v9">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqC-yj-4v9" id="yz8-zM-LBN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-fs-xM1">
@@ -202,10 +202,10 @@
                             <tableViewSection id="ED7-AE-KDP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tEM-gX-aDj">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="111" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tEM-gX-aDj" id="IKL-4t-NIx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-3g-JTn">
@@ -225,10 +225,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eRX-I3-CdO">
-                                        <rect key="frame" x="0.0" y="171" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="151" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eRX-I3-CdO" id="tLN-Tb-G8f">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-Nt-bAT">
@@ -248,10 +248,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vqD-It-gMO">
-                                        <rect key="frame" x="0.0" y="221" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="191" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqD-It-gMO" id="U3d-ho-8D5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YC3-UK-F2u">
@@ -275,10 +275,10 @@
                             <tableViewSection id="TkI-NZ-1aV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ww3-vc-1Yz">
-                                        <rect key="frame" x="0.0" y="307" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ww3-vc-1Yz" id="4N7-Av-2g3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vff-J1-snu">
@@ -298,10 +298,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ths-hb-r4H">
-                                        <rect key="frame" x="0.0" y="357" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="307" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ths-hb-r4H" id="K8W-e0-5Qm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49W-VG-3jM">
@@ -325,10 +325,10 @@
                             <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (13) 🚀" id="Mbm-2l-RyY">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oh6-69-P3p">
-                                        <rect key="frame" x="0.0" y="443" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="383" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oh6-69-P3p" id="XfU-81-hom">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFo-2O-Ify">
@@ -373,7 +373,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Firmenkontaktmesse Pyramid
+                                <string key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
 
 An der Hochschule 1
@@ -414,7 +414,7 @@ Instagram und Facebook Logo:
 commons.wikimedia.org
 Eventbilder:
 Designed by katemangostar / www.freepik.com
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -439,11 +439,11 @@ Designed by katemangostar / www.freepik.com
             <objects>
                 <viewController title="Partner" id="t5Y-JV-b36" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FdG-Wz-1G0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTh-Cl-Knp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u57-UV-Npb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="940"/>
@@ -606,7 +606,7 @@ Designed by katemangostar / www.freepik.com
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ka-0P-8ST"/>
                     </view>
-                    <size key="freeformSize" width="375" height="800"/>
+                    <size key="freeformSize" width="375" height="900"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-pn-28R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="biy-84-xdO" userLabel="Exit" sceneMemberID="exit"/>
@@ -860,10 +860,10 @@ Designed by katemangostar / www.freepik.com
             </objects>
             <point key="canvasLocation" x="2772" y="1171"/>
         </scene>
-        <!--Firmen-->
+        <!--Companies-->
         <scene sceneID="yzf-3x-Tg7">
             <objects>
-                <tableViewController id="ywv-W6-6iE" customClass="CompaniesTableViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ywv-W6-6iE" userLabel="Companies" customClass="CompaniesTableViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pgp-ty-BW1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -961,10 +961,10 @@ Designed by katemangostar / www.freepik.com
             </objects>
             <point key="canvasLocation" x="-993" y="-82"/>
         </scene>
-        <!--Anfahrt-->
+        <!--Avenue-->
         <scene sceneID="Pio-VA-LRE">
             <objects>
-                <viewController id="c5n-fG-pme" customClass="MapViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c5n-fG-pme" userLabel="Avenue" customClass="AvenueViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="foz-Rt-RJN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1037,6 +1037,9 @@ Schülerstraße 1
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oN7-mr-zhH"/>
                                                 </constraints>
                                                 <state key="normal" title="Anfahrt Gebäude"/>
+                                                <connections>
+                                                    <action selector="buildingButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="z6G-ZW-xRQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-tv-trp">
                                                 <rect key="frame" x="8" y="403" width="82" height="30"/>
@@ -1045,6 +1048,9 @@ Schülerstraße 1
                                                     <constraint firstAttribute="height" constant="30" id="jbG-fW-Oad"/>
                                                 </constraints>
                                                 <state key="normal" title="Anfahrt Zelt"/>
+                                                <connections>
+                                                    <action selector="tentButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="Thf-qV-5vh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1108,14 +1114,15 @@ Schülerstraße 1
                         <viewLayoutGuide key="safeArea" id="2ZM-3E-ivd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Anfahrt" id="OUk-Kv-qFd">
-                        <barButtonItem key="rightBarButtonItem" image="compass" id="7uG-pg-qBk"/>
+                        <barButtonItem key="rightBarButtonItem" image="compass" id="7uG-pg-qBk">
+                            <connections>
+                                <action selector="navButton:" destination="c5n-fG-pme" id="Ww2-4H-J9r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="850"/>
                     <connections>
-                        <outlet property="buildingButton" destination="Zgs-g1-8Pa" id="mp8-Pj-13e"/>
                         <outlet property="map" destination="4v1-kW-4VM" id="jwn-Zf-2NY"/>
-                        <outlet property="navButton" destination="7uG-pg-qBk" id="S94-hx-6Po"/>
-                        <outlet property="tentButton" destination="2aj-tv-trp" id="GC1-BA-6GD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCY-l0-Qku" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1273,7 +1280,7 @@ Schülerstraße 1
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M1W-sb-baj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1494,6 +1501,6 @@ Schülerstraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ld7-hr-i8H"/>
+        <segue reference="oOd-Gh-ySv"/>
     </inferredMetricsTieBreakers>
 </document>
