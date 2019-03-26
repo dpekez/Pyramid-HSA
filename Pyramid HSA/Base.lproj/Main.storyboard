@@ -168,7 +168,7 @@
             <objects>
                 <tableViewController title="Sonstiges" id="Uii-5f-RaZ" customClass="AboutTableViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="YeF-yk-k1h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -357,7 +357,6 @@
                             <outlet property="delegate" destination="Uii-5f-RaZ" id="gbz-Od-YJ8"/>
                         </connections>
                     </tableView>
-                    <size key="freeformSize" width="375" height="1100"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dC-f8-hJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,7 +371,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <mutableString key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
@@ -423,7 +422,7 @@ Designed by katemangostar / www.freepik.com
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bv9-1P-dpx" firstAttribute="top" secondItem="3zx-Lx-l5y" secondAttribute="top" id="HMv-3u-lPE"/>
+                            <constraint firstItem="Bv9-1P-dpx" firstAttribute="top" secondItem="bIB-0r-vid" secondAttribute="top" id="HMv-3u-lPE"/>
                             <constraint firstItem="3zx-Lx-l5y" firstAttribute="trailing" secondItem="Bv9-1P-dpx" secondAttribute="trailing" id="Lfr-e8-f4C"/>
                             <constraint firstItem="Bv9-1P-dpx" firstAttribute="leading" secondItem="3zx-Lx-l5y" secondAttribute="leading" id="hhF-bB-vFR"/>
                             <constraint firstAttribute="bottom" secondItem="Bv9-1P-dpx" secondAttribute="bottom" id="xgm-9k-MaH"/>
