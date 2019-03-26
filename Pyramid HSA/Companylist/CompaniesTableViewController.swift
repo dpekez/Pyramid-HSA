@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class CompaniesTableViewController: UITableViewController {
     @IBOutlet weak var table: UITableView!
@@ -16,6 +17,8 @@ class CompaniesTableViewController: UITableViewController {
     var companies = [CompanyDetailRearranged]()
     var filteredCompanies = [CompanyDetailRearranged]()
     let searchController = UISearchController(searchResultsController: nil)
+    var counterForReview = 0
+    var hasAskedForReview = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,13 @@ class CompaniesTableViewController: UITableViewController {
         
         setUpSearchController()
         createCompanyListArray()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if !hasAskedForReview && counterForReview >= 5 {
+            hasAskedForReview = true
+            SKStoreReviewController.requestReview()
+        }
     }
     
     private func createCompanyListArray() {
@@ -171,6 +181,8 @@ class CompaniesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "companyDetailSegue" {
+            counterForReview += 1
+            
             let cell = sender as! UITableViewCell
             let myIndex = tableView.indexPath(for: cell)!
             let companyDetailVC = (segue.destination as! UINavigationController).topViewController as! CompanyDetailViewController
