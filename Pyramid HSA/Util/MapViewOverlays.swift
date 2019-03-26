@@ -1,37 +1,21 @@
 //
-//  MapViewController.swift
+//  MapViewOverlays.swift
 //  Pyramid HSA
 //
-//  Created by Dejan Pekez on 20.03.19.
+//  Created by Dejan Pekez on 26.03.19.
 //  Copyright © 2019 Dejan Pekez. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
-    @IBOutlet weak var map: MKMapView!
-    let locationManager = CLLocationManager()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        map.delegate = self
+class MapViewOverlays: MKMapView, MKMapViewDelegate {
+
+    override func awakeFromNib() {
+        delegate = self
         setUpMap()
         createPointAnnotation()
         createOverlay()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        checkLocationAuthorizationStatus()
-    }
-    
-    func checkLocationAuthorizationStatus() {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            map.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
     }
     
     private func setUpMap() {
@@ -42,9 +26,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
         
-        map.setCamera(mapCam, animated: false)
+        setCamera(mapCam, animated: false)
     }
-    
+
     func createPointAnnotation() {
         let annotationM = MKPointAnnotation()
         let annotationL = MKPointAnnotation()
@@ -58,11 +42,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotationTentB.coordinate = CLLocationCoordinate2D(latitude: 48.358860, longitude: 10.906377)
         annotationW.coordinate = CLLocationCoordinate2D(latitude: 48.358496, longitude: 10.907053)
         
-        map.addAnnotation(annotationM)
-        map.addAnnotation(annotationL)
-        map.addAnnotation(annotationTentA)
-        map.addAnnotation(annotationTentB)
-        map.addAnnotation(annotationW)
+        addAnnotation(annotationM)
+        addAnnotation(annotationL)
+        addAnnotation(annotationTentA)
+        addAnnotation(annotationTentB)
+        addAnnotation(annotationW)
     }
     
     func createOverlay() {
@@ -103,10 +87,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let polygonTentA = MKPolygon(coordinates: coordinatesTentA, count: coordinatesTentA.count)
         let polygonTentB = MKPolygon(coordinates: coordinatesTentB, count: coordinatesTentB.count)
         
-        map.addOverlay(polygonLM)
-        map.addOverlay(polygonW)
-        map.addOverlay(polygonTentA)
-        map.addOverlay(polygonTentB)
+        addOverlay(polygonLM)
+        addOverlay(polygonW)
+        addOverlay(polygonTentA)
+        addOverlay(polygonTentB)
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -118,13 +102,4 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return polygonRenderer
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
