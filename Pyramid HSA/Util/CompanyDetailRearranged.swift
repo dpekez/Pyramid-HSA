@@ -34,6 +34,8 @@ struct CompanyDetailRearranged {
     let workingStudentInfo: String
     var primaryContactDict = Dictionary<ContactDetails, String>()
     var secondaryContactDict = Dictionary<ContactDetails, String>()
+    let room: String
+    let standNumber: String
 }
 
 extension CompanyDetailRearranged {
@@ -88,6 +90,8 @@ extension CompanyDetailRearranged {
         secondaryContactDict[.mobileNumber] = intermediate.secondaryContactMobileNumber
         secondaryContactDict[.faxNumber] = intermediate.secondaryContactFaxNumber
         secondaryContactDict[.mail] = intermediate.secondaryContactMail
+        room = intermediate.room
+        standNumber = intermediate.standNumber
     }
 }
 

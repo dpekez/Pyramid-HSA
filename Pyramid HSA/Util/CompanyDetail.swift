@@ -57,6 +57,8 @@ struct CompanyDetail: Decodable {
     let secondaryContactMobileNumber: String
     let secondaryContactFaxNumber: String
     let secondaryContactMail: String
+    let room: String
+    let standNumber: String
 }
 
 extension CompanyDetail {
@@ -111,5 +113,7 @@ extension CompanyDetail {
         case secondaryContactMobileNumber =   "ansprechpartner_2_mobil"
         case secondaryContactFaxNumber =      "ansprechpartner_2_fax"
         case secondaryContactMail =           "ansprechpartner_2_email"
+        case room =                           "raum"
+        case standNumber =                    "standplatz"
     }
 }
