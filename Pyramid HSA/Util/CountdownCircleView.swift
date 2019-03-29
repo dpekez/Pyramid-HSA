@@ -9,13 +9,9 @@
 import UIKit
 
 class CountdownCircleView: UIView {
-    private var width = CGFloat()
-    private var height = CGFloat()
-    private var yPosCenter = CGFloat()
     private var xOffset = CGFloat()
-    private var circleRadius = CGFloat()
+    private var yCenter = CGFloat()
     private let barWidth: CGFloat = 4
-    private var timer = Timer()
     private let countdown = Countdown()
     private var secondsLabel = UILabel()
     private var minutesLabel = UILabel()
@@ -69,48 +65,50 @@ class CountdownCircleView: UIView {
     
     private let timeUnits: [TimeUnit] = [.days, .hours, .minutes, .seconds]
     
-    override func draw(_ rect: CGRect) {
-        width = bounds.width
-        height = bounds.height
-        xOffset = width / 4
-        circleRadius = height / 2
-        yPosCenter = height / 2
-        create()
+    override func awakeFromNib() {
+        xOffset = bounds.width / 4
+        yCenter = bounds.height / 2
+        if countdown.eventIsCommingUp() {
+            create()
+        }
     }
     
-    func create() {
-        if countdown.eventIsCommingUp() {
-            runTimer()
-            var circlePaths: [CGPath] = []
-            for i in 0...3 {
-                let runner = CGFloat(i)
-                let circlePath = createCircularPath(withXOffset: xOffset/2 + xOffset * runner)
-                circlePaths.append(circlePath)
-                let circleBackgroundShape = createShapeLayer(withPath: circlePath)
-                layer.addSublayer(circleBackgroundShape)
-                setHeaderLabel(withText: timeUnits[i].rawValue, atXPos: xOffset * runner)
-            }
-            setShapeLayer(withPath: circlePaths[0], forShape: &daysShapeLayer)
-            setShapeLayer(withPath: circlePaths[1], forShape: &hoursShapeLayer)
-            setShapeLayer(withPath: circlePaths[2], forShape: &minutesShapeLayer)
-            setShapeLayer(withPath: circlePaths[3], forShape: &secondsShapeLayer)
-            layer.addSublayer(secondsShapeLayer)
-            layer.addSublayer(minutesShapeLayer)
-            layer.addSublayer(hoursShapeLayer)
-            layer.addSublayer(daysShapeLayer)
-            setCountLabel(label: &daysLabel, atXPos: 0)
-            setCountLabel(label: &hoursLabel, atXPos: xOffset)
-            setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
-            setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
-        } else {
-            self.removeFromSuperview()
+    func updateProgress() {
+        secondsProgress = countdown.getSecondsDiff()
+        minutesProgress = countdown.getMinutesDiff()
+        hoursProgress = countdown.getHoursDiff()
+        daysProgress = countdown.getDaysDiff()
+    }
+    
+    private func create() {
+        var circlePaths: [CGPath] = []
+        for i in 0...3 {
+            let runner = CGFloat(i)
+            let circlePath = createCircularPath(withXOffset: xOffset/2 + xOffset * runner)
+            circlePaths.append(circlePath)
+            let circleBackgroundShape = createShapeLayer(withPath: circlePath)
+            layer.addSublayer(circleBackgroundShape)
+            setHeaderLabel(withText: timeUnits[i].rawValue, atXPos: xOffset * runner)
         }
+        setShapeLayer(withPath: circlePaths[0], forShape: &daysShapeLayer)
+        setShapeLayer(withPath: circlePaths[1], forShape: &hoursShapeLayer)
+        setShapeLayer(withPath: circlePaths[2], forShape: &minutesShapeLayer)
+        setShapeLayer(withPath: circlePaths[3], forShape: &secondsShapeLayer)
+        layer.addSublayer(secondsShapeLayer)
+        layer.addSublayer(minutesShapeLayer)
+        layer.addSublayer(hoursShapeLayer)
+        layer.addSublayer(daysShapeLayer)
+        setCountLabel(label: &daysLabel, atXPos: 0)
+        setCountLabel(label: &hoursLabel, atXPos: xOffset)
+        setCountLabel(label: &minutesLabel, atXPos: xOffset * 2)
+        setCountLabel(label: &secondsLabel, atXPos: xOffset * 3)
+        updateProgress()
     }
     
     private func createCircularPath(withXOffset offset: CGFloat) -> CGPath {
         return UIBezierPath.init(
-            arcCenter: CGPoint(x: offset, y: yPosCenter),
-            radius: circleRadius,
+            arcCenter: CGPoint(x: offset, y: yCenter),
+            radius: yCenter - barWidth / 2,
             startAngle: .pi * 1.25,
             endAngle: .pi * 1.75,
             clockwise: false
@@ -136,7 +134,7 @@ class CountdownCircleView: UIView {
     }
     
     private func setCountLabel(label: inout UILabel, atXPos xPos: CGFloat) {
-        label = UILabel(frame: CGRect(x: xPos, y: yPosCenter, width: xOffset, height: 18))
+        label = UILabel(frame: CGRect(x: xPos, y: yCenter, width: xOffset, height: 18))
         label.font = UIFont(name: label.font.fontName, size: 24)
         label.textColor = PyramidColor.pyramidMidBlue
         label.textAlignment = .center
@@ -150,21 +148,5 @@ class CountdownCircleView: UIView {
         label.textAlignment = .center
         label.text = text
         addSubview(label)
-    }
-    
-    private func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CountdownCircleView.updateProgress)), userInfo: nil, repeats: true)
-    }
-
-    @objc private func updateProgress() {
-        if !countdown.eventIsCommingUp() {
-            timer.invalidate()
-            self.removeFromSuperview()
-            return
-        }
-        secondsProgress = countdown.getSecondDiff()
-        minutesProgress = countdown.getMinuteDiff()
-        hoursProgress = countdown.getHourDiff()
-        daysProgress = countdown.getDayDiff()
     }
 }
