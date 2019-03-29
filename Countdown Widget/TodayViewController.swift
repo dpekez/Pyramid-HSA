@@ -11,12 +11,18 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var countDownLabel: UILabel!
-    @IBOutlet weak var circles: UIView!
+    @IBOutlet weak var circles: CountdownCircleView!
     let countdown = Countdown()
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabel()
+        
+        if countdown.eventIsCommingUp() {
+            runTimer()
+        } else {
+            setLabel()
+        }
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -29,18 +35,25 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.newData)
     }
     
-    private func setLabel() {
+    @objc private func setLabel() {
         if countdown.eventIsCommingUp() {
-            // nil
+            circles.updateProgress()
         } else if countdown.eventIsLive() {
-            countDownLabel.isHidden = false
-            circles.removeFromSuperview()
-            countDownLabel.text = "Viel Spaß bei der Pyramid \(countdown.eventYear)!"
+            labelor(string: "Viel Spaß bei der Pyramid \(countdown.eventYear)!")
         } else {
-            countDownLabel.isHidden = false
-            circles.removeFromSuperview()
-            countDownLabel.text = "Bis zum nächsten Mal!"
+            labelor(string: "Bis zum nächsten Mal!")
         }
+    }
+    
+    private func labelor(string: String) {
+        timer.invalidate()
+        circles.removeFromSuperview()
+        countDownLabel.isHidden = false
+        countDownLabel.text = string
+    }
+    
+    private func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.setLabel)), userInfo: nil, repeats: true)
     }
     
 }
