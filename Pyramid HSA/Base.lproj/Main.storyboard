@@ -348,7 +348,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (14) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
+                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (15) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oh6-69-P3p">
                                         <rect key="frame" x="0.0" y="383" width="375" height="40"/>
