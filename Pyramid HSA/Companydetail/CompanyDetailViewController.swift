@@ -58,8 +58,10 @@ class CompanyDetailViewController: UIViewController {
         trainingTextView.attributedText = detailViewParagraphs.buildTrainingParagraph()
         contactTextView.attributedText = detailViewParagraphs.buildContactParagraph()
         
-        roomButton.setTitle(companyDetail.room, for: .normal)
-        
+        roomButton.setTitle(
+            "Raum: " + companyDetail.room +
+            "\nStand-Nr.: " + companyDetail.standNumber, for: .normal
+        )
     }
     
     private func createGraph() {
