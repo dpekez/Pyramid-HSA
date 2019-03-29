@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,11 +66,35 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mir-Fo-crf">
+                                                <rect key="frame" x="315" y="285.5" width="40" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-bN-UHA">
+                                                        <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="worldwide_location"/>
+                                                        <connections>
+                                                            <action selector="mapCenterButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rng-5u-DUg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Uio-ly-WQE"/>
+                                                    <constraint firstAttribute="width" constant="40" id="gyS-0X-nCi"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="3U9-me-BFF" firstAttribute="leading" secondItem="aH6-0Y-93p" secondAttribute="leading" constant="20" id="IAX-C8-2QP"/>
                                             <constraint firstItem="O0c-Fg-230" firstAttribute="leading" secondItem="aH6-0Y-93p" secondAttribute="leading" constant="10" id="ILq-4y-hX4"/>
+                                            <constraint firstItem="mir-Fo-crf" firstAttribute="trailing" secondItem="O0c-Fg-230" secondAttribute="trailing" constant="-10" id="Par-rK-Te7"/>
                                             <constraint firstAttribute="height" constant="650" id="Pqb-B8-xYd"/>
                                             <constraint firstItem="Aoj-hc-3FO" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="QqL-fL-Rth"/>
                                             <constraint firstItem="Aoj-hc-3FO" firstAttribute="top" secondItem="aH6-0Y-93p" secondAttribute="top" constant="30" id="Rbl-p7-ZXz"/>
@@ -79,6 +102,7 @@
                                             <constraint firstItem="O0c-Fg-230" firstAttribute="top" secondItem="3U9-me-BFF" secondAttribute="bottom" constant="8" id="VJP-sc-DPV"/>
                                             <constraint firstItem="3U9-me-BFF" firstAttribute="top" secondItem="Aoj-hc-3FO" secondAttribute="bottom" constant="40" id="Vb4-K2-E4o"/>
                                             <constraint firstAttribute="trailing" secondItem="O0c-Fg-230" secondAttribute="trailing" constant="10" id="dLe-P6-m0G"/>
+                                            <constraint firstItem="O0c-Fg-230" firstAttribute="top" secondItem="mir-Fo-crf" secondAttribute="top" constant="-10" id="vkd-tP-TjX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -163,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2486" y="1646"/>
+            <point key="canvasLocation" x="-2487.1999999999998" y="1644.3778110944529"/>
         </scene>
         <!--About-->
         <scene sceneID="W2B-K1-CGc">
@@ -1102,13 +1126,39 @@ Schülerstraße 1
                                     <constraint firstItem="xa9-Xd-r0r" firstAttribute="leading" secondItem="Sax-LP-khE" secondAttribute="leading" constant="8" id="xh8-TU-Pfj"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze">
+                                <rect key="frame" x="325" y="74" width="40" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-bw-omK">
+                                        <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="worldwide_location"/>
+                                        <connections>
+                                            <action selector="centerMapButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="neF-Ur-YED"/>
+                                            <action selector="mapCenterButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CPz-pN-3Su"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="iuD-E9-EoV"/>
+                                    <constraint firstAttribute="height" constant="40" id="zkJ-js-1hS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="trailing" secondItem="2ZM-3E-ivd" secondAttribute="trailing" id="1gY-BS-k20"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="trailing" secondItem="foz-Rt-RJN" secondAttribute="trailing" id="5Lo-rp-KRW"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="leading" secondItem="2ZM-3E-ivd" secondAttribute="leading" id="DNm-yl-5TR"/>
+                            <constraint firstItem="QLh-a6-qze" firstAttribute="trailing" secondItem="4v1-kW-4VM" secondAttribute="trailing" constant="-10" id="Fwl-No-o4v"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="leading" secondItem="foz-Rt-RJN" secondAttribute="leading" id="Gt8-8J-vYD"/>
+                            <constraint firstItem="2ZM-3E-ivd" firstAttribute="top" secondItem="QLh-a6-qze" secondAttribute="top" constant="-10" id="PtF-Ad-4kU"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" id="U9d-c3-Gek"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="top" secondItem="foz-Rt-RJN" secondAttribute="top" id="ecz-Zk-vXl"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="top" secondItem="4v1-kW-4VM" secondAttribute="bottom" id="go2-zC-GQz"/>
@@ -1389,32 +1439,32 @@ Schülerstraße 1
                             </scrollView>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iog-FJ-jfm" userLabel="detail links">
                                 <rect key="frame" x="0.0" y="701" width="375" height="50"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JOV-Rk-LsQ">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JOV-Rk-LsQ" userLabel="footer">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-qV-9kx">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-qV-9kx" userLabel="phone">
                                             <rect key="frame" x="223" y="10" width="30" height="30"/>
                                             <state key="normal" image="phone"/>
                                             <connections>
                                                 <action selector="phoneButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="wpJ-B8-TOc"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJw-7S-pDz">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJw-7S-pDz" userLabel="nav">
                                             <rect key="frame" x="337" y="10" width="30" height="30"/>
                                             <state key="normal" image="car"/>
                                             <connections>
                                                 <action selector="navButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="F5o-k3-ZTZ"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-TA-6vU">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-TA-6vU" userLabel="mail">
                                             <rect key="frame" x="261" y="10" width="30" height="30"/>
                                             <state key="normal" image="mail"/>
                                             <connections>
                                                 <action selector="mailButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="28n-bN-frR"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pe-Lw-Axp">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pe-Lw-Axp" userLabel="www">
                                             <rect key="frame" x="299" y="10" width="30" height="30"/>
                                             <state key="normal" image="compass"/>
                                             <connections>
@@ -1437,7 +1487,7 @@ Schülerstraße 1
                                         <constraint firstItem="oHn-WH-SJD" firstAttribute="leading" secondItem="JOV-Rk-LsQ" secondAttribute="leading" constant="8" id="6sy-Po-gh5"/>
                                         <constraint firstItem="nJw-7S-pDz" firstAttribute="leading" secondItem="8pe-Lw-Axp" secondAttribute="trailing" constant="8" id="86b-bZ-3cC"/>
                                         <constraint firstAttribute="trailing" secondItem="nJw-7S-pDz" secondAttribute="trailing" constant="8" id="Jgg-ml-3c3"/>
-                                        <constraint firstItem="oqM-qV-9kx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oHn-WH-SJD" secondAttribute="trailing" constant="8" symbolic="YES" id="P04-tQ-cH1"/>
+                                        <constraint firstItem="oqM-qV-9kx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oHn-WH-SJD" secondAttribute="trailing" constant="10" id="P04-tQ-cH1"/>
                                         <constraint firstItem="oJf-TA-6vU" firstAttribute="leading" secondItem="oqM-qV-9kx" secondAttribute="trailing" constant="8" id="Tm4-XY-PnJ"/>
                                         <constraint firstItem="oHn-WH-SJD" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="UNe-tq-R4m"/>
                                         <constraint firstItem="8pe-Lw-Axp" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="bLe-ck-LdP"/>
@@ -1564,6 +1614,7 @@ Schülerstraße 1
         <image name="sortimo" width="100" height="38.5"/>
         <image name="training" width="30" height="30"/>
         <image name="vmm" width="100" height="31"/>
+        <image name="worldwide_location" width="30" height="30"/>
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
