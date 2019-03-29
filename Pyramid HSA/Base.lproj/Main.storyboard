@@ -44,7 +44,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </mapView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-hc-3FO">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-hc-3FO">
                                                 <rect key="frame" x="27.5" y="30" width="320" height="165"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvl-1Z-OXw">
@@ -60,7 +60,6 @@
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4A-P5-vik" customClass="CountdownCircleView" customModule="Pyramid_HSA" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="93" width="320" height="72"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="72" id="IZc-Eb-ptk"/>
                                                             <constraint firstAttribute="width" constant="320" id="vY4-8z-Kyd"/>
@@ -157,6 +156,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="countdownCircle" destination="M4A-P5-vik" id="ex0-wS-alI"/>
                         <outlet property="map" destination="O0c-Fg-230" id="yfK-Kw-wzC"/>
                         <outlet property="partnerButton" destination="lIi-NT-CUm" id="VaC-4c-xbY"/>
                     </connections>
