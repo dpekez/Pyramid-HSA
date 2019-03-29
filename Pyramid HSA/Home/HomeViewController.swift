@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var countDownCircleView: CountdownCircleView!
     @IBOutlet weak var map: MKMapView!
     
     @IBAction func pyramidHeader(_ sender: Any) {
@@ -27,11 +26,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countDownCircleView.create()
         partnerButton.setTitle("Unsere\nPartner", for: .normal)
     }
     
     private func openURL(string: String) {
-        UIApplication.shared.open(URL(string: string)!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: string) ?? URL(string: "https://www.duck.com")!, options: [:], completionHandler: nil)
     }
 }

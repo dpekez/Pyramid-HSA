@@ -14,6 +14,26 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var detailsTextView: UITextView!
     @IBOutlet weak var trainingTextView: UITextView!
     @IBOutlet weak var contactTextView: UITextView!
+
+    @IBOutlet weak var footer: UIVisualEffectView!
+    
+    @IBOutlet weak var roomButton: UIButton!
+    
+    @IBAction func roomButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func phoneButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func mailButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func wwwButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func navButton(_ sender: UIButton) {
+    }
+    
     
     var companyDetail: CompanyDetailRearranged!
     var detailViewParagraphs: DetailViewParagraphs!
@@ -32,10 +52,14 @@ class CompanyDetailViewController: UIViewController {
     }
     
     private func setOutlets() {
+        footer.isHidden = false
         topImage.image = UIImage(named: "\(companyDetail.id)")
         detailsTextView.attributedText = detailViewParagraphs.buildDetailParagraph()
         trainingTextView.attributedText = detailViewParagraphs.buildTrainingParagraph()
         contactTextView.attributedText = detailViewParagraphs.buildContactParagraph()
+        
+        roomButton.setTitle(companyDetail.room, for: .normal)
+        
     }
     
     private func createGraph() {

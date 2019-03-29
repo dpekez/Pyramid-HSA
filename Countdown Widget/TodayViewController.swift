@@ -11,6 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var circles: UIView!
     let countdown = Countdown()
     
     override func viewDidLoad() {
@@ -30,29 +31,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     private func setLabel() {
         if countdown.eventIsCommingUp() {
-            countDownLabel.text = "\(countdown.getDayDiff()) Days, \(countdown.getHourDiff()) Hours, \(countdown.getMinuteDiff()) Minutes"
+            // nil
         } else if countdown.eventIsLive() {
-            countDownLabel.text = "Have fun at Pyramid \(countdown.eventYear)!"
+            countDownLabel.isHidden = false
+            circles.removeFromSuperview()
+            countDownLabel.text = "Viel Spaß bei der Pyramid \(countdown.eventYear)!"
         } else {
-            countDownLabel.text = "See you next time!"
+            countDownLabel.isHidden = false
+            circles.removeFromSuperview()
+            countDownLabel.text = "Bis zum nächsten Mal!"
         }
     }
     
 }
-
-
-// var timer = Timer()
-//
-// func updateInfo() {
-//    strTimer.text = Date().description
-// }
-//
-// override func viewDidLoad() {
-//    super.viewDidLoad()
-//    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateInfo), userInfo: nil, repeats: true)
-//    RunLoop.main.add(timer, forMode: .commonModes)
-// }
-//
-// func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
-//    completionHandler(.newData)
-// }

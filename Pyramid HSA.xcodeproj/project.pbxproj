@@ -12,9 +12,11 @@
 		77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77104306220A258600344821 /* DetailViewParagraphs.swift */; };
 		7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86321A49FA400DA424D /* FilterTableViewController.swift */; };
 		7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86521A4B6E900DA424D /* UserDefaultsController.swift */; };
-		7722343E223FFD9300219CEC /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 7722343D223FFD9300219CEC /* CompanyDetails.json */; };
 		772234412242492500219CEC /* AvenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772234402242492500219CEC /* AvenueViewController.swift */; };
 		7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */; };
+		7744694B224D7D8700D64F61 /* CountdownCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246D02218B86600C40074 /* CountdownCircleView.swift */; };
+		7744694C224D7E8400D64F61 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
+		7744694D224D7E9400D64F61 /* PyramidFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */; };
 		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
 		7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
 		7757CE3021CFBD9100DDF260 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */; };
@@ -40,6 +42,7 @@
 		77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
 		77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3856E224AD46300CE322F /* MapViewOverlays.swift */; };
+		77F38571224BBE5400CE322F /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 77F38570224BBE5400CE322F /* CompanyDetails.json */; };
 		77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +90,6 @@
 		77104306220A258600344821 /* DetailViewParagraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewParagraphs.swift; sourceTree = "<group>"; };
 		7721A86321A49FA400DA424D /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
-		7722343D223FFD9300219CEC /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
 		772234402242492500219CEC /* AvenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvenueViewController.swift; sourceTree = "<group>"; };
 		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
 		77F3856D224ACB5D00CE322F /* hsa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hsa.gpx; sourceTree = "<group>"; };
 		77F3856E224AD46300CE322F /* MapViewOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewOverlays.swift; sourceTree = "<group>"; };
+		77F38570224BBE5400CE322F /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
 		77F3D04C2219CDE800704DBA /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +164,7 @@
 		7710A6FF21BD9FD0008DE062 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7722343D223FFD9300219CEC /* CompanyDetails.json */,
+				77F38570224BBE5400CE322F /* CompanyDetails.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -266,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				776E036021919B6700989FB1 /* HomeViewController.swift */,
-				777246D02218B86600C40074 /* CountdownCircleView.swift */,
 				77B249E52247B073000E9143 /* AboutTableViewController.swift */,
 			);
 			path = Home;
@@ -297,6 +299,7 @@
 		77CC963321A2180C0048CF38 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				777246D02218B86600C40074 /* CountdownCircleView.swift */,
 				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
 				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
@@ -463,7 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7722343E223FFD9300219CEC /* CompanyDetails.json in Resources */,
+				77F38571224BBE5400CE322F /* CompanyDetails.json in Resources */,
 				776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */,
 				770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */,
 				776E036621919B6700989FB1 /* Main.storyboard in Resources */,
@@ -477,7 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7744694B224D7D8700D64F61 /* CountdownCircleView.swift in Sources */,
 				7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */,
+				7744694C224D7E8400D64F61 /* PyramidColor.swift in Sources */,
+				7744694D224D7E9400D64F61 /* PyramidFaculty.swift in Sources */,
 				77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -802,7 +808,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -820,7 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DG8R32K4AA;
 				INFOPLIST_FILE = "$(SRCROOT)/pyramid hsa/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -841,7 +847,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DG8R32K4AA;
 				INFOPLIST_FILE = "$(SRCROOT)/pyramid hsa/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
