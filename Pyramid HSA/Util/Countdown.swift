@@ -28,19 +28,19 @@ class Countdown {
         endDate = calendar.date(from: endDateComponents)!
     }
     
-    func getDayDiff() -> Int {
+    func getDaysDiff() -> Int {
         return Calendar.current.dateComponents([.day], from: Date(), to: startDate).day ?? 0
     }
     
-    func getHourDiff() -> Int {
+    func getHoursDiff() -> Int {
         return Calendar.current.dateComponents([.day, .hour], from: Date(), to: startDate).hour ?? 0
     }
     
-    func getMinuteDiff() -> Int {
+    func getMinutesDiff() -> Int {
         return Calendar.current.dateComponents([.day, .hour, .minute], from: Date(), to: startDate).minute ?? 0
     }
     
-    func getSecondDiff() -> Int {
+    func getSecondsDiff() -> Int {
         return Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(), to: startDate).second ?? 0
     }
     
