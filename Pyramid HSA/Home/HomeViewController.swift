@@ -15,6 +15,10 @@ class HomeViewController: UIViewController {
     private var timer = Timer()
     private let countdown = Countdown()
     
+    @IBAction func mapCenterButton(_ sender: UIButton) {
+        setMapCamera()
+    }
+    
     @IBAction func pyramidHeader(_ sender: Any) {
         openURL(string: "https://www.pyramid-hsa.de")
     }
@@ -36,6 +40,19 @@ class HomeViewController: UIViewController {
         } else {
             countdownUpdate()
         }
+        
+        setMapCamera()
+    }
+    
+    private func setMapCamera() {
+        let location = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+        let distance = CLLocationDistance(290)
+        let pitch = CGFloat(0)
+        let heading = CLLocationDirection(0)
+        
+        let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
+        
+        map.setCamera(mapCam, animated: true)
     }
     
     private func openURL(string: String) {
