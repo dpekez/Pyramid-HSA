@@ -12,6 +12,10 @@ import MapKit
 class AvenueViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var map: MKMapView!
     
+    @IBAction func centerMapButton(_ sender: UIButton) {
+        setMapCamera()
+    }
+    
     @IBAction func navButton(_ sender: UIBarButtonItem) {
     }
     
@@ -26,7 +30,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         map.delegate = self
-        setUpMap()
+        setMapCamera()
         createOverlay()
         createTentWaypoint()
     }
@@ -44,7 +48,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    private func setUpMap() {
+    private func setMapCamera() {
         let location = CLLocationCoordinate2D(latitude: 48.3578, longitude: 10.9059)
         let distance = CLLocationDistance(1050)
         let pitch = CGFloat(0)
@@ -52,7 +56,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
         
         let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
         
-        map.setCamera(mapCam, animated: false)
+        map.setCamera(mapCam, animated: true)
     }
     
     func createTentWaypoint() {
