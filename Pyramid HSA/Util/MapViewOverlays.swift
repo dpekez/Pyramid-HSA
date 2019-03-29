@@ -13,20 +13,8 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
 
     override func awakeFromNib() {
         delegate = self
-        setUpMap()
         createPointAnnotation()
         createOverlay()
-    }
-    
-    private func setUpMap() {
-        let location = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
-        let distance = CLLocationDistance(290)
-        let pitch = CGFloat(0)
-        let heading = CLLocationDirection(0)
-        
-        let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
-        
-        setCamera(mapCam, animated: false)
     }
 
     func createPointAnnotation() {
