@@ -181,7 +181,7 @@
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="countdownCircle" destination="M4A-P5-vik" id="ex0-wS-alI"/>
-                        <outlet property="map" destination="O0c-Fg-230" id="yfK-Kw-wzC"/>
+                        <outlet property="mapView" destination="O0c-Fg-230" id="CEN-aR-1i3"/>
                         <outlet property="partnerButton" destination="lIi-NT-CUm" id="VaC-4c-xbY"/>
                     </connections>
                 </viewController>
@@ -637,7 +637,7 @@ Designed by katemangostar / www.freepik.com
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-pn-28R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="biy-84-xdO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="2015"/>
+            <point key="canvasLocation" x="-1660" y="2251"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="vhQ-Pv-cpM">
@@ -995,7 +995,7 @@ Designed by katemangostar / www.freepik.com
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="340" id="qXA-R2-iu4"/>
@@ -1057,12 +1057,12 @@ Schülerstraße 1
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgs-g1-8Pa">
-                                                <rect key="frame" x="8" y="373" width="118" height="30"/>
+                                                <rect key="frame" x="8" y="373" width="79" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="7ZY-49-Nct"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oN7-mr-zhH"/>
                                                 </constraints>
-                                                <state key="normal" title="Anfahrt Gebäude"/>
+                                                <state key="normal" title="Anmeldung"/>
                                                 <connections>
                                                     <action selector="buildingButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="z6G-ZW-xRQ"/>
                                                 </connections>
@@ -1174,7 +1174,7 @@ Schülerstraße 1
                     </navigationItem>
                     <size key="freeformSize" width="375" height="850"/>
                     <connections>
-                        <outlet property="map" destination="4v1-kW-4VM" id="jwn-Zf-2NY"/>
+                        <outlet property="mapView" destination="4v1-kW-4VM" id="x5x-IU-dFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCY-l0-Qku" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1329,7 +1329,7 @@ Schülerstraße 1
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M1W-sb-baj">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1342,7 +1342,7 @@ Schülerstraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGZ-dM-V7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="1941"/>
+            <point key="canvasLocation" x="1519" y="1964"/>
         </scene>
         <!--Company Detail View Controller-->
         <scene sceneID="dn2-hx-poc">
@@ -1528,7 +1528,7 @@ Schülerstraße 1
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqH-RM-l4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="2001"/>
+            <point key="canvasLocation" x="609" y="2088"/>
         </scene>
         <!--Events-->
         <scene sceneID="9U9-B2-zl5">
@@ -1618,6 +1618,6 @@ Schülerstraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TBs-sm-ehS"/>
+        <segue reference="ld7-hr-i8H"/>
     </inferredMetricsTieBreakers>
 </document>

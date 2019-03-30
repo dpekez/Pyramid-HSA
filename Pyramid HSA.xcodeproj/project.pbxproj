@@ -291,7 +291,6 @@
 			children = (
 				7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */,
 				77104306220A258600344821 /* DetailViewParagraphs.swift */,
-				7757CE2321CD6A6C00DDF260 /* CircularBars.swift */,
 			);
 			path = Companydetail;
 			sourceTree = "<group>";
@@ -300,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				777246D02218B86600C40074 /* CountdownCircleView.swift */,
+				7757CE2321CD6A6C00DDF260 /* CircularBars.swift */,
 				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
 				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
