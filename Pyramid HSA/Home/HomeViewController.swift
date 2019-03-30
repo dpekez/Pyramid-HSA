@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var mapView: MapViewOverlays!
     @IBOutlet weak var countdownCircle: CountdownCircleView!
     private var timer = Timer()
     private let countdown = Countdown()
@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         } else {
             countdownUpdate()
         }
-        
+        mapView.createPointAnnotation()
         setMapCamera()
     }
     
@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
         
         let mapCam = MKMapCamera(lookingAtCenter: location, fromDistance: distance, pitch: pitch, heading: heading)
         
-        map.setCamera(mapCam, animated: true)
+        mapView.setCamera(mapCam, animated: true)
     }
     
     private func openURL(string: String) {
