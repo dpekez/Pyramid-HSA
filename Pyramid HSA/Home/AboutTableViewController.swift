@@ -20,7 +20,7 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
     }
     
     @IBAction func aboutButton(_ sender: UIButton) {
-        openURL(string: "https://www.pyramid-hsa.de/team.php/")
+        openURL(string: "https://www.pyramid-hsa.de/team.php")
     }
     
     @IBAction func facebookButton(_ sender: UIButton) {
