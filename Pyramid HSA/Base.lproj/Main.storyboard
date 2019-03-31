@@ -32,7 +32,7 @@
                                                 <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Fg-230" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Fg-230" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="275.5" width="355" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="ql7-Ob-QbC"/>
@@ -61,13 +61,13 @@
                                                         <rect key="frame" x="0.0" y="93" width="320" height="72"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="72" id="IZc-Eb-ptk"/>
-                                                            <constraint firstAttribute="width" constant="320" id="vY4-8z-Kyd"/>
+                                                            <constraint firstAttribute="width" constant="320" id="fSf-ya-DFA"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mir-Fo-crf">
-                                                <rect key="frame" x="315" y="285.5" width="40" height="40"/>
+                                                <rect key="frame" x="315" y="515.5" width="40" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-bN-UHA">
                                                         <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -102,7 +102,7 @@
                                             <constraint firstItem="O0c-Fg-230" firstAttribute="top" secondItem="3U9-me-BFF" secondAttribute="bottom" constant="8" id="VJP-sc-DPV"/>
                                             <constraint firstItem="3U9-me-BFF" firstAttribute="top" secondItem="Aoj-hc-3FO" secondAttribute="bottom" constant="40" id="Vb4-K2-E4o"/>
                                             <constraint firstAttribute="trailing" secondItem="O0c-Fg-230" secondAttribute="trailing" constant="10" id="dLe-P6-m0G"/>
-                                            <constraint firstItem="O0c-Fg-230" firstAttribute="top" secondItem="mir-Fo-crf" secondAttribute="top" constant="-10" id="vkd-tP-TjX"/>
+                                            <constraint firstItem="O0c-Fg-230" firstAttribute="bottom" secondItem="mir-Fo-crf" secondAttribute="bottom" constant="20" id="uq5-gh-BUd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -386,7 +386,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dC-f8-hJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="1173"/>
+            <point key="canvasLocation" x="-1660" y="1310"/>
         </scene>
         <!--Imprint-->
         <scene sceneID="8an-yN-O2G">
@@ -399,7 +399,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Firmenkontaktmesse Pyramid
+                                <mutableString key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
 
 An der Hochschule 1
@@ -417,7 +417,7 @@ Umsatzsteuer-Identifikationsnummer gem. § 27 Umsatzsteuergesetz (UStG): DE 8113
 Copyright
 Firmenkontaktmesse Pyramid
 
-Technische Umsetzung App
+Appentwicklung/Design:
 Dejan Pekez
 dejan.pekez@hs-augsburg.de
 
@@ -436,11 +436,9 @@ Diese Website enthält auch Links oder Verweise auf Websites Dritter, die außer
 4. Ressourcen
 Glyphen:
 Good Boy License / icons8.com
-Instagram und Facebook Logo:
-commons.wikimedia.org
 Eventbilder:
 Designed by katemangostar / www.freepik.com
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -458,7 +456,7 @@ Designed by katemangostar / www.freepik.com
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRS-8h-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-908" y="1171"/>
+            <point key="canvasLocation" x="-876" y="1309"/>
         </scene>
         <!--Partner-->
         <scene sceneID="doa-ac-WM5">
@@ -637,7 +635,7 @@ Designed by katemangostar / www.freepik.com
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-pn-28R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="biy-84-xdO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="2251"/>
+            <point key="canvasLocation" x="-1660" y="2141"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="vhQ-Pv-cpM">
@@ -884,7 +882,7 @@ Designed by katemangostar / www.freepik.com
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35N-GN-X4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iiz-CV-f6U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2772" y="1171"/>
+            <point key="canvasLocation" x="2730" y="1307"/>
         </scene>
         <!--Companies-->
         <scene sceneID="yzf-3x-Tg7">
@@ -964,7 +962,7 @@ Designed by katemangostar / www.freepik.com
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgh-MU-oMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="1173"/>
+            <point key="canvasLocation" x="1908" y="1308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -995,7 +993,7 @@ Designed by katemangostar / www.freepik.com
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="340" id="qXA-R2-iu4"/>
@@ -1127,7 +1125,7 @@ Schülerstraße 1
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze">
-                                <rect key="frame" x="325" y="74" width="40" height="40"/>
+                                <rect key="frame" x="325" y="280" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-bw-omK">
                                         <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -1158,7 +1156,7 @@ Schülerstraße 1
                             <constraint firstItem="Sax-LP-khE" firstAttribute="leading" secondItem="2ZM-3E-ivd" secondAttribute="leading" id="DNm-yl-5TR"/>
                             <constraint firstItem="QLh-a6-qze" firstAttribute="trailing" secondItem="4v1-kW-4VM" secondAttribute="trailing" constant="-10" id="Fwl-No-o4v"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="leading" secondItem="foz-Rt-RJN" secondAttribute="leading" id="Gt8-8J-vYD"/>
-                            <constraint firstItem="2ZM-3E-ivd" firstAttribute="top" secondItem="QLh-a6-qze" secondAttribute="top" constant="-10" id="PtF-Ad-4kU"/>
+                            <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="QLh-a6-qze" secondAttribute="bottom" constant="20" id="PtF-Ad-4kU"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" id="U9d-c3-Gek"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="top" secondItem="foz-Rt-RJN" secondAttribute="top" id="ecz-Zk-vXl"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="top" secondItem="4v1-kW-4VM" secondAttribute="bottom" id="go2-zC-GQz"/>
@@ -1166,7 +1164,7 @@ Schülerstraße 1
                         <viewLayoutGuide key="safeArea" id="2ZM-3E-ivd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Anfahrt" id="OUk-Kv-qFd">
-                        <barButtonItem key="rightBarButtonItem" image="compass" id="7uG-pg-qBk">
+                        <barButtonItem key="rightBarButtonItem" image="paper_plane" id="7uG-pg-qBk">
                             <connections>
                                 <action selector="navButton:" destination="c5n-fG-pme" id="Ww2-4H-J9r"/>
                             </connections>
@@ -1179,7 +1177,7 @@ Schülerstraße 1
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCY-l0-Qku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-504"/>
+            <point key="canvasLocation" x="1113" y="-505"/>
         </scene>
         <!--Events-->
         <scene sceneID="DcM-3k-5Om">
@@ -1288,7 +1286,7 @@ Schülerstraße 1
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYK-yA-6Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="287"/>
+            <point key="canvasLocation" x="1113" y="287"/>
         </scene>
         <!--Firmen-->
         <scene sceneID="m51-7J-PcU">
@@ -1302,7 +1300,7 @@ Schülerstraße 1
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuC-de-1bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="1171"/>
+            <point key="canvasLocation" x="225" y="1645"/>
         </scene>
         <!--Companies-->
         <scene sceneID="snW-sl-gZR">
@@ -1321,7 +1319,7 @@ Schülerstraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zr-gv-V4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="1173"/>
+            <point key="canvasLocation" x="1113" y="1309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mAz-9R-P1g">
@@ -1333,13 +1331,16 @@ Schülerstraße 1
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="orh-Tf-lKy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="trq-P9-8xw" kind="relationship" relationship="rootViewController" id="jna-IF-TDB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGZ-dM-V7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1519" y="1964"/>
+            <point key="canvasLocation" x="1113" y="2036"/>
         </scene>
         <!--Company Detail View Controller-->
         <scene sceneID="dn2-hx-poc">
@@ -1440,34 +1441,6 @@ Schülerstraße 1
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-qV-9kx" userLabel="phone">
-                                            <rect key="frame" x="223" y="10" width="30" height="30"/>
-                                            <state key="normal" image="phone"/>
-                                            <connections>
-                                                <action selector="phoneButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="wpJ-B8-TOc"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJw-7S-pDz" userLabel="nav">
-                                            <rect key="frame" x="337" y="10" width="30" height="30"/>
-                                            <state key="normal" image="car"/>
-                                            <connections>
-                                                <action selector="navButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="F5o-k3-ZTZ"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-TA-6vU" userLabel="mail">
-                                            <rect key="frame" x="261" y="10" width="30" height="30"/>
-                                            <state key="normal" image="mail"/>
-                                            <connections>
-                                                <action selector="mailButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="28n-bN-frR"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pe-Lw-Axp" userLabel="www">
-                                            <rect key="frame" x="299" y="10" width="30" height="30"/>
-                                            <state key="normal" image="compass"/>
-                                            <connections>
-                                                <action selector="wwwButton:" destination="trq-P9-8xw" eventType="touchUpInside" id="l8M-bU-HLb"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oHn-WH-SJD">
                                             <rect key="frame" x="8" y="5" width="39" height="40"/>
                                             <constraints>
@@ -1480,17 +1453,9 @@ Schülerstraße 1
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="oqM-qV-9kx" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="1nD-WS-GJb"/>
                                         <constraint firstItem="oHn-WH-SJD" firstAttribute="leading" secondItem="JOV-Rk-LsQ" secondAttribute="leading" constant="8" id="6sy-Po-gh5"/>
-                                        <constraint firstItem="nJw-7S-pDz" firstAttribute="leading" secondItem="8pe-Lw-Axp" secondAttribute="trailing" constant="8" id="86b-bZ-3cC"/>
-                                        <constraint firstAttribute="trailing" secondItem="nJw-7S-pDz" secondAttribute="trailing" constant="8" id="Jgg-ml-3c3"/>
-                                        <constraint firstItem="oqM-qV-9kx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oHn-WH-SJD" secondAttribute="trailing" constant="10" id="P04-tQ-cH1"/>
-                                        <constraint firstItem="oJf-TA-6vU" firstAttribute="leading" secondItem="oqM-qV-9kx" secondAttribute="trailing" constant="8" id="Tm4-XY-PnJ"/>
                                         <constraint firstItem="oHn-WH-SJD" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="UNe-tq-R4m"/>
-                                        <constraint firstItem="8pe-Lw-Axp" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="bLe-ck-LdP"/>
-                                        <constraint firstItem="oJf-TA-6vU" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="jZI-KK-UEt"/>
-                                        <constraint firstItem="nJw-7S-pDz" firstAttribute="centerY" secondItem="JOV-Rk-LsQ" secondAttribute="centerY" id="vQ2-6y-0MH"/>
-                                        <constraint firstItem="8pe-Lw-Axp" firstAttribute="leading" secondItem="oJf-TA-6vU" secondAttribute="trailing" constant="8" id="ypd-3P-vtb"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oHn-WH-SJD" secondAttribute="trailing" constant="20" symbolic="YES" id="sfE-eA-sMU"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -1511,7 +1476,14 @@ Schülerstraße 1
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gzn-yw-wMR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hcf-pj-FI3"/>
+                    <navigationItem key="navigationItem" id="Hcf-pj-FI3">
+                        <rightBarButtonItems>
+                            <barButtonItem image="car" id="tY0-Vn-u1Q" userLabel="nav"/>
+                            <barButtonItem image="compass" id="iS5-y6-pvy" userLabel="www"/>
+                            <barButtonItem image="mail" id="OR5-1c-y5q" userLabel="mail"/>
+                            <barButtonItem image="phone" id="nvw-g0-XcX" userLabel="phone"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="contactTextView" destination="sn1-Ub-AOy" id="qxu-jO-rDj"/>
@@ -1525,7 +1497,7 @@ Schülerstraße 1
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqH-RM-l4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="2088"/>
+            <point key="canvasLocation" x="2335" y="2035"/>
         </scene>
         <!--Events-->
         <scene sceneID="9U9-B2-zl5">
@@ -1544,7 +1516,7 @@ Schülerstraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzw-a3-4KF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="287"/>
+            <point key="canvasLocation" x="225" y="287"/>
         </scene>
         <!--Home-->
         <scene sceneID="e1S-H8-jMq">
@@ -1582,7 +1554,7 @@ Schülerstraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh7-vJ-3wA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="-421"/>
+            <point key="canvasLocation" x="225" y="-422"/>
         </scene>
     </scenes>
     <resources>
@@ -1605,6 +1577,7 @@ Schülerstraße 1
         <image name="mail" width="30" height="30"/>
         <image name="man" width="300" height="109"/>
         <image name="map" width="30" height="30"/>
+        <image name="paper_plane" width="30" height="30"/>
         <image name="phone" width="30" height="30"/>
         <image name="proffile" width="100" height="40"/>
         <image name="radiofantasy" width="100" height="23"/>
@@ -1615,6 +1588,6 @@ Schülerstraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jMj-cR-Zj0"/>
+        <segue reference="TBs-sm-ehS"/>
     </inferredMetricsTieBreakers>
 </document>
