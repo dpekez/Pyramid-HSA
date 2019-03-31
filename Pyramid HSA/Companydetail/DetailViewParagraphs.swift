@@ -157,6 +157,44 @@ class DetailViewParagraphs {
         string.append(NSAttributedString(string: mailTitle, attributes: titleHeaderStyle))
         string.append(NSAttributedString(string: companyDetail.primaryContactDict[.mail]! + "\n", attributes: textStyle))
         
+        
+        
+        
+        
+        
+        string.append(NSAttributedString(string: personTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string:
+            companyDetail.secondaryContactDict[.prefix]! +
+                companyDetail.secondaryContactDict[.title]! +
+                companyDetail.secondaryContactDict[.firstName]! +
+                companyDetail.secondaryContactDict[.lastName]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: subdivisionTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.subdivision]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: officeTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.office]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: responsibilityTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.responsibility]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: phoneNumberTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.phoneNumber]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: mobileNumberTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.mobileNumber]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: faxNumberTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.faxNumber]! + "\n", attributes: textStyle))
+        
+        string.append(NSAttributedString(string: mailTitle, attributes: titleHeaderStyle))
+        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.mail]! + "\n", attributes: textStyle))
+        
+        
+        
+        
+        
+        
         return string
     }
     
