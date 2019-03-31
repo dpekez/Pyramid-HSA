@@ -22,19 +22,6 @@ class CompanyDetailViewController: UIViewController {
     @IBAction func roomButton(_ sender: UIButton) {
     }
     
-    @IBAction func phoneButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func mailButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func wwwButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func navButton(_ sender: UIButton) {
-    }
-    
-    
     var companyDetail: CompanyDetailRearranged!
     var detailViewParagraphs: DetailViewParagraphs!
     
