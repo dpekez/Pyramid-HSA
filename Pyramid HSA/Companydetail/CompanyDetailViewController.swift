@@ -14,12 +14,18 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var detailsTextView: UITextView!
     @IBOutlet weak var trainingTextView: UITextView!
     @IBOutlet weak var contactTextView: UITextView!
-
     @IBOutlet weak var footer: UIVisualEffectView!
-    
     @IBOutlet weak var roomButton: UIButton!
     
     @IBAction func roomButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func wwwButton(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: "Firmenwebseite", message: companyDetail.homepage, preferredStyle: .actionSheet)
+        let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in self.openURL(string: self.companyDetail.homepage)})
+        actionSheet.addAction(openAction)
+        actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
+        self.present(actionSheet, animated: true)
     }
     
     var companyDetail: CompanyDetailRearranged!
@@ -107,4 +113,23 @@ class CompanyDetailViewController: UIViewController {
      }
  */
     
+}
+
+extension CompanyDetailViewController {
+    private func openURL(string: String) {
+        let link = URL(string: "http://" + string)
+        if link != nil {
+            UIApplication.shared.open(link!, options: [:])
+        } else {
+            showURLFailAlert()
+        }
+    }
+}
+
+extension CompanyDetailViewController {
+    private func showURLFailAlert() {
+        let alert = UIAlertController(title: "Hoppla!", message: "Leider ist der Link nicht gültig.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
 }
