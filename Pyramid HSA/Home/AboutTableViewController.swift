@@ -16,7 +16,7 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
     }
     
     private func openURL(string: String) {
-        UIApplication.shared.open(URL(string: string)!, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: string)!, options: [:])
     }
     
     @IBAction func aboutButton(_ sender: UIButton) {
@@ -82,17 +82,14 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
         if let e = error?.localizedDescription {
             errorMsg = e
         } else {
-            errorMsg = "Bitte überprüfe deine Mail.app-Einstellungen und probiere es erneut."
+            errorMsg = #"Vermutlich ist "Mail" nicht konfiguriert. Bitte überprüfe deine Einstellungen und versuche es erneut."#
         }
         
         let alert = UIAlertController(title: "E-Mail kann nicht gesendet werden", message: errorMsg, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Schließen", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Schließen", style: .cancel))
         
-        self.present(alert, animated: true) { () -> Void in
-            alert.view.tintColor = PyramidColor.pyramidBlue
-        }
-        
+        self.present(alert, animated: true)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -101,11 +98,9 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
         if result == .sent {
             let alert = UIAlertController(title: "Danke für dein Feedback!", message: "🤠", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Schließen", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Schließen", style: .cancel))
             
-            self.present(alert, animated: true) { () -> Void in
-                alert.view.tintColor = PyramidColor.pyramidBlue
-            }
+            self.present(alert, animated: true)
         }
     }
     
