@@ -16,66 +16,72 @@ class DetailViewParagraphs {
     let titleHeaderStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.boldSystemFont(ofSize: 12)
     ]
+    let contactHeaderStyle: [NSAttributedString.Key: Any] = [
+        .font: UIFont.boldSystemFont(ofSize: 12),
+        .foregroundColor: PyramidColor.pyramidBlue
+    ]
     let textStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.systemFont(ofSize: 12)
     ]
     
     var companyDetail: CompanyDetailRearranged!
     
+    func createDetailLine(withHeader header: String, andDetail text: String) -> NSAttributedString {
+        let returnString = NSMutableAttributedString(string: header, attributes: titleHeaderStyle)
+        returnString.append(NSAttributedString(string: text + "\n", attributes: textStyle))
+        return returnString
+    }
+    
     func buildDetailParagraph() -> NSMutableAttributedString {
-        let detailSectionHeader = "Details" + "\n"
-        
-        let branchTitle = "Branchen" + "\n"
-        let productTitle = "Produkte" + "\n"
-        let subsidiaryTitle = "Standorte" + "\n"
-        let revenueTitle = "Umsatz" + "\n"
-        let employeeCountTitle = "Mitarbeiterzahl" + "\n"
-
+        let detailSectionHeader = "Details\n"
+        let adressTitle = "Adresse: "
+        let branchTitle = "Branchen: "
+        let productTitle = "Produkte: "
+        let subsidiaryTitle = "Standorte: "
+        let revenueTitle = "Umsatz: "
+        let employeeCountTitle = "Mitarbeiterzahl: "
         let string = NSMutableAttributedString(string: detailSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(NSAttributedString(string: branchTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.branch + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: adressTitle, andDetail:
+            companyDetail.street + " in " +
+            companyDetail.postalCode + " " +
+            companyDetail.city))
         
-        string.append(NSAttributedString(string: productTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.product + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: branchTitle, andDetail: companyDetail.branch))
         
-        string.append(NSAttributedString(string: subsidiaryTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.subsidiary + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: productTitle, andDetail: companyDetail.product))
         
-        string.append(NSAttributedString(string: revenueTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.revenue + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: subsidiaryTitle, andDetail: companyDetail.subsidiary))
         
-        string.append(NSAttributedString(string: employeeCountTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.employeeCount + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: revenueTitle, andDetail: revenueFormatter(companyDetail.revenue)))
+        
+        string.append(createDetailLine(withHeader: employeeCountTitle, andDetail: companyDetail.employeeCount))
         
         return string
     }
     
     func buildTrainingParagraph() -> NSMutableAttributedString {
         let trainingSectionHeader = "Training\n"
-        
-        let entryAsTitle = "Einstiegsmöglichkeiten\n"
-        let qualificationTitle = "Zusatzqualifikation\n"
-        let foreignCountryTitle = "Ausland\n"
+        let entryAsTitle = "Einstiegsmöglichkeiten: "
+        let qualificationTitle = "Zusatzqualifikation: "
+        let foreignCountryTitle = "Ausland: "
         let internshipTitle = "Praktika: "
         let internshipBenefitsTitle = "Praktika Vergütung: "
-        let internshipInfoTitle = "Praktika Info\n"
+        let internshipInfoTitle = "Praktika Info: "
         let thesisTitle = "Bachelor-/ Master-Thesis: "
         let thesisBenefitTitle = "Thesis Vergütung: "
         let workingStudentTitle = "Werkstudent: "
         let workingStudentBenefitTitle = "Werkstudent Vergütung: "
-        let workingStudentInfoTitle = "Werkstudent Info\n"
+        let workingStudentInfoTitle = "Werkstudent Info: "
         
         let string = NSMutableAttributedString(string: trainingSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(NSAttributedString(string: entryAsTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.entryAs + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: entryAsTitle, andDetail: companyDetail.entryAs))
         
-        string.append(NSAttributedString(string: qualificationTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.qualification + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: qualificationTitle, andDetail: companyDetail.qualification))
         
-        string.append(NSAttributedString(string: foreignCountryTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.foreignCountry + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: foreignCountryTitle, andDetail: companyDetail.foreignCountry))
+        //✔️☑️
         
         string.append(NSAttributedString(string: internshipTitle, attributes: titleHeaderStyle))
         string.append(NSAttributedString(string: companyDetail.internship + "\n", attributes: textStyle))
@@ -83,8 +89,7 @@ class DetailViewParagraphs {
         string.append(NSAttributedString(string: internshipBenefitsTitle, attributes: titleHeaderStyle))
         string.append(NSAttributedString(string: companyDetail.internshipBenefit + "\n", attributes: textStyle))
         
-        string.append(NSAttributedString(string: internshipInfoTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.internshipInfo + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: internshipInfoTitle, andDetail: companyDetail.internshipInfo))
         
         string.append(NSAttributedString(string: thesisTitle, attributes: titleHeaderStyle))
         string.append(NSAttributedString(string: companyDetail.thesis + "\n", attributes: textStyle))
@@ -96,106 +101,117 @@ class DetailViewParagraphs {
         string.append(NSAttributedString(string: companyDetail.workingStudent + "\n", attributes: textStyle))
         
         string.append(NSAttributedString(string: workingStudentBenefitTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.internshipBenefit + "\n", attributes: textStyle))
+        string.append(NSAttributedString(string: companyDetail.workingStudentBenefit + "\n", attributes: textStyle))
         
-        string.append(NSAttributedString(string: workingStudentInfoTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.workingStudentInfo + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: workingStudentInfoTitle, andDetail: companyDetail.workingStudentInfo))
         
         return string
     }
     
     func buildContactParagraph() -> NSMutableAttributedString {
-        let contactSectionHeader = "Kontakt" + "\n"
-        
-        let homepageTitle = "Homepage" + "\n"
-        let adressTitle = "Adresse" + "\n"
-        let personTitle = "Person" + "\n"
-        let subdivisionTitle = "Bereich" + "\n"
-        let officeTitle = "Posten" + "\n"
-        let responsibilityTitle = "Zuständig für" + "\n"
-        let phoneNumberTitle = "Telefon" + "\n"
-        let mobileNumberTitle = "Mobil" + "\n"
-        let faxNumberTitle = "Fax" + "\n"
-        let mailTitle = "Mail" + "\n"
+        let contactSectionHeader = "Ansprechpartner\n"
         
         let string = NSMutableAttributedString(string: contactSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(NSAttributedString(string: homepageTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.homepage + "\n", attributes: textStyle))
+        string.append(NSAttributedString(string: "Hauptansprechpartner\n", attributes: contactHeaderStyle))
+        string.append(contactBuilder(companyDetail.primaryContactDict))
         
-        string.append(NSAttributedString(string: adressTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string:
-            companyDetail.street + " in " +
-            companyDetail.postalCode + " " +
-            companyDetail.city + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: personTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string:
-            companyDetail.primaryContactDict[.prefix]! +
-            companyDetail.primaryContactDict[.title]! +
-            companyDetail.primaryContactDict[.firstName]! +
-            companyDetail.primaryContactDict[.lastName]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: subdivisionTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.subdivision]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: officeTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.office]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: responsibilityTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.responsibility]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: phoneNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.phoneNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: mobileNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.mobileNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: faxNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.faxNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: mailTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.primaryContactDict[.mail]! + "\n", attributes: textStyle))
-        
-        
-        
-        
-        
-        
-        string.append(NSAttributedString(string: personTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string:
-            companyDetail.secondaryContactDict[.prefix]! +
-                companyDetail.secondaryContactDict[.title]! +
-                companyDetail.secondaryContactDict[.firstName]! +
-                companyDetail.secondaryContactDict[.lastName]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: subdivisionTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.subdivision]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: officeTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.office]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: responsibilityTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.responsibility]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: phoneNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.phoneNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: mobileNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.mobileNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: faxNumberTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.faxNumber]! + "\n", attributes: textStyle))
-        
-        string.append(NSAttributedString(string: mailTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.secondaryContactDict[.mail]! + "\n", attributes: textStyle))
-        
-        
-        
-        
-        
+        if contactIsAvailable(with: companyDetail.secondaryContactDict[.firstName]!) {
+            string.append(NSAttributedString(string: "\nZweitansprechpartner\n", attributes: contactHeaderStyle))
+            string.append(contactBuilder(companyDetail.secondaryContactDict))
+        }
         
         return string
     }
+}
+
+extension DetailViewParagraphs {
+    func revenueFormatter(_ revenue: Int) -> String {
+        if revenue == 0 {
+            return ""
+        } else if revenue >= 1_000_000_000 {
+            var i = Float(revenue)
+            i = i / 1_000_000_000
+            return "\(i)".replacingOccurrences(of: ".", with: ",") + " Mrd. Euro"
+        } else if  revenue >= 1_000_000 {
+            var i = Float(revenue)
+            i = i / 1_000_000
+            return "\(i)".replacingOccurrences(of: ".", with: ",") + " Mio. Euro"
+        } else {
+            return "\(revenue) Euro"
+        }
+    }
     
+    func contactNameFormatter(_ details: [ContactDetails: String]) -> String {
+        let prefix = details[.prefix]!
+        let title = details[.title]!
+        let firstName = details[.firstName]!
+        let lastName = details[.lastName]!
+        var outputString = String()
+        
+        // take 1 as threshold since DB is garbled with "-" strings
+        if prefix.count > 1 {
+            outputString.append("\(prefix) ")
+        }
+        
+        if title.count > 1 {
+            outputString.append("\(title) ")
+        }
+        
+        if firstName.count > 1 {
+            outputString.append("\(firstName) ")
+        }
+        
+        if lastName.count > 1 {
+            outputString.append("\(lastName)")
+        }
+        
+        return outputString
+    }
+    
+    func trainingFormatter() {
+        
+    }
+}
+
+extension DetailViewParagraphs {
+    func contactIsAvailable(with firstName: String) -> Bool {
+        return firstName.count > 1
+    }
+}
+
+extension DetailViewParagraphs {
+    func contactBuilder(_ details: [ContactDetails: String]) -> NSAttributedString {
+        let personTitle = "Person: "
+        let subdivisionTitle = "Position: "
+        let phoneNumberTitle = "Telefon: "
+        let mobileNumberTitle = "Mobil: "
+        let faxNumberTitle = "Fax: "
+        let mailTitle = "Mail: "
+        let outputString = NSMutableAttributedString()
+        
+        outputString.append(createDetailLine(withHeader: personTitle, andDetail: contactNameFormatter(details)))
+        
+        if details[.subdivision]!.count > 1 {
+            outputString.append(createDetailLine(withHeader: subdivisionTitle, andDetail: details[.subdivision]!))
+        }
+        
+        if details[.phoneNumber]!.count > 1 {
+            outputString.append(createDetailLine(withHeader: phoneNumberTitle, andDetail: details[.phoneNumber]!))
+        }
+        
+        if details[.mobileNumber]!.count > 1 {
+            outputString.append(createDetailLine(withHeader: mobileNumberTitle, andDetail: details[.mobileNumber]!))
+        }
+        
+        if details[.faxNumber]!.count > 1 {
+            outputString.append(createDetailLine(withHeader: faxNumberTitle, andDetail: details[.faxNumber]!))
+        }
+        
+        if details[.mail]!.count > 1 {
+            outputString.append(createDetailLine(withHeader: mailTitle, andDetail: details[.mail]!))
+        }
+        
+        return outputString
+    }
 }
