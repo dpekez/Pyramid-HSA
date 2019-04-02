@@ -27,12 +27,28 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         } else if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             polylineRenderer.strokeColor = PyramidColor.pyramidDarkBlue
-            polylineRenderer.lineWidth = 3
+            polylineRenderer.lineWidth = 2
             
             return polylineRenderer
         }
         
         return MKOverlayRenderer()
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+            // Make a fast exit if the annotation is the `MKUserLocation`, as it's not an annotation view we wish to customize.
+            return nil
+        }
+        
+//        var annotationView: MKAnnotationView?
+        
+        return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let rightButton = UIButton(type: .detailDisclosure)
+        view.rightCalloutAccessoryView = rightButton
     }
     
     func createPointAnnotation() {
@@ -42,11 +58,25 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         let annotationTentA = MKPointAnnotation()
         let annotationTentB = MKPointAnnotation()
         
+        let blub = MKPinAnnotationView()
+        blub.animatesDrop = true
+        blub.pinTintColor = PyramidColor.pyramidBlue
+        blub.canShowCallout = true
+        let rightButton = UIButton(type: .detailDisclosure)
+        blub.rightCalloutAccessoryView = rightButton
+        
+        
         annotationL.coordinate = CLLocationCoordinate2D(latitude: 48.358908, longitude: 10.905958)
         annotationM.coordinate = CLLocationCoordinate2D(latitude: 48.358564, longitude: 10.906355)
         annotationW.coordinate = CLLocationCoordinate2D(latitude: 48.358496, longitude: 10.907053)
         annotationTentA.coordinate = CLLocationCoordinate2D(latitude: 48.358602, longitude: 10.905878)
         annotationTentB.coordinate = CLLocationCoordinate2D(latitude: 48.358860, longitude: 10.906377)
+        
+        annotationL.title = "L-Bau"
+        annotationM.title = "M-Bau"
+        annotationW.title = "W-Bau"
+        annotationTentA.title = "Zelt A"
+        annotationTentB.title = "Zelt B"
         
         addAnnotation(annotationL)
         addAnnotation(annotationM)
@@ -59,7 +89,9 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         let coordinatesL = [
             CLLocationCoordinate2D(latitude: 48.35875, longitude: 10.90542),
             CLLocationCoordinate2D(latitude: 48.35923, longitude: 10.90647),
-            CLLocationCoordinate2D(latitude: 48.35917, longitude: 10.90653),
+            CLLocationCoordinate2D(latitude: 48.35922, longitude: 10.90648),
+            CLLocationCoordinate2D(latitude: 48.35923, longitude: 10.90650),
+            CLLocationCoordinate2D(latitude: 48.35919, longitude: 10.90655),
             CLLocationCoordinate2D(latitude: 48.35916, longitude: 10.90650),
             CLLocationCoordinate2D(latitude: 48.35912, longitude: 10.90653),
             CLLocationCoordinate2D(latitude: 48.35866, longitude: 10.90552)
@@ -78,8 +110,8 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
             CLLocationCoordinate2D(latitude: 48.35833, longitude: 10.90582),
             CLLocationCoordinate2D(latitude: 48.35893, longitude: 10.90685),
             CLLocationCoordinate2D(latitude: 48.35890, longitude: 10.90690),
-            CLLocationCoordinate2D(latitude: 48.35892, longitude: 10.90694),
-            CLLocationCoordinate2D(latitude: 48.35887, longitude: 10.90700),
+            CLLocationCoordinate2D(latitude: 48.35892, longitude: 10.90695),
+            CLLocationCoordinate2D(latitude: 48.35888, longitude: 10.90703),
             CLLocationCoordinate2D(latitude: 48.35884, longitude: 10.90696),
             CLLocationCoordinate2D(latitude: 48.35878, longitude: 10.90705),
             CLLocationCoordinate2D(latitude: 48.35849, longitude: 10.90656),
