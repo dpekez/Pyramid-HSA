@@ -21,8 +21,8 @@ class EventsCollectionViewController: UICollectionViewController {
         "Catch it if you can"
     ]
     let eventBody = [
-        "Einsatz von virtuellen Techniken bei MAN Energy Solutions (Herr Knödler, MAN Energy Solutions)",
-        "Bewerbungs-ABC (Herr Owen / Frau Neamtu, Digatus IT Group AG)",
+        "Einsatz von virtuellen Techniken bei MAN Energy Solutions (Herr Tobias Knödler, MAN Energy Solutions)",
+        "Bewerbungs-ABC (Herr Florian Owen / Frau Jasmin Neamtu, Digatus IT Group AG)",
         "Auch für die Verpflegung ist gesorgt",
         "Bei unserem Gewinnspiel am FCA Stand warten viele großartige Preise auf dich",
         "Ihr erhaltet kostenlose Bewerbungsfotos von einem professionellen Fotografen",
