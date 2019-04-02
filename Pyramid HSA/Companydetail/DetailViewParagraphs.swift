@@ -47,15 +47,25 @@ class DetailViewParagraphs {
             companyDetail.postalCode + " " +
             companyDetail.city))
         
-        string.append(createDetailLine(withHeader: branchTitle, andDetail: companyDetail.branch))
+        if companyDetail.branch.count > 1 {
+            string.append(createDetailLine(withHeader: branchTitle, andDetail: companyDetail.branch))
+        }
         
-        string.append(createDetailLine(withHeader: productTitle, andDetail: companyDetail.product))
+        if companyDetail.product.count > 1 {
+            string.append(createDetailLine(withHeader: productTitle, andDetail: companyDetail.product))
+        }
         
-        string.append(createDetailLine(withHeader: subsidiaryTitle, andDetail: companyDetail.subsidiary))
+        if companyDetail.subsidiary.count > 1 {
+            string.append(createDetailLine(withHeader: subsidiaryTitle, andDetail: companyDetail.subsidiary))
+        }
         
-        string.append(createDetailLine(withHeader: revenueTitle, andDetail: revenueFormatter(companyDetail.revenue)))
+        if companyDetail.revenue > 0 {
+            string.append(createDetailLine(withHeader: revenueTitle, andDetail: revenueFormatter(companyDetail.revenue)))
+        }
         
-        string.append(createDetailLine(withHeader: employeeCountTitle, andDetail: companyDetail.employeeCount))
+        if companyDetail.employeeCount.count > 1 {
+            string.append(createDetailLine(withHeader: employeeCountTitle, andDetail: companyDetail.employeeCount))
+        }
         
         return string
     }
@@ -76,35 +86,37 @@ class DetailViewParagraphs {
         
         let string = NSMutableAttributedString(string: trainingSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(createDetailLine(withHeader: entryAsTitle, andDetail: companyDetail.entryAs))
+        if companyDetail.entryAs.count > 1 {
+            string.append(createDetailLine(withHeader: entryAsTitle, andDetail: companyDetail.entryAs))
+        }
         
-        string.append(createDetailLine(withHeader: qualificationTitle, andDetail: companyDetail.qualification))
+        if companyDetail.qualification.count > 1 {
+            string.append(createDetailLine(withHeader: qualificationTitle, andDetail: companyDetail.qualification))
+        }
         
-        string.append(createDetailLine(withHeader: foreignCountryTitle, andDetail: companyDetail.foreignCountry))
-        //✔️☑️
+        if companyDetail.foreignCountry.count > 1 {
+            string.append(createDetailLine(withHeader: foreignCountryTitle, andDetail: companyDetail.foreignCountry))
+        }
         
-        string.append(NSAttributedString(string: internshipTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.internship + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: internshipTitle, andDetail: trainingFormatter(companyDetail.internship)))
         
-        string.append(NSAttributedString(string: internshipBenefitsTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.internshipBenefit + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: internshipBenefitsTitle, andDetail: trainingFormatter(companyDetail.internshipBenefit)))
         
-        string.append(createDetailLine(withHeader: internshipInfoTitle, andDetail: companyDetail.internshipInfo))
+        if companyDetail.internshipInfo.count > 1 {
+            string.append(createDetailLine(withHeader: internshipInfoTitle, andDetail: companyDetail.internshipInfo))
+        }
         
-        string.append(NSAttributedString(string: thesisTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.thesis + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: thesisTitle, andDetail: trainingFormatter(companyDetail.thesis)))
         
-        string.append(NSAttributedString(string: thesisBenefitTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.thesisBenefit + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: thesisBenefitTitle, andDetail: trainingFormatter(companyDetail.thesisBenefit)))
         
-        string.append(NSAttributedString(string: workingStudentTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.workingStudent + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: workingStudentTitle, andDetail: trainingFormatter(companyDetail.workingStudent)))
         
-        string.append(NSAttributedString(string: workingStudentBenefitTitle, attributes: titleHeaderStyle))
-        string.append(NSAttributedString(string: companyDetail.workingStudentBenefit + "\n", attributes: textStyle))
+        string.append(createDetailLine(withHeader: workingStudentBenefitTitle, andDetail: trainingFormatter(companyDetail.workingStudentBenefit)))
         
-        string.append(createDetailLine(withHeader: workingStudentInfoTitle, andDetail: companyDetail.workingStudentInfo))
-        
+        if companyDetail.workingStudentInfo.count > 1 {
+            string.append(createDetailLine(withHeader: workingStudentInfoTitle, andDetail: companyDetail.workingStudentInfo))
+        }
         return string
     }
     
@@ -116,7 +128,7 @@ class DetailViewParagraphs {
         string.append(NSAttributedString(string: "Hauptansprechpartner\n", attributes: contactHeaderStyle))
         string.append(contactBuilder(companyDetail.primaryContactDict))
         
-        if contactIsAvailable(with: companyDetail.secondaryContactDict[.firstName]!) {
+        if companyDetail.secondaryContactDict[.firstName]!.count > 1 {
             string.append(NSAttributedString(string: "\nZweitansprechpartner\n", attributes: contactHeaderStyle))
             string.append(contactBuilder(companyDetail.secondaryContactDict))
         }
@@ -169,14 +181,12 @@ extension DetailViewParagraphs {
         return outputString
     }
     
-    func trainingFormatter() {
-        
-    }
-}
-
-extension DetailViewParagraphs {
-    func contactIsAvailable(with firstName: String) -> Bool {
-        return firstName.count > 1
+    func trainingFormatter(_ detail: String) -> String {
+        if detail == "1" {
+            return "✔️"
+        } else {
+            return "-"
+        }
     }
 }
 
