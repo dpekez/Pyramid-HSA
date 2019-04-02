@@ -40,8 +40,6 @@ struct CompanyDetail: Decodable {
     let primaryContactFirstName: String
     let primaryContactLastName: String
     let primaryContactSubdivision: String
-    let primaryContactOffice: String
-    let primaryContactResponsibility: String
     let primaryContactPhoneNumber: String
     let primaryContactMobileNumber: String
     let primaryContactFaxNumber: String
@@ -51,8 +49,6 @@ struct CompanyDetail: Decodable {
     let secondaryContactFirstName: String
     let secondaryContactLastName: String
     let secondaryContactSubdivision: String
-    let secondaryContactOffice: String
-    let secondaryContactResponsibility: String
     let secondaryContactPhoneNumber: String
     let secondaryContactMobileNumber: String
     let secondaryContactFaxNumber: String
@@ -95,9 +91,7 @@ extension CompanyDetail {
         case primaryContactTitle =            "ansprechpartner_1_titel"
         case primaryContactFirstName =        "ansprechpartner_1_vorname"
         case primaryContactLastName =         "ansprechpartner_1_nachname"
-        case primaryContactSubdivision =      "ansprechpartner_1_abteilung"
-        case primaryContactOffice =           "ansprechpartner_1_posten"
-        case primaryContactResponsibility =   "ansprechpartner_1_verantwortlich_fuer"
+        case primaryContactSubdivision =      "ansprechpartner_1_posten"
         case primaryContactPhoneNumber =      "ansprechpartner_1_telefon"
         case primaryContactMobileNumber =     "ansprechpartner_1_mobil"
         case primaryContactFaxNumber =        "ansprechpartner_1_fax"
@@ -107,8 +101,6 @@ extension CompanyDetail {
         case secondaryContactFirstName =      "ansprechpartner_2_vorname"
         case secondaryContactLastName =       "ansprechpartner_2_nachname"
         case secondaryContactSubdivision =    "ansprechpartner_2_posten"
-        case secondaryContactOffice =         "ansprechpartner_2_abteilung"
-        case secondaryContactResponsibility = "ansprechpartner_2_verantwortlich_fuer"
         case secondaryContactPhoneNumber =    "ansprechpartner_2_telefon"
         case secondaryContactMobileNumber =   "ansprechpartner_2_mobil"
         case secondaryContactFaxNumber =      "ansprechpartner_2_fax"

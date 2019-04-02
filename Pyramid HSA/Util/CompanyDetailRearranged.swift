@@ -19,7 +19,7 @@ struct CompanyDetailRearranged {
     let branch: String
     let product: String
     let subsidiary: String
-    let revenue: String
+    let revenue: Int
     let employeeCount: String
     let entryAs: String
     let qualification: String
@@ -55,7 +55,7 @@ extension CompanyDetailRearranged {
         branch =  intermediate.branch
         product = intermediate.product
         subsidiary = intermediate.subsidiary
-        revenue = intermediate.revenue
+        revenue = Int(intermediate.revenue)!
         employeeCount = intermediate.employeeCount
         entryAs = intermediate.entryAs
         qualification = intermediate.qualification
@@ -73,8 +73,6 @@ extension CompanyDetailRearranged {
         primaryContactDict[.firstName] = intermediate.primaryContactFirstName
         primaryContactDict[.lastName] = intermediate.primaryContactLastName
         primaryContactDict[.subdivision] = intermediate.primaryContactSubdivision
-        primaryContactDict[.office] = intermediate.primaryContactOffice
-        primaryContactDict[.responsibility] = intermediate.primaryContactResponsibility
         primaryContactDict[.phoneNumber] = intermediate.primaryContactPhoneNumber
         primaryContactDict[.mobileNumber] = intermediate.primaryContactMobileNumber
         primaryContactDict[.faxNumber] = intermediate.primaryContactFaxNumber
@@ -84,8 +82,6 @@ extension CompanyDetailRearranged {
         secondaryContactDict[.firstName] = intermediate.secondaryContactFirstName
         secondaryContactDict[.lastName] = intermediate.secondaryContactLastName
         secondaryContactDict[.subdivision] = intermediate.secondaryContactSubdivision
-        secondaryContactDict[.office] = intermediate.secondaryContactOffice
-        secondaryContactDict[.responsibility] = intermediate.secondaryContactResponsibility
         secondaryContactDict[.phoneNumber] = intermediate.secondaryContactPhoneNumber
         secondaryContactDict[.mobileNumber] = intermediate.secondaryContactMobileNumber
         secondaryContactDict[.faxNumber] = intermediate.secondaryContactFaxNumber
@@ -101,8 +97,6 @@ enum ContactDetails {
     case firstName
     case lastName
     case subdivision
-    case office
-    case responsibility
     case phoneNumber
     case mobileNumber
     case faxNumber
