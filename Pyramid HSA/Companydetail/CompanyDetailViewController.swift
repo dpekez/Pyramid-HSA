@@ -22,6 +22,12 @@ class CompanyDetailViewController: UIViewController {
     
     @IBAction func wwwButton(_ sender: UIBarButtonItem) {
         let actionSheet = UIAlertController(title: "Firmenwebseite", message: companyDetail.homepage, preferredStyle: .actionSheet)
+        
+        // make sure this works on iPad too
+        if let actionSheet = actionSheet.popoverPresentationController {
+            actionSheet.barButtonItem = sender
+        }
+        
         let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in self.openURL(string: self.companyDetail.homepage)})
         actionSheet.addAction(openAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
@@ -35,12 +41,15 @@ class CompanyDetailViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
         self.navigationItem.leftItemsSupplementBackButton = true
+        let lol = self.navigationItem.rightBarButtonItem
+        self.navigationItem.rightBarButtonItem = nil
         
         if companyDetail != nil {
             detailViewParagraphs = DetailViewParagraphs()
             detailViewParagraphs.companyDetail = companyDetail
             createGraph()
             setOutlets()
+            self.navigationItem.rightBarButtonItem = lol
         }
     }
     
