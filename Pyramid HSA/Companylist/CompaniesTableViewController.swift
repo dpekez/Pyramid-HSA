@@ -192,7 +192,7 @@ class CompaniesTableViewController: UITableViewController {
             
             let cell = sender as! UITableViewCell
             let myIndex = tableView.indexPath(for: cell)!
-            let companyDetailVC = (segue.destination as! UINavigationController).topViewController as! CompanyDetailViewController
+            let companyDetailVC = (segue.destination as! UINavigationController).topViewController as! CompanyDetailViewController  // we need this since a navVC is in between
             
             if isSearching() {
                 companyDetailVC.title = filteredCompanies[myIndex.row].name
@@ -202,7 +202,7 @@ class CompaniesTableViewController: UITableViewController {
                 companyDetailVC.companyDetail = companies[myIndex.row]
             }
         } else if segue.identifier == "filterSegue" {
-            let filterVC = segue.destination as! FilterTableViewController
+            let filterVC = (segue.destination as! UINavigationController).topViewController as! FilterTableViewController
             filterVC.updateHandler = {
                 self.createCompanyListArray()
                 self.tableView.reloadData()
