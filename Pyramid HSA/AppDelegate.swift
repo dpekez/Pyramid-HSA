@@ -21,16 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: QuickActions
     
-    enum QuickAction: String {
-        case companies = "com.pekez.penta.show.companies"
-        case events = "com.pekez.penta.show.events"
-        case map = "com.pekez.penta.show.map"
-        
-        init?(identifier: String) {
-            self.init(rawValue: identifier)
-        }
-    }
-    
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         completionHandler(handleQuickAction(shortcutItem: shortcutItem))
     }
@@ -56,5 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
+    }
+    
+    enum QuickAction: String {
+        case companies = "com.pekez.penta.show.companies"
+        case events = "com.pekez.penta.show.events"
+        case map = "com.pekez.penta.show.map"
+        
+        init?(identifier: String) {
+            self.init(rawValue: identifier)
+        }
     }
 }
