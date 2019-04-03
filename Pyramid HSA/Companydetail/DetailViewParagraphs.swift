@@ -139,16 +139,14 @@ class DetailViewParagraphs {
 
 extension DetailViewParagraphs {
     func revenueFormatter(_ revenue: Int) -> String {
-        if revenue == 0 {
-            return ""
-        } else if revenue >= 1_000_000_000 {
-            var i = Float(revenue)
-            i = i / 1_000_000_000
-            return "\(i)".replacingOccurrences(of: ".", with: ",") + " Mrd. Euro"
+        if revenue >= 1_000_000_000 {
+            let i = revenue / 1_000_000 // just get 3 decimals, no rounding
+            let f = Float(i) / 1_000    // get correct value for unit
+            return "\(f)".replacingOccurrences(of: ".", with: ",") + " Mrd. Euro"
         } else if  revenue >= 1_000_000 {
-            var i = Float(revenue)
-            i = i / 1_000_000
-            return "\(i)".replacingOccurrences(of: ".", with: ",") + " Mio. Euro"
+            let i = revenue / 1_000
+            let f = Float(i) / 1_000
+            return "\(f)".replacingOccurrences(of: ".", with: ",") + " Mio. Euro"
         } else {
             return "\(revenue) Euro"
         }
