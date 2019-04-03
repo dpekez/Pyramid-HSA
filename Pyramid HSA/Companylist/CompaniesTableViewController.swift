@@ -77,7 +77,7 @@ class CompaniesTableViewController: UITableViewController {
         cell.logoImageView.image = UIImage(named: "\(company.id)")
         
         cell.backgroundColor = UIColor.white
-        if company.id == 274 || company.id == 296 {
+        if company.id == 274 || company.id == 296 { // colourize premium partners
             cell.backgroundColor = PyramidColor.pyramidBrighterBlue
         }
 
@@ -103,6 +103,13 @@ class CompaniesTableViewController: UITableViewController {
             shareContent += "\nAndroid: ;)"
             
             let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
+            
+            // make sure this works on iPad too
+            if let activityViewController = activityViewController.popoverPresentationController {
+                activityViewController.sourceView = tableView
+                activityViewController.sourceRect = tableView.cellForRow(at: index)!.frame
+            }
+            
             self.present(activityViewController, animated: true, completion: nil)
         }
         share.backgroundColor = PyramidColor.pyramidBlue
