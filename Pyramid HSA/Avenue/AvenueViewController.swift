@@ -14,8 +14,23 @@ class AvenueViewController: UIViewController {
     @IBAction func centerMapButton(_ sender: UIButton) {
         setMapCamera()
     }
+    let gMaps = "https://goo.gl/maps/bda4HnWPQ5G2"
+    let aMaps = "https://maps.apple.com/?q=48.358685,10.907935&sll=48.358685,10.907935&sspn=0.001922,0.003246&t=m"
     
     @IBAction func navButton(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: nil, message: "Zur Firmenregistrierung navigieren", preferredStyle: .actionSheet)
+        
+        // make sure this works on iPad too
+        if let actionSheet = actionSheet.popoverPresentationController {
+            actionSheet.barButtonItem = sender
+        }
+        
+        let gMapsAction = UIAlertAction(title: "In Google Maps öffnen", style: .default, handler: {_ in self.openURL(string: self.gMaps)})
+        let aMapsAction = UIAlertAction(title: "In Apple Maps öffnen", style: .default, handler: {_ in self.openURL(string: self.aMaps)})
+        actionSheet.addAction(gMapsAction)
+        actionSheet.addAction(aMapsAction)
+        actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
+        self.present(actionSheet, animated: true)
     }
     
     @IBAction func buildingButton(_ sender: UIButton) {
@@ -29,6 +44,7 @@ class AvenueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setMapCamera()
+        mapView.createRegistrationPointAnnotation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,5 +71,24 @@ extension AvenueViewController {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+}
+
+extension AvenueViewController {
+    private func openURL(string: String) {
+        let link = URL(string: string)
+        if link != nil {
+            UIApplication.shared.open(link!, options: [:])
+        } else {
+            showURLFailAlert()
+        }
+    }
+}
+
+extension AvenueViewController {
+    private func showURLFailAlert() {
+        let alert = UIAlertController(title: "Hoppla!", message: "Leider ist der Link nicht gültig.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
     }
 }
