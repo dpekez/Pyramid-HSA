@@ -85,6 +85,14 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         addAnnotation(annotationTentB)
     }
     
+    func createRegistrationPointAnnotation() {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.35867, longitude: 10.90793)
+        annotation.title = "Anmeldung"
+        annotation.subtitle = "Firmenanmeldung"
+        addAnnotation(annotation)
+    }
+    
     private func createOverlay() {
         let coordinatesL = [
             CLLocationCoordinate2D(latitude: 48.35875, longitude: 10.90542),
