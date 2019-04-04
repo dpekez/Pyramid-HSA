@@ -15,18 +15,23 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         createOverlay()
     }
     
+    func moveCamera(to loc: CLLocationCoordinate2D, atDistance dist: CLLocationDistance, _ pitch: CGFloat = 0, _ heading: CLLocationDirection = 0) {
+        let mapCam = MKMapCamera(lookingAtCenter: loc, fromDistance: dist, pitch: pitch, heading: heading)
+        setCamera(mapCam, animated: true)
+    }
+    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolygon {
             let polygonRenderer = MKPolygonRenderer(overlay: overlay)
-            polygonRenderer.fillColor = PyramidColor.pyramidBrighterBlue.withAlphaComponent(0.3)
-            polygonRenderer.strokeColor = PyramidColor.pyramidDarkBlue
+            polygonRenderer.fillColor = UIColor.pyramidBrighterBlue.withAlphaComponent(0.3)
+            polygonRenderer.strokeColor = .pyramidDarkBlue
             polygonRenderer.lineWidth = 1
             
             return polygonRenderer
             
         } else if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = PyramidColor.pyramidDarkBlue
+            polylineRenderer.strokeColor = .pyramidDarkBlue
             polylineRenderer.lineWidth = 2
             
             return polylineRenderer
@@ -53,6 +58,7 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
     
     func createPointAnnotation() {
         let annotationL = MKPointAnnotation()
+        let annotationK = MKPointAnnotation()
         let annotationM = MKPointAnnotation()
         let annotationW = MKPointAnnotation()
         let annotationTentA = MKPointAnnotation()
@@ -60,25 +66,28 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         
         let blub = MKPinAnnotationView()
         blub.animatesDrop = true
-        blub.pinTintColor = PyramidColor.pyramidBlue
+        blub.pinTintColor = .pyramidBlue
         blub.canShowCallout = true
         let rightButton = UIButton(type: .detailDisclosure)
         blub.rightCalloutAccessoryView = rightButton
         
         
         annotationL.coordinate = CLLocationCoordinate2D(latitude: 48.358908, longitude: 10.905958)
+        annotationK.coordinate = CLLocationCoordinate2D(latitude: 48.358967, longitude: 10.906961)
         annotationM.coordinate = CLLocationCoordinate2D(latitude: 48.358564, longitude: 10.906355)
         annotationW.coordinate = CLLocationCoordinate2D(latitude: 48.358496, longitude: 10.907053)
         annotationTentA.coordinate = CLLocationCoordinate2D(latitude: 48.358602, longitude: 10.905878)
         annotationTentB.coordinate = CLLocationCoordinate2D(latitude: 48.358860, longitude: 10.906377)
         
         annotationL.title = "L-Bau"
+        annotationK.title = "K-Bau"
         annotationM.title = "M-Bau"
         annotationW.title = "W-Bau"
         annotationTentA.title = "Zelt A"
         annotationTentB.title = "Zelt B"
         
         addAnnotation(annotationL)
+        addAnnotation(annotationK)
         addAnnotation(annotationM)
         addAnnotation(annotationW)
         addAnnotation(annotationTentA)
@@ -88,9 +97,32 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
     func createRegistrationPointAnnotation() {
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: 48.35867, longitude: 10.90793)
-        annotation.title = "Anmeldung"
-        annotation.subtitle = "Firmenanmeldung"
+        annotation.title = "Anmeldepunkt"
         addAnnotation(annotation)
+    }
+    
+    func createParkingAnnotation() {
+        let annotation = MKPointAnnotation()
+        let annotation2 = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.352311, longitude: 10.906202)
+        annotation.title = "Parkplatz"
+        annotation.subtitle = "Frischstraße"
+        annotation2.coordinate = CLLocationCoordinate2D(latitude: 48.355245, longitude: 10.914821)
+        annotation2.title = "Parkplatz"
+        annotation2.subtitle = "Spickelbad"
+        addAnnotation(annotation)
+        addAnnotation(annotation2)
+    }
+    
+    func createPublicTransportAnnotation() {
+        let annotation = MKPointAnnotation()
+        let annotation2 = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.358190, longitude: 10.902142)
+        annotation.title = "Tramlinien 2 und 3"
+        annotation2.coordinate = CLLocationCoordinate2D(latitude: 48.355013, longitude: 10.901830)
+        annotation2.title = "Bahnhof"
+        addAnnotation(annotation)
+        addAnnotation(annotation2)
     }
     
     private func createOverlay() {
@@ -166,23 +198,4 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         addOverlay(polygonTentA)
         addOverlay(polygonTentB)
     }
-    
-    func createTentWaypoint() {
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 48.35554, longitude: 10.90401),
-            CLLocationCoordinate2D(latitude: 48.35664, longitude: 10.90633),
-            CLLocationCoordinate2D(latitude: 48.35689, longitude: 10.90601),
-            CLLocationCoordinate2D(latitude: 48.35752, longitude: 10.90442),
-            CLLocationCoordinate2D(latitude: 48.35782, longitude: 10.90435),
-            CLLocationCoordinate2D(latitude: 48.35785, longitude: 10.90506),
-            CLLocationCoordinate2D(latitude: 48.35796, longitude: 10.9053),
-            CLLocationCoordinate2D(latitude: 48.35832, longitude: 10.90531),
-            CLLocationCoordinate2D(latitude: 48.35832, longitude: 10.90573)
-        ]
-        
-        let polyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
-        
-        addOverlay(polyline)
-    }
-    
 }
