@@ -15,10 +15,14 @@ class CircularBars: UIView {
     private let barWidth: CGFloat = 8
     private let strokeStart: CGFloat = 0
     private let animationDuration: CFTimeInterval = 1
-    private let barBackgroundColor = PyramidColor.customGrey.cgColor
+    private let barBackgroundColor = UIColor.customGrey.cgColor
     private var interestRatings = [PyramidFaculty: CGFloat]()
-    private let interest: [PyramidFaculty] = [.architecture, .electricalEngineering, .design, .computerScience,
-                                      .mechanicalEngineering, .businessAdministration]
+    private let interest: [PyramidFaculty] = [
+        .architecture, .electricalEngineering, .design, .computerScience, .mechanicalEngineering, .businessAdministration
+    ]
+    private let colors: [UIColor] = [
+        .architecture, .electricalEngineering, .design, .computerScience, .mechanicalEngineering, .businessAdministration
+    ]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,9 +46,7 @@ class CircularBars: UIView {
         var stepper = 0
         for i in interest {
             let yPos = radiusOffset + radiusStep * CGFloat(stepper)
-            stepper += 1
-            
-            var color = PyramidColor.colorDict[i]!.cgColor
+            var color = colors[stepper].cgColor
             
             let circularPath = createCircularPath(withRadius: yPos)
             let shapeLayer = createShapeLayer(withPath: circularPath, color: color, strokeEnd: interestRatings[i]!, animated: true)
@@ -59,6 +61,7 @@ class CircularBars: UIView {
             layer.addSublayer(textLayer)
             layer.addSublayer(backgroundLayer)
             layer.addSublayer(shapeLayer)
+            stepper += 1
         }
     }
     
