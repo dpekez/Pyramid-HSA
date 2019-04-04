@@ -11,14 +11,14 @@ import UIKit
 class DetailViewParagraphs {
     let sectionHeaderStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.boldSystemFont(ofSize: 36),
-        .foregroundColor: PyramidColor.pyramidBlue
+        .foregroundColor: UIColor.pyramidBlue
     ]
     let titleHeaderStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.boldSystemFont(ofSize: 12)
     ]
     let contactHeaderStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.boldSystemFont(ofSize: 12),
-        .foregroundColor: PyramidColor.pyramidBlue
+        .foregroundColor: UIColor.pyramidBlue
     ]
     let textStyle: [NSAttributedString.Key: Any] = [
         .font: UIFont.systemFont(ofSize: 12)
@@ -75,12 +75,12 @@ class DetailViewParagraphs {
         let entryAsTitle = "Einstiegsmöglichkeiten: "
         let qualificationTitle = "Zusatzqualifikation: "
         let foreignCountryTitle = "Ausland: "
-        let internshipTitle = "Praktika: "
+        let internshipTitle = "\nPraktika: "
         let internshipBenefitsTitle = "Praktika Vergütung: "
         let internshipInfoTitle = "Praktika Info: "
-        let thesisTitle = "Bachelor-/ Master-Thesis: "
+        let thesisTitle = "\nBachelor-/ Master-Thesis: "
         let thesisBenefitTitle = "Thesis Vergütung: "
-        let workingStudentTitle = "Werkstudent: "
+        let workingStudentTitle = "\nWerkstudent: "
         let workingStudentBenefitTitle = "Werkstudent Vergütung: "
         let workingStudentInfoTitle = "Werkstudent Info: "
         
