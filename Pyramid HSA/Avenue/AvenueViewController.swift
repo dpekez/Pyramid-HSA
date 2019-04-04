@@ -11,8 +11,8 @@ import MapKit
 
 class AvenueViewController: UIViewController {
     let locationManager = CLLocationManager()
-    let gMaps = "https://www.google.de/maps/place/Hochschule+Augsburg/@48.3589748,10.9063944,18z/data=!4m5!3m4!1s0x0:0x8a16b7655d3bfdc5!8m2!3d48.3583307!4d10.9058189"
-    let aMaps = "https://maps.apple.com/?q=48.359260,10.906433&sll=48.359260,10.906433&sspn=0.001197,0.002547&t=m"
+    let gMaps = URL(string: "https://www.google.de/maps/place/Hochschule+Augsburg/@48.3589748,10.9063944,18z/data=!4m5!3m4!1s0x0:0x8a16b7655d3bfdc5!8m2!3d48.3583307!4d10.9058189")
+    let aMaps = URL(string: "https://maps.apple.com/?q=48.359260,10.906433&sll=48.359260,10.906433&sspn=0.001197,0.002547&t=m")
     let gMapsRegistration = ""
     let aMapsRegistration = ""
     let nearDist = CLLocationDistance(700)
@@ -51,8 +51,10 @@ class AvenueViewController: UIViewController {
             actionSheet.barButtonItem = sender
         }
         
-        let gMapsAction = UIAlertAction(title: "In „Google Maps“ öffnen", style: .default, handler: {_ in self.openURL(string: self.gMaps)})
-        let aMapsAction = UIAlertAction(title: "In „Karten“ öffnen", style: .default, handler: {_ in self.openURL(string: self.aMaps)})
+        let gMapsAction = UIAlertAction(title: "In „Google Maps“ öffnen", style: .default, handler: {_ in
+            UIApplication.shared.open(self.gMaps!, options: [:])})
+        let aMapsAction = UIAlertAction(title: "In „Karten“ öffnen", style: .default, handler: {_ in
+            UIApplication.shared.open(self.aMaps!, options: [:])})
         actionSheet.addAction(gMapsAction)
         actionSheet.addAction(aMapsAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
@@ -114,25 +116,6 @@ extension AvenueViewController {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
-    }
-    
-}
-
-extension AvenueViewController {
-    
-    private func openURL(string: String) {
-        let link = URL(string: string)
-        if link != nil {
-            UIApplication.shared.open(link!, options: [:])
-        } else {
-            showURLFailAlert()
-        }
-    }
-    
-    private func showURLFailAlert() {
-        let alert = UIAlertController(title: "Hoppla!", message: "Leider ist der Link nicht gültig.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true)
     }
     
 }
