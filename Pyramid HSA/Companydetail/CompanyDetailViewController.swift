@@ -17,32 +17,6 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var footer: UIVisualEffectView!
     @IBOutlet weak var roomButton: UIButton!
     
-    @IBAction func roomButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func wwwButton(_ sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: "Firmenwebseite", message: companyDetail.homepage, preferredStyle: .actionSheet)
-        
-        // make sure this works on iPad too
-        if let actionSheet = actionSheet.popoverPresentationController {
-            actionSheet.barButtonItem = sender
-        }
-        
-        let link = URL(string: "http://\(companyDetail.homepage)")
-        if link != nil {
-            let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in
-                UIApplication.shared.open(link!, options: [:])})
-            
-            actionSheet.addAction(openAction)
-        }
-        
-        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in
-            UIPasteboard.general.string = self.companyDetail.homepage})
-        actionSheet.addAction(copyAction)
-        actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
-        self.present(actionSheet, animated: true)
-    }
-    
     var companyDetail: CompanyDetailRearranged!
     var detailViewParagraphs: DetailViewParagraphs!
     
@@ -80,6 +54,31 @@ class CompanyDetailViewController: UIViewController {
         interestsGraph.createCircularBars()
     }
     
+    @IBAction func roomButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func wwwButton(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: "Firmenwebseite", message: companyDetail.homepage, preferredStyle: .actionSheet)
+        
+        // make sure this works on iPad too
+        if let actionSheet = actionSheet.popoverPresentationController {
+            actionSheet.barButtonItem = sender
+        }
+        
+        let link = URL(string: "http://\(companyDetail.homepage)")
+        if link != nil {
+            let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in
+                UIApplication.shared.open(link!, options: [:])})
+            
+            actionSheet.addAction(openAction)
+        }
+        
+        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in
+            UIPasteboard.general.string = self.companyDetail.homepage})
+        actionSheet.addAction(copyAction)
+        actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
+        self.present(actionSheet, animated: true)
+    }
     
     /*
      // MARK: - Action methods
