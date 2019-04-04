@@ -29,7 +29,9 @@ class CompanyDetailViewController: UIViewController {
         }
         
         let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in self.openURL(string: self.companyDetail.homepage)})
+        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in UIPasteboard.general.string = self.companyDetail.homepage})
         actionSheet.addAction(openAction)
+        actionSheet.addAction(copyAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
         self.present(actionSheet, animated: true)
     }
