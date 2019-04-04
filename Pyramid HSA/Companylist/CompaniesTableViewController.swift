@@ -78,7 +78,7 @@ class CompaniesTableViewController: UITableViewController {
         
         cell.backgroundColor = UIColor.white
         if company.id == 274 || company.id == 296 { // colourize premium partners
-            cell.backgroundColor = PyramidColor.pyramidBrighterBlue
+            cell.backgroundColor = .pyramidBrighterBlue
         }
 
         return cell
@@ -112,7 +112,7 @@ class CompaniesTableViewController: UITableViewController {
             
             self.present(activityViewController, animated: true, completion: nil)
         }
-        share.backgroundColor = PyramidColor.pyramidBlue
+        share.backgroundColor = .pyramidBlue
         
         return [share]
     }
