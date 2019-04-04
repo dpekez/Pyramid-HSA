@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class AvenueViewController: UIViewController {
+    
     let locationManager = CLLocationManager()
     let gMaps = URL(string: "https://www.google.de/maps/place/Hochschule+Augsburg/@48.3589748,10.9063944,18z/data=!4m5!3m4!1s0x0:0x8a16b7655d3bfdc5!8m2!3d48.3583307!4d10.9058189")
     let aMaps = URL(string: "https://maps.apple.com/?q=48.359260,10.906433&sll=48.359260,10.906433&sspn=0.001197,0.002547&t=m")
@@ -44,7 +45,7 @@ class AvenueViewController: UIViewController {
     }
     
     @IBAction func navButton(_ sender: UIBarButtonItem) {
-        let actionSheet = UIAlertController(title: nil, message: "Friedberger Str. 2, 86161 Augsburg", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Campus am Roten Tor", message: "Schülestraße 1, 86161 Augsburg", preferredStyle: .actionSheet)
         
         // make sure this works on iPad too
         if let actionSheet = actionSheet.popoverPresentationController {
@@ -55,8 +56,12 @@ class AvenueViewController: UIViewController {
             UIApplication.shared.open(self.gMaps!, options: [:])})
         let aMapsAction = UIAlertAction(title: "In „Karten“ öffnen", style: .default, handler: {_ in
             UIApplication.shared.open(self.aMaps!, options: [:])})
+        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in
+            UIPasteboard.general.string = "Schülestraße 1, 86161 Augsburg"
+        })
         actionSheet.addAction(gMapsAction)
         actionSheet.addAction(aMapsAction)
+        actionSheet.addAction(copyAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
         self.present(actionSheet, animated: true)
     }
