@@ -10,51 +10,17 @@ import UIKit
 import MessageUI
 
 class AboutTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    private func openURL(string: String) {
-        UIApplication.shared.open(URL(string: string)!, options: [:])
-    }
-    
-    @IBAction func aboutButton(_ sender: UIButton) {
-        openURL(string: "https://www.pyramid-hsa.de/team.php")
-    }
-    
-    @IBAction func facebookButton(_ sender: UIButton) {
-        openURL(string: "https://www.facebook.com/Firmenkontaktmesse.Pyramid/")
-    }
-    
-    @IBAction func instagramButton(_ sender: UIButton) {
-        openURL(string: "https://www.instagram.com/pyramid_hsa/")
-    }
-    
-    @IBAction func snapchatButton(_ sender: UIButton) {
-        openURL(string: "https://www.snapchat.com/add/hsaugsburg/")
-    }
-    
-    @IBAction func storeRatingButton(_ sender: UIButton) {
-        openURL(string: "https://itunes.apple.com/app/id1442865279?action=write-review")
-//        SKStoreReviewController.requestReview()
-    }
-    
-    @IBAction func feedbackButton(_ sender: UIButton) {
-        mailComposer()
-    }
-    
     private func mailComposer() {
         if MFMailComposeViewController.canSendMail() {
             let composeVC = MFMailComposeViewController()
             composeVC.mailComposeDelegate = self
             
-            let recipient = "dejan.pekez@hs-augsburg.de"
-            let subject = "Pyramid HSA-App Feedback"
             let systemVersion = UIDevice.current.systemVersion
             let hardware = UIDevice.current.model
             let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String ?? ""
             let buildVersion = Bundle.main.infoDictionary!["CFBundleVersion"] as? String ?? ""
+            let recipient = "dejan.pekez@hs-augsburg.de"
+            let subject = "Pyramid HSA \(appVersion)"
             
             let messageBody = """
             
@@ -82,7 +48,7 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
         if let e = error?.localizedDescription {
             errorMsg = e
         } else {
-            errorMsg = #"Vermutlich ist "Mail" nicht konfiguriert. Bitte überprüfe deine Einstellungen und versuche es erneut."#
+            errorMsg = #"Vermutlich ist „Mail“ nicht konfiguriert. Bitte überprüfe deine Einstellungen und versuche es erneut."#
         }
         
         let alert = UIAlertController(title: "E-Mail kann nicht gesendet werden", message: errorMsg, preferredStyle: .alert)
@@ -104,4 +70,29 @@ class AboutTableViewController: UITableViewController, MFMailComposeViewControll
         }
     }
     
+    @IBAction func aboutButton(_ sender: UIButton) {
+        openURL(string: "https://www.pyramid-hsa.de/team.php")
+    }
+    
+    @IBAction func facebookButton(_ sender: UIButton) {
+        openURL(string: "https://www.facebook.com/Firmenkontaktmesse.Pyramid/")
+    }
+    
+    @IBAction func instagramButton(_ sender: UIButton) {
+        openURL(string: "https://www.instagram.com/pyramid_hsa/")
+    }
+    
+    @IBAction func storeRatingButton(_ sender: UIButton) {
+        openURL(string: "https://itunes.apple.com/app/id1442865279?action=write-review")
+    }
+    
+    @IBAction func feedbackButton(_ sender: UIButton) {
+        mailComposer()
+    }
+}
+
+extension AboutTableViewController {
+    private func openURL(string: String) {
+        UIApplication.shared.open(URL(string: string)!, options: [:])
+    }
 }
