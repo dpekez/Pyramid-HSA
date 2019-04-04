@@ -966,17 +966,17 @@ Designed by katemangostar / www.freepik.com
             <objects>
                 <viewController id="c5n-fG-pme" userLabel="Avenue" customClass="AvenueViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="foz-Rt-RJN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-LP-khE">
-                                <rect key="frame" x="0.0" y="800" width="375" height="800"/>
+                                <rect key="frame" x="0.0" y="406" width="375" height="406"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-yp-sVI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="783"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-nn-AaD">
-                                                <rect key="frame" x="8" y="78.666666666666629" width="359" height="107.66666666666669"/>
+                                                <rect key="frame" x="8" y="78.666666666666686" width="359" height="107.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="x5r-nD-ntd"/>
                                                 </constraints>
@@ -986,7 +986,7 @@ Designed by katemangostar / www.freepik.com
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mit dem Auto" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sky-B7-OUv">
-                                                <rect key="frame" x="8" y="422.33333333333326" width="359" height="32.333333333333314"/>
+                                                <rect key="frame" x="8" y="422.33333333333337" width="359" height="32.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="MV2-v2-bW6"/>
                                                 </constraints>
@@ -995,7 +995,7 @@ Designed by katemangostar / www.freepik.com
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-4L-I8q">
-                                                <rect key="frame" x="8" y="460.66666666666674" width="359" height="54"/>
+                                                <rect key="frame" x="8" y="460.66666666666663" width="359" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="mPf-6D-xdX"/>
                                                 </constraints>
@@ -1016,7 +1016,7 @@ Schülestraße 1
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="zZj-h7-AX9" userLabel="2">
-                                                <rect key="frame" x="8" y="304.33333333333326" width="148" height="30"/>
+                                                <rect key="frame" x="8" y="304.33333333333337" width="148" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tram" translatesAutoresizingMaskIntoConstraints="NO" id="v8K-8o-oTO">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1026,7 +1026,7 @@ Schülestraße 1
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNn-fp-vsh">
-                                                        <rect key="frame" x="49" y="0.66666666666674246" width="15" height="28.666666666666668"/>
+                                                        <rect key="frame" x="49" y="0.66666666666662877" width="15" height="28.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1047,7 +1047,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QqH-eD-R7a" userLabel="3">
-                                                <rect key="frame" x="8" y="338.33333333333326" width="148.66666666666666" height="30"/>
+                                                <rect key="frame" x="8" y="338.33333333333337" width="148.66666666666666" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tram" translatesAutoresizingMaskIntoConstraints="NO" id="XWS-rd-y1P">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1057,7 +1057,7 @@ Schülestraße 1
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3G-hF-HbY">
-                                                        <rect key="frame" x="49" y="0.66666666666674246" width="15.666666666666671" height="28.666666666666668"/>
+                                                        <rect key="frame" x="49" y="0.66666666666662877" width="15.666666666666671" height="28.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1078,7 +1078,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="KBP-zd-ZrP" userLabel="32">
-                                                <rect key="frame" x="8" y="236.33333333333326" width="234" height="30"/>
+                                                <rect key="frame" x="8" y="236.33333333333337" width="234" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-NO-IFT">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1088,7 +1088,7 @@ Schülestraße 1
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l8-sv-k5Z">
-                                                        <rect key="frame" x="41" y="0.66666666666674246" width="30.333333333333329" height="28.666666666666668"/>
+                                                        <rect key="frame" x="41" y="0.66666666666662877" width="30.333333333333329" height="28.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1109,7 +1109,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-hb-dNk" userLabel="35">
-                                                <rect key="frame" x="8" y="270.33333333333326" width="234.66666666666666" height="30"/>
+                                                <rect key="frame" x="8" y="270.33333333333337" width="234.66666666666666" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="W28-40-5Jc">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1119,7 +1119,7 @@ Schülestraße 1
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-xO-8fy">
-                                                        <rect key="frame" x="41" y="0.66666666666674246" width="31" height="28.666666666666668"/>
+                                                        <rect key="frame" x="41" y="0.66666666666662877" width="31" height="28.666666666666668"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1140,7 +1140,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-el-HWU" userLabel="train">
-                                                <rect key="frame" x="8" y="372.33333333333326" width="279" height="30"/>
+                                                <rect key="frame" x="8" y="372.33333333333337" width="279" height="30"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train" translatesAutoresizingMaskIntoConstraints="NO" id="oMh-Q7-QVr">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1196,7 +1196,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-8V-RYt" userLabel="parking frischstr">
-                                                <rect key="frame" x="8" y="530.66666666666674" width="359" height="36"/>
+                                                <rect key="frame" x="8" y="530.66666666666663" width="359" height="36"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-UM-QKP">
                                                         <rect key="frame" x="0.0" y="3" width="30" height="30"/>
@@ -1221,7 +1221,7 @@ Schülestraße 1
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9xa-LF-9KA" userLabel="parking spickel">
-                                                <rect key="frame" x="8" y="574.66666666666674" width="359" height="54"/>
+                                                <rect key="frame" x="8" y="574.66666666666663" width="359" height="54"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-he-T2V">
                                                         <rect key="frame" x="0.0" y="12" width="30" height="30"/>
@@ -1317,10 +1317,10 @@ Schülestraße 1
                                 </constraints>
                             </scrollView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze" userLabel="map center view">
-                                <rect key="frame" x="325" y="740" width="40" height="40"/>
+                                <rect key="frame" x="325" y="346" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-bw-omK">
                                         <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -1366,7 +1366,6 @@ Schülestraße 1
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="1600"/>
                     <connections>
                         <outlet property="mapView" destination="4v1-kW-4VM" id="x5x-IU-dFP"/>
                     </connections>
