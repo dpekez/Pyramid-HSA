@@ -119,7 +119,7 @@ class CountdownCircleView: UIView {
         let shape = CAShapeLayer()
         shape.path = path
         shape.fillColor = UIColor.clear.cgColor
-        shape.strokeColor = PyramidColor.customGrey.cgColor
+        shape.strokeColor = UIColor.customGrey.cgColor
         shape.lineWidth = barWidth
         shape.lineCap = .round
         return shape
@@ -128,7 +128,7 @@ class CountdownCircleView: UIView {
     private func setShapeLayer(withPath path: CGPath, forShape shape: inout CAShapeLayer) {
         shape.path = path
         shape.fillColor = UIColor.clear.cgColor
-        shape.strokeColor = PyramidColor.pyramidBlue.cgColor
+        shape.strokeColor = UIColor.pyramidBlue.cgColor
         shape.lineWidth = barWidth
         shape.lineCap = .round
     }
@@ -136,7 +136,7 @@ class CountdownCircleView: UIView {
     private func setCountLabel(label: inout UILabel, atXPos xPos: CGFloat) {
         label = UILabel(frame: CGRect(x: xPos, y: yCenter, width: xOffset, height: 18))
         label.font = UIFont(name: label.font.fontName, size: 24)
-        label.textColor = PyramidColor.pyramidMidBlue
+        label.textColor = .pyramidMidBlue
         label.textAlignment = .center
         addSubview(label)
     }
@@ -144,7 +144,7 @@ class CountdownCircleView: UIView {
     private func setHeaderLabel(withText text: String, atXPos xPos: CGFloat) {
         let label = UILabel(frame: CGRect(x: xPos, y: 0, width: xOffset, height: 18))
         label.font = UIFont(name: label.font.fontName, size: 9)
-        label.textColor = PyramidColor.pyramidDarkBlue
+        label.textColor = .pyramidDarkBlue
         label.textAlignment = .center
         label.text = text
         addSubview(label)
