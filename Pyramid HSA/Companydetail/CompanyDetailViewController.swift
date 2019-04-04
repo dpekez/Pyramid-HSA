@@ -28,9 +28,16 @@ class CompanyDetailViewController: UIViewController {
             actionSheet.barButtonItem = sender
         }
         
-        let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in self.openURL(string: self.companyDetail.homepage)})
-        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in UIPasteboard.general.string = self.companyDetail.homepage})
-        actionSheet.addAction(openAction)
+        let link = URL(string: "http://\(companyDetail.homepage)")
+        if link != nil {
+            let openAction = UIAlertAction(title: "Öffnen", style: .default, handler: {_ in
+                UIApplication.shared.open(link!, options: [:])})
+            
+            actionSheet.addAction(openAction)
+        }
+        
+        let copyAction = UIAlertAction(title: "Kopieren", style: .default, handler: {_ in
+            UIPasteboard.general.string = self.companyDetail.homepage})
         actionSheet.addAction(copyAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
         self.present(actionSheet, animated: true)
@@ -124,23 +131,4 @@ class CompanyDetailViewController: UIViewController {
      }
  */
     
-}
-
-extension CompanyDetailViewController {
-    private func openURL(string: String) {
-        let link = URL(string: "http://" + string)
-        if link != nil {
-            UIApplication.shared.open(link!, options: [:])
-        } else {
-            showURLFailAlert()
-        }
-    }
-}
-
-extension CompanyDetailViewController {
-    private func showURLFailAlert() {
-        let alert = UIAlertController(title: "Hoppla!", message: "Leider ist der Link nicht gültig.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true)
-    }
 }
