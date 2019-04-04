@@ -15,10 +15,10 @@
 		772234412242492500219CEC /* AvenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772234402242492500219CEC /* AvenueViewController.swift */; };
 		7734692E21BD9449001C2377 /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */; };
 		7744694B224D7D8700D64F61 /* CountdownCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246D02218B86600C40074 /* CountdownCircleView.swift */; };
-		7744694C224D7E8400D64F61 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
+		7744694C224D7E8400D64F61 /* UIColor+PyramidColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */; };
 		7744694D224D7E9400D64F61 /* PyramidFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */; };
 		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
-		7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* PyramidColor.swift */; };
+		7757CE2621CD963E00DDF260 /* UIColor+PyramidColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */; };
 		7757CE3021CFBD9100DDF260 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */; };
 		7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE3221CFBD9100DDF260 /* TodayViewController.swift */; };
 		7757CE3621CFBD9100DDF260 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7757CE3421CFBD9100DDF260 /* MainInterface.storyboard */; };
@@ -93,7 +93,7 @@
 		772234402242492500219CEC /* AvenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvenueViewController.swift; sourceTree = "<group>"; };
 		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
-		7757CE2521CD963E00DDF260 /* PyramidColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidColor.swift; sourceTree = "<group>"; };
+		7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+PyramidColors.swift"; sourceTree = "<group>"; };
 		7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Countdown Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		7757CE3221CFBD9100DDF260 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
 				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
 				7721A86521A4B6E900DA424D /* UserDefaultsController.swift */,
-				7757CE2521CD963E00DDF260 /* PyramidColor.swift */,
+				7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */,
 				7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */,
 				77F3D04C2219CDE800704DBA /* Countdown.swift */,
 				77F3856E224AD46300CE322F /* MapViewOverlays.swift */,
@@ -482,7 +482,7 @@
 			files = (
 				7744694B224D7D8700D64F61 /* CountdownCircleView.swift in Sources */,
 				7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */,
-				7744694C224D7E8400D64F61 /* PyramidColor.swift in Sources */,
+				7744694C224D7E8400D64F61 /* UIColor+PyramidColors.swift in Sources */,
 				7744694D224D7E9400D64F61 /* PyramidFaculty.swift in Sources */,
 				77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */,
 			);
@@ -510,7 +510,7 @@
 			files = (
 				7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */,
 				7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */,
-				7757CE2621CD963E00DDF260 /* PyramidColor.swift in Sources */,
+				7757CE2621CD963E00DDF260 /* UIColor+PyramidColors.swift in Sources */,
 				77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */,
 				77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */,
 				7705483A2191A73F0008CB4B /* CompanyTableViewCell.swift in Sources */,

@@ -206,7 +206,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-fs-xM1">
-                                                    <rect key="frame" x="16" y="6.0000000000000018" width="63" height="27.666666666666671"/>
+                                                    <rect key="frame" x="16" y="6.0000000000000018" width="63" height="29.666666666666671"/>
                                                     <state key="normal" title="Über uns"/>
                                                     <connections>
                                                         <action selector="aboutButton:" destination="Uii-5f-RaZ" eventType="touchUpInside" id="GeR-jH-Whg"/>
@@ -233,7 +233,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8o-3g-JTn">
-                                                    <rect key="frame" x="16" y="6.0000000000000018" width="165" height="27.666666666666671"/>
+                                                    <rect key="frame" x="16" y="6.0000000000000018" width="165" height="29.666666666666671"/>
                                                     <state key="normal" title="Folge uns auf Instagram"/>
                                                     <connections>
                                                         <action selector="instagramButton:" destination="Uii-5f-RaZ" eventType="touchUpInside" id="oqP-94-c0e"/>
@@ -256,7 +256,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAH-Nt-bAT">
-                                                    <rect key="frame" x="16" y="6.0000000000000018" width="163" height="27.666666666666671"/>
+                                                    <rect key="frame" x="16" y="6.0000000000000018" width="163" height="29.666666666666671"/>
                                                     <state key="normal" title="Folge uns auf Facebook"/>
                                                     <connections>
                                                         <action selector="facebookButton:" destination="Uii-5f-RaZ" eventType="touchUpInside" id="4nA-x1-nFu"/>
@@ -283,7 +283,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vff-J1-snu">
-                                                    <rect key="frame" x="16" y="6.0000000000000018" width="179" height="27.666666666666671"/>
+                                                    <rect key="frame" x="16" y="6.0000000000000018" width="179" height="29.666666666666671"/>
                                                     <state key="normal" title="Bewerte uns im App Store"/>
                                                     <connections>
                                                         <action selector="storeRatingButton:" destination="Uii-5f-RaZ" eventType="touchUpInside" id="u8c-fK-rfb"/>
@@ -306,7 +306,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49W-VG-3jM">
-                                                    <rect key="frame" x="16" y="10.666666666666666" width="125" height="18.333333333333336"/>
+                                                    <rect key="frame" x="16" y="10.666666666666666" width="125" height="20.333333333333336"/>
                                                     <state key="normal" title="Feedback zur App"/>
                                                     <connections>
                                                         <action selector="feedbackButton:" destination="Uii-5f-RaZ" eventType="touchUpInside" id="Dhe-I6-mn0"/>
@@ -333,7 +333,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impressum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFo-2O-Ify">
-                                                    <rect key="frame" x="16" y="11.000000000000002" width="85" height="17.666666666666671"/>
+                                                    <rect key="frame" x="16" y="11.000000000000002" width="85" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -359,7 +359,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Info" id="6xX-cn-8Cz">
-                        <barButtonItem key="rightBarButtonItem" title="Schließen" id="vrU-E3-O43">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="vrU-E3-O43">
                             <connections>
                                 <segue destination="oig-oV-Jwn" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="FFW-g0-nvT"/>
                             </connections>
@@ -602,7 +602,7 @@ Designed by katemangostar / www.freepik.com
                         <viewLayoutGuide key="safeArea" id="4Ka-0P-8ST"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unsere Partner 2019" id="i3O-5s-j4w">
-                        <barButtonItem key="rightBarButtonItem" title="Schließen" id="YdR-fU-Iyw">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="YdR-fU-Iyw">
                             <connections>
                                 <segue destination="biy-84-xdO" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="rMd-oD-Grf"/>
                             </connections>
@@ -839,7 +839,7 @@ Designed by katemangostar / www.freepik.com
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Filter" id="vZl-sa-lnD">
-                        <barButtonItem key="rightBarButtonItem" title="Schließen" id="FJf-1H-hPR">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="FJf-1H-hPR">
                             <connections>
                                 <segue destination="iiz-CV-f6U" kind="unwind" unwindAction="filterViewUnwindActionWithUnwindSegue:" id="5h2-2L-eqM"/>
                             </connections>
@@ -966,39 +966,27 @@ Designed by katemangostar / www.freepik.com
             <objects>
                 <viewController id="c5n-fG-pme" userLabel="Avenue" customClass="AvenueViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="foz-Rt-RJN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="324.66666666666669"/>
-                            </mapView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-LP-khE">
-                                <rect key="frame" x="0.0" y="324.66666666666674" width="375" height="487.33333333333326"/>
+                                <rect key="frame" x="0.0" y="800" width="375" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-yp-sVI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="480.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-nn-AaD">
-                                                <rect key="frame" x="8" y="80.666666666666629" width="359" height="81.333333333333314"/>
+                                                <rect key="frame" x="8" y="78.666666666666629" width="359" height="107.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="x5r-nD-ntd"/>
                                                 </constraints>
-                                                <string key="text">Das Messegelände der Pyramid ist der Campus am Roten Tor der Hochschule Augsburg. Diesen erreichen Sie mit der Tramlinie Nr. 6 sowie den Buslinien 33 und 35.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haltestelle: Hochschule Augsburg" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-oX-5ra">
-                                                <rect key="frame" x="8" y="170" width="359" height="20.333333333333343"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="mWc-jK-Hv7"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <string key="text">Das Messegelände der Pyramid ist der Campus am Roten Tor der Hochschule Augsburg. Diesen erreicht man mit den Tramlinien 6, 2 und 3 sowie den Buslinien 32 und 35. Regionalzüge halten am Bahnhof Haunstetterstraße, der nur 5 Gehminuten vom Messegelände entfernt ist.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mit dem Auto" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sky-B7-OUv">
-                                                <rect key="frame" x="8" y="210.33333333333331" width="359" height="32.333333333333343"/>
+                                                <rect key="frame" x="8" y="422.33333333333326" width="359" height="32.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="MV2-v2-bW6"/>
                                                 </constraints>
@@ -1007,19 +995,19 @@ Designed by katemangostar / www.freepik.com
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-4L-I8q">
-                                                <rect key="frame" x="8" y="250.66666666666669" width="359" height="61"/>
+                                                <rect key="frame" x="8" y="460.66666666666674" width="359" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="mPf-6D-xdX"/>
                                                 </constraints>
                                                 <string key="text">Campus am Roten Tor
-Schülerstraße 1
+Schülestraße 1
 86161 Augsburg</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anreise für Firmen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7f-k4-xa0">
-                                                <rect key="frame" x="8" y="331.66666666666669" width="359" height="33"/>
+                                                <rect key="frame" x="8" y="648.66666666666674" width="359" height="32.333333333333371"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="liH-Re-xNP"/>
                                                 </constraints>
@@ -1027,51 +1015,282 @@ Schülerstraße 1
                                                 <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgs-g1-8Pa">
-                                                <rect key="frame" x="8" y="372.66666666666669" width="79" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="zZj-h7-AX9" userLabel="2">
+                                                <rect key="frame" x="8" y="304.33333333333326" width="148" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tram" translatesAutoresizingMaskIntoConstraints="NO" id="v8K-8o-oTO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="6u6-5m-Nmd"/>
+                                                            <constraint firstAttribute="width" constant="30" id="HyJ-Mb-54D"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNn-fp-vsh">
+                                                        <rect key="frame" x="49" y="0.66666666666674246" width="15" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotes Tor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKI-Sx-Lf1">
+                                                        <rect key="frame" x="83" y="6" width="65" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="7ZY-49-Nct"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="oN7-mr-zhH"/>
+                                                    <constraint firstAttribute="height" constant="30" id="UIP-Gx-gBc"/>
                                                 </constraints>
-                                                <state key="normal" title="Anmeldung"/>
                                                 <connections>
-                                                    <action selector="buildingButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="z6G-ZW-xRQ"/>
+                                                    <outletCollection property="gestureRecognizers" destination="Buo-Cm-Q9f" appends="YES" id="qvJ-hr-erR"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-tv-trp">
-                                                <rect key="frame" x="8" y="410.66666666666669" width="82" height="30"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QqH-eD-R7a" userLabel="3">
+                                                <rect key="frame" x="8" y="338.33333333333326" width="148.66666666666666" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tram" translatesAutoresizingMaskIntoConstraints="NO" id="XWS-rd-y1P">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="63Z-Lh-pfB"/>
+                                                            <constraint firstAttribute="width" constant="30" id="8cy-KZ-muo"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3G-hF-HbY">
+                                                        <rect key="frame" x="49" y="0.66666666666674246" width="15.666666666666671" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotes Tor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-VN-aYl">
+                                                        <rect key="frame" x="83.666666666666671" y="6" width="65.000000000000014" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="hFL-OC-Jcu"/>
-                                                    <constraint firstAttribute="height" constant="30" id="jbG-fW-Oad"/>
+                                                    <constraint firstAttribute="height" constant="30" id="NzZ-wm-MxF"/>
                                                 </constraints>
-                                                <state key="normal" title="Anfahrt Zelt"/>
                                                 <connections>
-                                                    <action selector="tentButton:" destination="c5n-fG-pme" eventType="touchUpInside" id="Thf-qV-5vh"/>
+                                                    <outletCollection property="gestureRecognizers" destination="4Z4-bL-PeC" appends="YES" id="XAB-Qd-3Sh"/>
                                                 </connections>
-                                            </button>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="KBP-zd-ZrP" userLabel="32">
+                                                <rect key="frame" x="8" y="236.33333333333326" width="234" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-NO-IFT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Dkl-cF-qie"/>
+                                                            <constraint firstAttribute="width" constant="30" id="jLJ-rg-Nqa"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l8-sv-k5Z">
+                                                        <rect key="frame" x="41" y="0.66666666666674246" width="30.333333333333329" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO2-Og-a94">
+                                                        <rect key="frame" x="82.333333333333329" y="6" width="151.66666666666669" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="b8b-RR-6ZQ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="mjA-y7-Va9" appends="YES" id="Aeb-KB-KpN"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-hb-dNk" userLabel="35">
+                                                <rect key="frame" x="8" y="270.33333333333326" width="234.66666666666666" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="W28-40-5Jc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="MyZ-NJ-RCC"/>
+                                                            <constraint firstAttribute="height" constant="30" id="tJO-dG-VQ0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-xO-8fy">
+                                                        <rect key="frame" x="41" y="0.66666666666674246" width="31" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-vA-cij">
+                                                        <rect key="frame" x="82.999999999999986" y="6" width="151.66666666666663" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="X7I-zG-Yvh"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Ou4-o8-qaC" appends="YES" id="3v2-2X-gN4"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-el-HWU" userLabel="train">
+                                                <rect key="frame" x="8" y="372.33333333333326" width="279" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="train" translatesAutoresizingMaskIntoConstraints="NO" id="oMh-Q7-QVr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="abe-cO-YaC"/>
+                                                            <constraint firstAttribute="width" constant="30" id="mZ2-UM-W2l"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Augsburg Haunstetterstraße" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQz-nQ-ijV">
+                                                        <rect key="frame" x="84" y="6" width="195" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="wWt-09-WxI"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="k3y-b4-zZi" appends="YES" id="BeZ-t1-SR1"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="aVD-bG-6ch" userLabel="6">
+                                                <rect key="frame" x="8" y="202.33333333333337" width="233.66666666666666" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tram" translatesAutoresizingMaskIntoConstraints="NO" id="zwk-Ej-d8b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="0QZ-RS-bQx"/>
+                                                            <constraint firstAttribute="height" constant="30" id="aeT-i4-vgb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhJ-ul-6ms">
+                                                        <rect key="frame" x="48" y="0.66666666666662877" width="16" height="28.666666666666668"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-e7-T7h">
+                                                        <rect key="frame" x="81.999999999999986" y="6" width="151.66666666666663" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="2RY-aP-kdv"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="FST-SW-W7d" appends="YES" id="UIR-Xk-I6g"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-8V-RYt" userLabel="parking frischstr">
+                                                <rect key="frame" x="8" y="530.66666666666674" width="359" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking" translatesAutoresizingMaskIntoConstraints="NO" id="vLg-UM-QKP">
+                                                        <rect key="frame" x="0.0" y="3" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="V0x-Fk-BYX"/>
+                                                            <constraint firstAttribute="height" constant="30" id="mth-8l-01E"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in der Frischstraße, nur wenige Gehminuten vom Messegelände entfernt" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aar-sU-5Kd">
+                                                        <rect key="frame" x="40" y="0.0" width="319" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="CUv-G2-5kD"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="MsM-lt-Cjk" appends="YES" id="x8v-vd-UOH"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9xa-LF-9KA" userLabel="parking spickel">
+                                                <rect key="frame" x="8" y="574.66666666666674" width="359" height="54"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parking" translatesAutoresizingMaskIntoConstraints="NO" id="UZH-he-T2V">
+                                                        <rect key="frame" x="0.0" y="12" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="392-ag-fZC"/>
+                                                            <constraint firstAttribute="height" constant="30" id="Nui-vn-Yad"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="an der Ecke Friedberger Straße/Siebentischstraße (beim Spickelbad), ca. 15 Gehminuten vom Messegelände entfernt." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noC-G9-5Xm">
+                                                        <rect key="frame" x="40" y="0.0" width="319" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Qdo-Dg-qf2"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="IfY-FL-UE1" appends="YES" id="sgx-w9-aoF"/>
+                                                </connections>
+                                            </stackView>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Anmeldepunkt ist beim Studentenparkhaus an der Friedberger Straße." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h3-lk-oh3">
+                                                <rect key="frame" x="8" y="687" width="359" height="36"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="BD8-P4-pyv" appends="YES" id="VJi-Zn-Peu"/>
+                                                </connections>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="2aJ-oX-5ra" firstAttribute="top" secondItem="iQu-nn-AaD" secondAttribute="bottom" constant="8" id="0q2-tE-SUX"/>
                                             <constraint firstItem="iQu-nn-AaD" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="1ES-Qe-UgN"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2aj-tv-trp" secondAttribute="trailing" constant="20" symbolic="YES" id="2pF-4W-3HH"/>
+                                            <constraint firstItem="aVD-bG-6ch" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="3vA-cJ-qrd"/>
                                             <constraint firstAttribute="trailing" secondItem="iQu-nn-AaD" secondAttribute="trailing" constant="8" id="6su-Sa-l0a"/>
+                                            <constraint firstItem="sky-B7-OUv" firstAttribute="top" secondItem="wMU-el-HWU" secondAttribute="bottom" constant="20" id="7fw-aS-hME"/>
                                             <constraint firstAttribute="trailing" secondItem="F7f-k4-xa0" secondAttribute="trailing" constant="8" id="95b-5D-mqB"/>
-                                            <constraint firstItem="2aJ-oX-5ra" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="G2K-uk-8FN"/>
-                                            <constraint firstItem="sky-B7-OUv" firstAttribute="top" secondItem="2aJ-oX-5ra" secondAttribute="bottom" constant="20" id="H9N-nM-Zza"/>
-                                            <constraint firstItem="2aj-tv-trp" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="K7S-YK-2pa"/>
+                                            <constraint firstItem="ZTB-hb-dNk" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="CN6-x1-oni"/>
+                                            <constraint firstItem="ZTB-hb-dNk" firstAttribute="top" secondItem="KBP-zd-ZrP" secondAttribute="bottom" constant="4" id="CZl-zn-9Ic"/>
+                                            <constraint firstAttribute="trailing" secondItem="8h3-lk-oh3" secondAttribute="trailing" constant="8" id="Ft5-AH-qYV"/>
+                                            <constraint firstItem="9xa-LF-9KA" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="JIh-X6-H6T"/>
+                                            <constraint firstAttribute="trailing" secondItem="9xa-LF-9KA" secondAttribute="trailing" constant="8" id="LL6-4d-XO9"/>
+                                            <constraint firstItem="8h3-lk-oh3" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="LdO-H4-0Si"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8h3-lk-oh3" secondAttribute="bottom" constant="60" id="LgT-IN-vZp"/>
+                                            <constraint firstItem="KBP-zd-ZrP" firstAttribute="top" secondItem="aVD-bG-6ch" secondAttribute="bottom" constant="4" id="QNt-ZN-2hz"/>
+                                            <constraint firstItem="zZj-h7-AX9" firstAttribute="top" secondItem="ZTB-hb-dNk" secondAttribute="bottom" constant="4" id="R2A-c3-vhS"/>
                                             <constraint firstAttribute="trailing" secondItem="j7g-4L-I8q" secondAttribute="trailing" constant="8" id="Rp2-ZF-Flf"/>
+                                            <constraint firstAttribute="trailing" secondItem="8b6-8V-RYt" secondAttribute="trailing" constant="8" id="Rvk-yB-uyG"/>
                                             <constraint firstItem="sky-B7-OUv" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="V1u-LX-dfc"/>
-                                            <constraint firstItem="j7g-4L-I8q" firstAttribute="top" secondItem="sky-B7-OUv" secondAttribute="bottom" constant="8" id="WGY-jd-uAc"/>
+                                            <constraint firstItem="QqH-eD-R7a" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="VN2-qy-T6m"/>
+                                            <constraint firstItem="j7g-4L-I8q" firstAttribute="top" secondItem="sky-B7-OUv" secondAttribute="bottom" constant="6" id="WGY-jd-uAc"/>
+                                            <constraint firstItem="QqH-eD-R7a" firstAttribute="top" secondItem="zZj-h7-AX9" secondAttribute="bottom" constant="4" id="ZhC-Og-7aJ"/>
                                             <constraint firstItem="F7f-k4-xa0" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="cmZ-ir-pps"/>
-                                            <constraint firstItem="2aj-tv-trp" firstAttribute="top" secondItem="Zgs-g1-8Pa" secondAttribute="bottom" constant="8" id="dgJ-Bd-agG"/>
-                                            <constraint firstAttribute="trailing" secondItem="2aJ-oX-5ra" secondAttribute="trailing" constant="8" id="gIu-jU-B2s"/>
+                                            <constraint firstItem="8b6-8V-RYt" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="d8t-SC-21I"/>
+                                            <constraint firstItem="wMU-el-HWU" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="gxF-WX-8rm"/>
+                                            <constraint firstItem="aVD-bG-6ch" firstAttribute="top" secondItem="iQu-nn-AaD" secondAttribute="bottom" constant="16" id="h51-C2-t6c"/>
+                                            <constraint firstItem="zZj-h7-AX9" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="jTf-PZ-7TY"/>
                                             <constraint firstItem="j7g-4L-I8q" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="jvt-oa-3LC"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zgs-g1-8Pa" secondAttribute="trailing" constant="20" symbolic="YES" id="lJd-2Z-Jqy"/>
-                                            <constraint firstItem="Zgs-g1-8Pa" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="m8p-0Z-Ggv"/>
-                                            <constraint firstItem="F7f-k4-xa0" firstAttribute="top" secondItem="j7g-4L-I8q" secondAttribute="bottom" constant="20" id="nXV-3m-2W0"/>
+                                            <constraint firstItem="8b6-8V-RYt" firstAttribute="top" secondItem="j7g-4L-I8q" secondAttribute="bottom" constant="16" id="kab-Xw-5CP"/>
+                                            <constraint firstItem="8h3-lk-oh3" firstAttribute="top" secondItem="F7f-k4-xa0" secondAttribute="bottom" constant="6" id="lw1-3r-6Ar"/>
                                             <constraint firstAttribute="trailing" secondItem="sky-B7-OUv" secondAttribute="trailing" constant="8" id="vDz-4W-mae"/>
-                                            <constraint firstItem="Zgs-g1-8Pa" firstAttribute="top" secondItem="F7f-k4-xa0" secondAttribute="bottom" constant="8" id="vjA-Cx-337"/>
+                                            <constraint firstItem="wMU-el-HWU" firstAttribute="top" secondItem="QqH-eD-R7a" secondAttribute="bottom" constant="4" id="vmK-la-ZX7"/>
+                                            <constraint firstItem="F7f-k4-xa0" firstAttribute="top" secondItem="9xa-LF-9KA" secondAttribute="bottom" constant="20" id="wch-wr-Iy3"/>
+                                            <constraint firstItem="9xa-LF-9KA" firstAttribute="top" secondItem="8b6-8V-RYt" secondAttribute="bottom" constant="8" id="wsp-JR-jfU"/>
+                                            <constraint firstItem="KBP-zd-ZrP" firstAttribute="leading" secondItem="dLU-yp-sVI" secondAttribute="leading" constant="8" id="z22-sf-Otb"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mit den öffentlichen Verkehrsmitteln" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa9-Xd-r0r">
@@ -1085,12 +1304,11 @@ Schülerstraße 1
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="2aj-tv-trp" secondAttribute="bottom" constant="40" id="BeG-8c-fye"/>
                                     <constraint firstItem="dLU-yp-sVI" firstAttribute="height" secondItem="Sax-LP-khE" secondAttribute="height" priority="250" id="Cs7-gu-6BJ"/>
                                     <constraint firstAttribute="trailing" secondItem="dLU-yp-sVI" secondAttribute="trailing" id="Lgz-zv-l1z"/>
                                     <constraint firstAttribute="bottom" secondItem="dLU-yp-sVI" secondAttribute="bottom" id="UNZ-CW-unq"/>
                                     <constraint firstItem="xa9-Xd-r0r" firstAttribute="top" secondItem="Sax-LP-khE" secondAttribute="top" constant="8" id="aRE-N3-VTF"/>
-                                    <constraint firstItem="iQu-nn-AaD" firstAttribute="top" secondItem="xa9-Xd-r0r" secondAttribute="bottom" constant="8" id="aeS-me-7Gc"/>
+                                    <constraint firstItem="iQu-nn-AaD" firstAttribute="top" secondItem="xa9-Xd-r0r" secondAttribute="bottom" constant="6" id="aeS-me-7Gc"/>
                                     <constraint firstItem="dLU-yp-sVI" firstAttribute="top" secondItem="Sax-LP-khE" secondAttribute="top" id="fNa-ZT-UlX"/>
                                     <constraint firstItem="dLU-yp-sVI" firstAttribute="width" secondItem="Sax-LP-khE" secondAttribute="width" id="hEU-Ri-WOI"/>
                                     <constraint firstAttribute="trailing" secondItem="xa9-Xd-r0r" secondAttribute="trailing" constant="8" id="lhM-KR-HXe"/>
@@ -1098,8 +1316,11 @@ Schülerstraße 1
                                     <constraint firstItem="xa9-Xd-r0r" firstAttribute="leading" secondItem="Sax-LP-khE" secondAttribute="leading" constant="8" id="xh8-TU-Pfj"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze">
-                                <rect key="frame" x="325" y="264.66666666666669" width="40" height="40"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze" userLabel="map center view">
+                                <rect key="frame" x="325" y="740" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-bw-omK">
                                         <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -1128,13 +1349,13 @@ Schülerstraße 1
                             <constraint firstItem="Sax-LP-khE" firstAttribute="trailing" secondItem="2ZM-3E-ivd" secondAttribute="trailing" id="1gY-BS-k20"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="trailing" secondItem="foz-Rt-RJN" secondAttribute="trailing" id="5Lo-rp-KRW"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="leading" secondItem="2ZM-3E-ivd" secondAttribute="leading" id="DNm-yl-5TR"/>
-                            <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" multiplier="0.4" id="FJC-qH-A3T"/>
+                            <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" multiplier="0.5" id="FJC-qH-A3T"/>
                             <constraint firstItem="QLh-a6-qze" firstAttribute="trailing" secondItem="4v1-kW-4VM" secondAttribute="trailing" constant="-10" id="Fwl-No-o4v"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="leading" secondItem="foz-Rt-RJN" secondAttribute="leading" id="Gt8-8J-vYD"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="QLh-a6-qze" secondAttribute="bottom" constant="20" id="PtF-Ad-4kU"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" id="U9d-c3-Gek"/>
+                            <constraint firstItem="Sax-LP-khE" firstAttribute="top" secondItem="4v1-kW-4VM" secondAttribute="bottom" id="b32-4T-QTv"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="top" secondItem="foz-Rt-RJN" secondAttribute="top" id="ecz-Zk-vXl"/>
-                            <constraint firstItem="Sax-LP-khE" firstAttribute="top" secondItem="foz-Rt-RJN" secondAttribute="bottom" multiplier="0.4" id="go2-zC-GQz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2ZM-3E-ivd"/>
                     </view>
@@ -1145,13 +1366,59 @@ Schülerstraße 1
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="1600"/>
                     <connections>
                         <outlet property="mapView" destination="4v1-kW-4VM" id="x5x-IU-dFP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCY-l0-Qku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Buo-Cm-Q9f" userLabel="2">
+                    <connections>
+                        <action selector="tramTwoTapped:" destination="c5n-fG-pme" id="pQA-rq-M9B"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="4Z4-bL-PeC" userLabel="3">
+                    <connections>
+                        <action selector="tramThreeTapped:" destination="c5n-fG-pme" id="bO7-MJ-f7z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="k3y-b4-zZi" userLabel="train">
+                    <connections>
+                        <action selector="trainTapped:" destination="c5n-fG-pme" id="PeV-Hs-eUc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FST-SW-W7d" userLabel="6">
+                    <connections>
+                        <action selector="tramSixTapped:" destination="c5n-fG-pme" id="iUa-nm-itH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mjA-y7-Va9" userLabel="32">
+                    <connections>
+                        <action selector="bus32Tapped:" destination="c5n-fG-pme" id="ITd-BU-W7y"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ou4-o8-qaC" userLabel="35">
+                    <connections>
+                        <action selector="bus35Tapped:" destination="c5n-fG-pme" id="S8g-xs-B0Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="MsM-lt-Cjk" userLabel="parking frisch">
+                    <connections>
+                        <action selector="parkingFrischTapped:" destination="c5n-fG-pme" id="paf-iE-Ty4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="IfY-FL-UE1" userLabel="parking spickel">
+                    <connections>
+                        <action selector="parkingSpickelTapped:" destination="c5n-fG-pme" id="0Uf-8Y-hpC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="BD8-P4-pyv" userLabel="registration">
+                    <connections>
+                        <action selector="registrationTapped:" destination="c5n-fG-pme" id="jcR-mC-TFk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1113" y="-505"/>
+            <point key="canvasLocation" x="1112.8" y="-505.41871921182269"/>
         </scene>
         <!--Events-->
         <scene sceneID="DcM-3k-5Om">
@@ -1585,6 +1852,7 @@ Schülerstraße 1
     <resources>
         <image name="abele" width="150" height="30.333333969116211"/>
         <image name="aldi" width="100" height="120"/>
+        <image name="bus" width="100" height="100"/>
         <image name="compass" width="30" height="30"/>
         <image name="digatus" width="100" height="20.333333969116211"/>
         <image name="dynamicengineering" width="100" height="30.666666030883789"/>
@@ -1600,10 +1868,13 @@ Schülerstraße 1
         <image name="man" width="300" height="108.66666412353516"/>
         <image name="map" width="30" height="30"/>
         <image name="paper_plane" width="30" height="30"/>
+        <image name="parking" width="96" height="96"/>
         <image name="proffile" width="100" height="39.666667938232422"/>
         <image name="radiofantasy" width="100" height="23"/>
         <image name="sortimo" width="100" height="38.666667938232422"/>
+        <image name="train" width="100" height="100"/>
         <image name="training" width="30" height="30"/>
+        <image name="tram" width="100" height="100"/>
         <image name="vmm" width="100" height="31"/>
         <image name="worldwide_location" width="30" height="30"/>
         <image name="xitaso" width="100" height="25"/>
