@@ -855,7 +855,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="architectureChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="DCY-BF-bCx"/>
                                                                 <action selector="internshipChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="N7d-vI-Mj0"/>
                                                             </connections>
                                                         </switch>
@@ -891,7 +890,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294.66666666666669" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="electricalEngineeringChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="egC-Q2-l6T"/>
                                                                 <action selector="internshipBenefitChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="3Fe-RF-AjO"/>
                                                             </connections>
                                                         </switch>
@@ -926,7 +924,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="designChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="SKT-h7-eUu"/>
                                                                 <action selector="thesisChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="7xq-QU-vM5"/>
                                                             </connections>
                                                         </switch>
@@ -961,7 +958,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="computerScienceChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="AWJ-va-5ia"/>
                                                                 <action selector="thesisBenefitChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="8pW-GU-sP8"/>
                                                             </connections>
                                                         </switch>
@@ -996,7 +992,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="mechanicalEngineeringChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="geV-Nz-gO0"/>
                                                                 <action selector="workingStudentChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="lC4-3H-idT"/>
                                                             </connections>
                                                         </switch>
@@ -1031,7 +1026,6 @@ Designed by katemangostar / www.freepik.com
                                                             <rect key="frame" x="294" y="0.0" width="51" height="31.333333333333332"/>
                                                             <color key="onTintColor" red="0.24016350510000001" green="0.37337875370000001" blue="0.6597730517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="businessAdministrationChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="X8d-Ph-sV9"/>
                                                                 <action selector="workingStudentBenefitChanged:" destination="pTV-6g-T3H" eventType="valueChanged" id="P7b-TV-Mp8"/>
                                                             </connections>
                                                         </switch>
