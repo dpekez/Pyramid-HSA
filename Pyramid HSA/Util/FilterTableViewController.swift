@@ -9,12 +9,19 @@
 import UIKit
 
 class FilterTableViewController: UITableViewController {
+    
     @IBOutlet weak var architectureSwitch: UISwitch!
     @IBOutlet weak var electricalEngineeringSwitch: UISwitch!
     @IBOutlet weak var designSwitch: UISwitch!
     @IBOutlet weak var computerScienceSwitch: UISwitch!
     @IBOutlet weak var mechanicalEngineeringSwitch: UISwitch!
     @IBOutlet weak var businessAdministrationSwitch: UISwitch!
+    @IBOutlet weak var internshipSwitch: UISwitch!
+    @IBOutlet weak var internshipBenefitSwitch: UISwitch!
+    @IBOutlet weak var thesisSwitch: UISwitch!
+    @IBOutlet weak var thesisBenefitSwitch: UISwitch!
+    @IBOutlet weak var workingStudentSwitch: UISwitch!
+    @IBOutlet weak var workingStudentBenefitSwitch: UISwitch!
     
     private let userDefaults = UserDefaultsController.shared
     var updateHandler: (() -> Void)!
@@ -28,6 +35,12 @@ class FilterTableViewController: UITableViewController {
         computerScienceSwitch.isOn = userDefaults.computerScienceIsOn
         mechanicalEngineeringSwitch.isOn = userDefaults.mechanicalEngineeringIsOn
         businessAdministrationSwitch.isOn = userDefaults.businessAdministrationIsOn
+        internshipSwitch.isOn = userDefaults.internshipIsOn
+        internshipBenefitSwitch.isOn = userDefaults.internshipBenefitIsOn
+        thesisSwitch.isOn = userDefaults.thesisIsOn
+        thesisBenefitSwitch.isOn = userDefaults.thesisBenefitIsOn
+        workingStudentSwitch.isOn = userDefaults.workingStudentIsOn
+        workingStudentBenefitSwitch.isOn = userDefaults.workingStudentBenefitIsOn
     }
     
     @IBAction func architectureChanged(_ sender: UISwitch) {
@@ -59,4 +72,35 @@ class FilterTableViewController: UITableViewController {
         userDefaults.businessAdministrationIsOn = sender.isOn
         updateHandler()
     }
+    
+    @IBAction func internshipChanged(_ sender: UISwitch) {
+        userDefaults.internshipIsOn = sender.isOn
+        updateHandler()
+    }
+    
+    @IBAction func internshipBenefitChanged(_ sender: UISwitch) {
+        userDefaults.internshipBenefitIsOn = sender.isOn
+        updateHandler()
+    }
+    
+    @IBAction func thesisChanged(_ sender: UISwitch) {
+        userDefaults.thesisIsOn = sender.isOn
+        updateHandler()
+    }
+    
+    @IBAction func thesisBenefitChanged(_ sender: UISwitch) {
+        userDefaults.thesisBenefitIsOn = sender.isOn
+        updateHandler()
+    }
+    
+    @IBAction func workingStudentChanged(_ sender: UISwitch) {
+        userDefaults.workingStudentIsOn = sender.isOn
+        updateHandler()
+    }
+    
+    @IBAction func workingStudentBenefitChanged(_ sender: UISwitch) {
+        userDefaults.workingStudentBenefitIsOn = sender.isOn
+        updateHandler()
+    }
+    
 }
