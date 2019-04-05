@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class MapViewOverlays: MKMapView, MKMapViewDelegate {
+    
     override func awakeFromNib() {
         delegate = self
         createOverlay()
@@ -51,6 +52,10 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         return nil
     }
     
+//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        
+//    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let rightButton = UIButton(type: .detailDisclosure)
         view.rightCalloutAccessoryView = rightButton
@@ -63,14 +68,6 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         let annotationW = MKPointAnnotation()
         let annotationTentA = MKPointAnnotation()
         let annotationTentB = MKPointAnnotation()
-        
-        let blub = MKPinAnnotationView()
-        blub.animatesDrop = true
-        blub.pinTintColor = .pyramidBlue
-        blub.canShowCallout = true
-        let rightButton = UIButton(type: .detailDisclosure)
-        blub.rightCalloutAccessoryView = rightButton
-        
         
         annotationL.coordinate = CLLocationCoordinate2D(latitude: 48.358908, longitude: 10.905958)
         annotationK.coordinate = CLLocationCoordinate2D(latitude: 48.358967, longitude: 10.906961)
@@ -198,4 +195,5 @@ class MapViewOverlays: MKMapView, MKMapViewDelegate {
         addOverlay(polygonTentA)
         addOverlay(polygonTentB)
     }
+    
 }
