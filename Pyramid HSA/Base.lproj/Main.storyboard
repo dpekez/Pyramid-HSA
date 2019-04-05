@@ -324,7 +324,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (17) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
+                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (18) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oh6-69-P3p">
                                         <rect key="frame" x="0.0" y="353" width="375" height="42"/>
@@ -1529,10 +1529,10 @@ Schülestraße 1
             </objects>
             <point key="canvasLocation" x="1113" y="287"/>
         </scene>
-        <!--Firmen-->
+        <!--Companies SplitVC-->
         <scene sceneID="m51-7J-PcU">
             <objects>
-                <splitViewController id="vES-7q-cfs" customClass="CompaniesSplitViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="vES-7q-cfs" userLabel="Companies SplitVC" customClass="CompaniesSplitViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Firmen" image="layers" id="Y49-UM-MLm"/>
                     <connections>
                         <segue destination="poy-UH-4aK" kind="relationship" relationship="masterViewController" id="YVU-lM-Pso"/>
@@ -1550,7 +1550,7 @@ Schülestraße 1
                     <tabBarItem key="tabBarItem" title="Firmen" id="1lb-gl-4I5" userLabel="Companies"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OdO-fW-h2L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
