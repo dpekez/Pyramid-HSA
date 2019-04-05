@@ -10,6 +10,7 @@ import UIKit
 import StoreKit
 
 class CompaniesTableViewController: UITableViewController {
+    
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var searchFooter: SearchFooter!
     @IBOutlet weak var filterButton: UIBarButtonItem!
@@ -117,7 +118,7 @@ class CompaniesTableViewController: UITableViewController {
         return [share]
     }
     
-    // MARK: Branch Filter
+    // MARK: Branch/Training Filter
     
     func filterForBranch() {
         let defaults = UserDefaultsController.shared
@@ -148,8 +149,38 @@ class CompaniesTableViewController: UITableViewController {
             filterIsActive = true
         }
         
+        if defaults.internshipIsOn {
+            companies.removeAll(where: { $0.internship == 0 } )
+            filterIsActive = true
+        }
+        
+        if defaults.internshipBenefitIsOn {
+            companies.removeAll(where: { $0.internshipBenefit == 0 } )
+            filterIsActive = true
+        }
+        
+        if defaults.thesisIsOn {
+            companies.removeAll(where: { $0.thesis == 0 } )
+            filterIsActive = true
+        }
+        
+        if defaults.thesisBenefitIsOn {
+            companies.removeAll(where: { $0.thesisBenefit == 0 } )
+            filterIsActive = true
+        }
+        
+        if defaults.workingStudentIsOn {
+            companies.removeAll(where: { $0.workingStudent == 0 } )
+            filterIsActive = true
+        }
+        
+        if defaults.workingStudentBenefitIsOn {
+            companies.removeAll(where: { $0.workingStudentBenefit == 0 } )
+            filterIsActive = true
+        }
+        
         if filterIsActive {
-            filterButton.title = "•Filter"
+            filterButton.title = "Filter aktiv"
         } else {
             filterButton.title = "Filter"
         }
@@ -209,6 +240,7 @@ class CompaniesTableViewController: UITableViewController {
             }
         }
     }
+    
 }
 
 extension CompaniesTableViewController: UISearchResultsUpdating {
