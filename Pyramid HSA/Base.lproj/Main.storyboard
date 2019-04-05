@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="645.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lageplan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U9-me-BFF">
-                                                <rect key="frame" x="20" y="225" width="335" height="32.333333333333314"/>
+                                                <rect key="frame" x="20" y="225" width="113" height="32.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Hdg-sN-qTT"/>
                                                 </constraints>
@@ -35,6 +35,7 @@
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Fg-230" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="265.33333333333331" width="355" height="299.99999999999994"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="520" id="md4-w3-Hkb"/>
                                                     <constraint firstAttribute="height" constant="300" id="ql7-Ob-QbC"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -92,16 +93,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="3U9-me-BFF" firstAttribute="leading" secondItem="aH6-0Y-93p" secondAttribute="leading" constant="20" id="IAX-C8-2QP"/>
-                                            <constraint firstItem="O0c-Fg-230" firstAttribute="leading" secondItem="aH6-0Y-93p" secondAttribute="leading" constant="10" id="ILq-4y-hX4"/>
+                                            <constraint firstItem="O0c-Fg-230" firstAttribute="leading" secondItem="aH6-0Y-93p" secondAttribute="leading" priority="750" constant="10" id="ILq-4y-hX4"/>
                                             <constraint firstItem="mir-Fo-crf" firstAttribute="trailing" secondItem="O0c-Fg-230" secondAttribute="trailing" constant="-10" id="Par-rK-Te7"/>
                                             <constraint firstItem="Aoj-hc-3FO" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="QqL-fL-Rth"/>
                                             <constraint firstItem="Aoj-hc-3FO" firstAttribute="top" secondItem="aH6-0Y-93p" secondAttribute="top" constant="20" id="Rbl-p7-ZXz"/>
-                                            <constraint firstAttribute="trailing" secondItem="3U9-me-BFF" secondAttribute="trailing" constant="20" id="Uh1-Dd-N3H"/>
                                             <constraint firstItem="O0c-Fg-230" firstAttribute="top" secondItem="3U9-me-BFF" secondAttribute="bottom" constant="8" id="VJP-sc-DPV"/>
                                             <constraint firstItem="3U9-me-BFF" firstAttribute="top" secondItem="Aoj-hc-3FO" secondAttribute="bottom" constant="40" id="Vb4-K2-E4o"/>
-                                            <constraint firstAttribute="trailing" secondItem="O0c-Fg-230" secondAttribute="trailing" constant="10" id="dLe-P6-m0G"/>
+                                            <constraint firstItem="O0c-Fg-230" firstAttribute="centerX" secondItem="aH6-0Y-93p" secondAttribute="centerX" id="XzJ-6H-sNi"/>
+                                            <constraint firstItem="3U9-me-BFF" firstAttribute="leading" secondItem="O0c-Fg-230" secondAttribute="leading" constant="10" id="hQs-AE-utf"/>
                                             <constraint firstAttribute="bottom" secondItem="O0c-Fg-230" secondAttribute="bottom" constant="80" id="k7a-c5-xRt"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3U9-me-BFF" secondAttribute="trailing" constant="20" symbolic="YES" id="mvw-Ls-RT7"/>
                                             <constraint firstItem="O0c-Fg-230" firstAttribute="bottom" secondItem="mir-Fo-crf" secondAttribute="bottom" constant="20" id="uq5-gh-BUd"/>
                                         </constraints>
                                     </view>
@@ -171,7 +172,7 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pyramid 2019" id="t9J-Kq-1GS">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info" id="n8k-U0-vxs">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="n8k-U0-vxs">
                             <connections>
                                 <segue destination="pat-RL-jm8" kind="presentation" modalPresentationStyle="formSheet" id="MEP-1u-7mV"/>
                             </connections>
@@ -359,7 +360,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Info" id="6xX-cn-8Cz">
-                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="vrU-E3-O43">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vrU-E3-O43">
                             <connections>
                                 <segue destination="oig-oV-Jwn" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="FFW-g0-nvT"/>
                             </connections>
@@ -566,7 +567,7 @@ Designed by katemangostar / www.freepik.com
                                         <constraints>
                                             <constraint firstItem="FVQ-UR-CfL" firstAttribute="top" secondItem="u57-UV-Npb" secondAttribute="top" constant="20" id="Hhr-ju-OIP"/>
                                             <constraint firstItem="FVQ-UR-CfL" firstAttribute="centerX" secondItem="u57-UV-Npb" secondAttribute="centerX" id="YRI-iD-AB3"/>
-                                            <constraint firstAttribute="bottom" secondItem="FVQ-UR-CfL" secondAttribute="bottom" constant="20" id="xd4-Ij-HWD"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FVQ-UR-CfL" secondAttribute="bottom" constant="20" id="xd4-Ij-HWD"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -602,7 +603,7 @@ Designed by katemangostar / www.freepik.com
                         <viewLayoutGuide key="safeArea" id="4Ka-0P-8ST"/>
                     </view>
                     <navigationItem key="navigationItem" title="Unsere Partner 2019" id="i3O-5s-j4w">
-                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="YdR-fU-Iyw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YdR-fU-Iyw">
                             <connections>
                                 <segue destination="biy-84-xdO" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="rMd-oD-Grf"/>
                             </connections>
@@ -839,7 +840,7 @@ Designed by katemangostar / www.freepik.com
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Filter" id="vZl-sa-lnD">
-                        <barButtonItem key="rightBarButtonItem" title="Fertig" id="FJf-1H-hPR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="FJf-1H-hPR">
                             <connections>
                                 <segue destination="iiz-CV-f6U" kind="unwind" unwindAction="filterViewUnwindActionWithUnwindSegue:" id="5h2-2L-eqM"/>
                             </connections>
@@ -1034,7 +1035,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotes Tor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKI-Sx-Lf1">
                                                         <rect key="frame" x="83" y="6" width="65" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1065,7 +1066,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotes Tor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa4-VN-aYl">
                                                         <rect key="frame" x="83.666666666666671" y="6" width="65.000000000000014" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1096,7 +1097,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO2-Og-a94">
                                                         <rect key="frame" x="82.333333333333329" y="6" width="151.66666666666669" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1127,7 +1128,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-vA-cij">
                                                         <rect key="frame" x="82.999999999999986" y="6" width="151.66666666666663" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1152,7 +1153,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Augsburg Haunstetterstraße" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQz-nQ-ijV">
                                                         <rect key="frame" x="84" y="6" width="195" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.33725490200000002" green="0.43529411759999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1183,7 +1184,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hochschule Augsburg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-e7-T7h">
                                                         <rect key="frame" x="81.999999999999986" y="6" width="151.66666666666663" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1208,7 +1209,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in der Frischstraße, nur wenige Gehminuten vom Messegelände entfernt" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aar-sU-5Kd">
                                                         <rect key="frame" x="40" y="0.0" width="319" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1233,7 +1234,7 @@ Schülestraße 1
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="an der Ecke Friedberger Straße/Siebentischstraße (beim Spickelbad), ca. 15 Gehminuten vom Messegelände entfernt." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noC-G9-5Xm">
                                                         <rect key="frame" x="40" y="0.0" width="319" height="54"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1249,7 +1250,7 @@ Schülestraße 1
                                                 <rect key="frame" x="8" y="687" width="359" height="36"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.37254901959999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="BD8-P4-pyv" appends="YES" id="VJi-Zn-Peu"/>
@@ -1360,7 +1361,7 @@ Schülestraße 1
                         <viewLayoutGuide key="safeArea" id="2ZM-3E-ivd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Anfahrt" id="OUk-Kv-qFd">
-                        <barButtonItem key="rightBarButtonItem" image="paper_plane" id="7uG-pg-qBk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="7uG-pg-qBk">
                             <connections>
                                 <action selector="navButton:" destination="c5n-fG-pme" id="Ww2-4H-J9r"/>
                             </connections>
@@ -1549,7 +1550,7 @@ Schülestraße 1
                     <tabBarItem key="tabBarItem" title="Firmen" id="1lb-gl-4I5" userLabel="Companies"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OdO-fW-h2L">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1561,10 +1562,10 @@ Schülestraße 1
             </objects>
             <point key="canvasLocation" x="2106" y="983"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Company Detail NavVC-->
         <scene sceneID="mAz-9R-P1g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" userLabel="Company Detail NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M1W-sb-baj">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -1580,7 +1581,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGZ-dM-V7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="1824"/>
+            <point key="canvasLocation" x="2105" y="1883"/>
         </scene>
         <!--Company Detail View Controller-->
         <scene sceneID="dn2-hx-poc">
@@ -1793,10 +1794,10 @@ Schülestraße 1
             </objects>
             <point key="canvasLocation" x="225" y="-422"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Info NavVC-->
         <scene sceneID="DaY-I6-mLe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pat-RL-jm8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pat-RL-jm8" userLabel="Info NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36L-11-HhQ">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1811,10 +1812,10 @@ Schülestraße 1
             </objects>
             <point key="canvasLocation" x="-1660" y="1309.2953523238382"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Filter NavVC-->
         <scene sceneID="VIb-8S-MXo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KMl-ob-bfI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KMl-ob-bfI" userLabel="Filter NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UKB-OA-y1o">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1829,10 +1830,10 @@ Schülestraße 1
             </objects>
             <point key="canvasLocation" x="3862" y="983"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Partner NavVC-->
         <scene sceneID="ja2-Tf-qqv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CY8-KV-mN9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CY8-KV-mN9" userLabel="Partner NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ykX-IF-Ahn">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1866,7 +1867,6 @@ Schülestraße 1
         <image name="layers" width="30" height="30"/>
         <image name="man" width="300" height="108.66666412353516"/>
         <image name="map" width="30" height="30"/>
-        <image name="paper_plane" width="30" height="30"/>
         <image name="parking" width="96" height="96"/>
         <image name="proffile" width="100" height="39.666667938232422"/>
         <image name="radiofantasy" width="100" height="23"/>
