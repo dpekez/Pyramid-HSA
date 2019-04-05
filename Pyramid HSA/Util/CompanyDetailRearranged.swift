@@ -24,13 +24,13 @@ struct CompanyDetailRearranged {
     let entryAs: String
     let qualification: String
     let foreignCountry: String
-    let internship: String
-    let internshipBenefit: String
+    let internship: Int
+    let internshipBenefit: Int
     let internshipInfo: String
-    let thesis: String
-    let thesisBenefit: String
-    let workingStudent: String
-    let workingStudentBenefit: String
+    let thesis: Int
+    let thesisBenefit: Int
+    let workingStudent: Int
+    let workingStudentBenefit: Int
     let workingStudentInfo: String
     var primaryContactDict = Dictionary<ContactDetails, String>()
     var secondaryContactDict = Dictionary<ContactDetails, String>()
@@ -60,13 +60,13 @@ extension CompanyDetailRearranged {
         entryAs = intermediate.entryAs
         qualification = intermediate.qualification
         foreignCountry = intermediate.foreignCountry
-        internship = intermediate.internship
-        internshipBenefit = intermediate.internshipBenefit
+        internship = Int(intermediate.internship)!
+        internshipBenefit = Int(intermediate.internshipBenefit)!
         internshipInfo = intermediate.internshipInfo
-        thesis = intermediate.thesis
-        thesisBenefit = intermediate.thesisBenefit
-        workingStudent = intermediate.workingStudent
-        workingStudentBenefit = intermediate.workingStudentBenefit
+        thesis = Int(intermediate.thesis)!
+        thesisBenefit = Int(intermediate.thesisBenefit)!
+        workingStudent = Int(intermediate.workingStudent)!
+        workingStudentBenefit = Int(intermediate.workingStudentBenefit)!
         workingStudentInfo = intermediate.workingStudentInfo
         primaryContactDict[.prefix] = intermediate.primaryContactPrefix
         primaryContactDict[.title] = intermediate.primaryContactTitle
