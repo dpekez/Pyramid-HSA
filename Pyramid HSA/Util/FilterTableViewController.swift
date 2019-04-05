@@ -41,6 +41,44 @@ class FilterTableViewController: UITableViewController {
         thesisBenefitSwitch.isOn = userDefaults.thesisBenefitIsOn
         workingStudentSwitch.isOn = userDefaults.workingStudentIsOn
         workingStudentBenefitSwitch.isOn = userDefaults.workingStudentBenefitIsOn
+        
+        benefitButtonsStateSetup()
+    }
+    
+    private func benefitButtonsStateSetup() {
+        internshipBenefitButtonStateSetter()
+        thesisBenefitButtonStateSetter()
+        workingStudentBenefitButtonStateSetter()
+    }
+    
+    private func internshipBenefitButtonStateSetter() {
+        if internshipSwitch.isOn {
+            internshipBenefitSwitch.isEnabled = true
+        } else {
+            internshipBenefitSwitch.isEnabled = false
+            internshipBenefitSwitch.isOn = false
+            userDefaults.internshipBenefitIsOn = false
+        }
+    }
+    
+    private func thesisBenefitButtonStateSetter() {
+        if thesisSwitch.isOn {
+            thesisBenefitSwitch.isEnabled = true
+        } else {
+            thesisBenefitSwitch.isEnabled = false
+            thesisBenefitSwitch.isOn = false
+            userDefaults.thesisBenefitIsOn = false
+        }
+    }
+    
+    private func workingStudentBenefitButtonStateSetter() {
+        if workingStudentSwitch.isOn {
+            workingStudentBenefitSwitch.isEnabled = true
+        } else {
+            workingStudentBenefitSwitch.isEnabled = false
+            workingStudentBenefitSwitch.isOn = false
+            userDefaults.workingStudentBenefitIsOn = false
+        }
     }
     
     @IBAction func architectureChanged(_ sender: UISwitch) {
@@ -75,6 +113,7 @@ class FilterTableViewController: UITableViewController {
     
     @IBAction func internshipChanged(_ sender: UISwitch) {
         userDefaults.internshipIsOn = sender.isOn
+        internshipBenefitButtonStateSetter()
         updateHandler()
     }
     
@@ -85,6 +124,7 @@ class FilterTableViewController: UITableViewController {
     
     @IBAction func thesisChanged(_ sender: UISwitch) {
         userDefaults.thesisIsOn = sender.isOn
+        thesisBenefitButtonStateSetter()
         updateHandler()
     }
     
@@ -95,6 +135,7 @@ class FilterTableViewController: UITableViewController {
     
     @IBAction func workingStudentChanged(_ sender: UISwitch) {
         userDefaults.workingStudentIsOn = sender.isOn
+        workingStudentBenefitButtonStateSetter()
         updateHandler()
     }
     
