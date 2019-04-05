@@ -179,8 +179,8 @@ extension DetailViewParagraphs {
         return outputString
     }
     
-    func trainingFormatter(_ detail: String) -> String {
-        if detail == "1" {
+    func trainingFormatter(_ detail: Int) -> String {
+        if detail == 1 {
             return "✔️"
         } else {
             return "-"
