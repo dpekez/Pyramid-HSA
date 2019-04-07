@@ -80,6 +80,14 @@ class CompanyDetailViewController: UIViewController {
         self.present(actionSheet, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "floorSegue" {
+            let floorsVC = segue.destination as! FloorsViewController
+            floorsVC.room = companyDetail.room
+            floorsVC.stand = companyDetail.standNumber
+        }
+    }
+    
     /*
      // MARK: - Action methods
      
