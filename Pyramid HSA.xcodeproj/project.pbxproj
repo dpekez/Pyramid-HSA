@@ -42,6 +42,8 @@
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
 		77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
+		77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE4D225A668E00369000 /* FloorsViewController.swift */; };
+		77E9CE50225A6B6F00369000 /* RoomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE4F225A6B6F00369000 /* RoomParser.swift */; };
 		77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3856E224AD46300CE322F /* MapViewOverlays.swift */; };
 		77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +125,8 @@
 		77B249E52247B073000E9143 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
+		77E9CE4D225A668E00369000 /* FloorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorsViewController.swift; sourceTree = "<group>"; };
+		77E9CE4F225A6B6F00369000 /* RoomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomParser.swift; sourceTree = "<group>"; };
 		77F3856D224ACB5D00CE322F /* hsa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hsa.gpx; sourceTree = "<group>"; };
 		77F3856E224AD46300CE322F /* MapViewOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewOverlays.swift; sourceTree = "<group>"; };
 		77F3D04C2219CDE800704DBA /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				776E035E21919B6700989FB1 /* AppDelegate.swift */,
+				77E9CE4C225A5DD100369000 /* Floors */,
 				7722343F2242490100219CEC /* Avenue */,
 				777246CA221369A100C40074 /* Events */,
 				77CC962E21A203B00048CF38 /* Companydetail */,
@@ -308,8 +313,17 @@
 				7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */,
 				77F3D04C2219CDE800704DBA /* Countdown.swift */,
 				77F3856E224AD46300CE322F /* MapViewOverlays.swift */,
+				77E9CE4F225A6B6F00369000 /* RoomParser.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		77E9CE4C225A5DD100369000 /* Floors */ = {
+			isa = PBXGroup;
+			children = (
+				77E9CE4D225A668E00369000 /* FloorsViewController.swift */,
+			);
+			path = Floors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,11 +523,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */,
+				77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */,
 				7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */,
 				7757CE2621CD963E00DDF260 /* UIColor+PyramidColors.swift in Sources */,
 				77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */,
 				77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */,
 				7705483A2191A73F0008CB4B /* CompanyTableViewCell.swift in Sources */,
+				77E9CE50225A6B6F00369000 /* RoomParser.swift in Sources */,
 				777246D12218B86600C40074 /* CountdownCircleView.swift in Sources */,
 				776E035F21919B6700989FB1 /* AppDelegate.swift in Sources */,
 				7764F20F22122B00009D7E9C /* PyramidFaculty.swift in Sources */,
