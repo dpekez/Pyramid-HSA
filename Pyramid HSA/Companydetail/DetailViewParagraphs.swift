@@ -121,15 +121,15 @@ class DetailViewParagraphs {
     }
     
     func buildContactParagraph() -> NSMutableAttributedString {
-        let contactSectionHeader = "Ansprechpartner\n"
+        let contactSectionHeader = "AnsprechpartnerIn\n"
         
         let string = NSMutableAttributedString(string: contactSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(NSAttributedString(string: "Hauptansprechpartner\n", attributes: contactHeaderStyle))
+        string.append(NSAttributedString(string: "HauptansprechpartnerIn\n", attributes: contactHeaderStyle))
         string.append(contactBuilder(companyDetail.primaryContactDict))
         
         if companyDetail.secondaryContactDict[.firstName]!.count > 1 {
-            string.append(NSAttributedString(string: "\nZweitansprechpartner\n", attributes: contactHeaderStyle))
+            string.append(NSAttributedString(string: "\nZweitansprechpartnerIn\n", attributes: contactHeaderStyle))
             string.append(contactBuilder(companyDetail.secondaryContactDict))
         }
         
