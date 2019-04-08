@@ -18,54 +18,32 @@ class FloorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let floor = roomParser.getFloor(string: room)
+        let floorName = roomParser.getFloorName(string: room)
         
-        self.title = getNameOfBuilding(forFloor: floor)
+        self.title = floorName.rawValue + ", Stand: " + stand
         
-        imageView.image = UIImage(named: floor.rawValue)
+        let floorImage = getFloorImage(forFloor: floorName)
+        
+        imageView.image = UIImage(named: floorImage)
     }
     
-    private func getNameOfBuilding(forFloor floor: Floor) -> String {
+    private func getFloorImage(forFloor floor: FloorName) -> String {
         switch floor {
         case .tentA:
-            return Building.tentA.rawValue
+            return "tentA"
         case .tentB:
-            return Building.tentB.rawValue
+            return "tentB"
         case .wMain:
-            return Building.wMain.rawValue
+            return "wMainFloor"
         case .wSecond:
-            return Building.wSecond.rawValue
+            return "wSecondFloor"
         case .mMain:
-            return Building.mMain.rawValue
+            return "mMainFloor"
         case .mSecond:
-            return Building.mSecond.rawValue
+            return "mSecondFloor"
         case .lMain:
-            return Building.lMain.rawValue
+            return "lMainFloor"
         }
     }
-    
-}
-
-enum Floor: String {
-    
-    case tentA = "tentA"
-    case tentB = "tentB"
-    case wMain = "wMainFloor"
-    case wSecond = "wSecondFloor"
-    case mMain = "mMainFloor"
-    case mSecond = "mSecondFloor"
-    case lMain = "lMainFloor"
-    
-}
-
-enum Building: String {
-    
-    case tentA = "Zelt A"
-    case tentB = "Zelt B"
-    case wMain = "W-Bau EG"
-    case wSecond = "W-Bau 2. OG"
-    case mMain = "M-Bau EG"
-    case mSecond = "M-Bau 1. OG"
-    case lMain = "L-Bau EG"
     
 }
