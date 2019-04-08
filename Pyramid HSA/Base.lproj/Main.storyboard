@@ -389,7 +389,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0 (19) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
+                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0.1 (21) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oh6-69-P3p">
                                         <rect key="frame" x="0.0" y="353" width="375" height="42"/>
@@ -1848,7 +1848,7 @@ Schülestraße 1
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" userLabel="Company Detail NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M1W-sb-baj">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2223,6 +2223,6 @@ Schülestraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ld7-hr-i8H"/>
+        <segue reference="jMj-cR-Zj0"/>
     </inferredMetricsTieBreakers>
 </document>

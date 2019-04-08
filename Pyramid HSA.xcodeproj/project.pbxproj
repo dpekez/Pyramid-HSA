@@ -36,7 +36,6 @@
 		777246CE2213714800C40074 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246CD2213714800C40074 /* EventCollectionViewCell.swift */; };
 		777246D12218B86600C40074 /* CountdownCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246D02218B86600C40074 /* CountdownCircleView.swift */; };
 		77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */; };
-		779CB8972253BFFA00E4D628 /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 779CB8962253BFF900E4D628 /* CompanyDetails.json */; };
 		77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */; };
 		77B249E62247B073000E9143 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B249E52247B073000E9143 /* AboutTableViewController.swift */; };
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
@@ -46,6 +45,7 @@
 		77E9CE50225A6B6F00369000 /* RoomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE4F225A6B6F00369000 /* RoomParser.swift */; };
 		77E9CE52225AA0E100369000 /* MapAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE51225AA0E100369000 /* MapAnnotations.swift */; };
 		77E9CE54225B683500369000 /* FloorsAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE53225B683500369000 /* FloorsAllViewController.swift */; };
+		77E9CE56225BE15000369000 /* CompanyDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 77E9CE55225BE15000369000 /* CompanyDetails.json */; };
 		77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3856E224AD46300CE322F /* MapViewOverlays.swift */; };
 		77F3D04D2219CDE800704DBA /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 /* End PBXBuildFile section */
@@ -122,7 +122,6 @@
 		777246CD2213714800C40074 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		777246D02218B86600C40074 /* CountdownCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownCircleView.swift; sourceTree = "<group>"; };
 		77767AE921AB0BE100C3BA14 /* CompaniesSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesSplitViewController.swift; sourceTree = "<group>"; };
-		779CB8962253BFF900E4D628 /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
 		77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
 		77B249E52247B073000E9143 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
@@ -131,6 +130,7 @@
 		77E9CE4F225A6B6F00369000 /* RoomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomParser.swift; sourceTree = "<group>"; };
 		77E9CE51225AA0E100369000 /* MapAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotations.swift; sourceTree = "<group>"; };
 		77E9CE53225B683500369000 /* FloorsAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorsAllViewController.swift; sourceTree = "<group>"; };
+		77E9CE55225BE15000369000 /* CompanyDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CompanyDetails.json; sourceTree = "<group>"; };
 		77F3856D224ACB5D00CE322F /* hsa.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hsa.gpx; sourceTree = "<group>"; };
 		77F3856E224AD46300CE322F /* MapViewOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewOverlays.swift; sourceTree = "<group>"; };
 		77F3D04C2219CDE800704DBA /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		7710A6FF21BD9FD0008DE062 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				779CB8962253BFF900E4D628 /* CompanyDetails.json */,
+				77E9CE55225BE15000369000 /* CompanyDetails.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779CB8972253BFFA00E4D628 /* CompanyDetails.json in Resources */,
+				77E9CE56225BE15000369000 /* CompanyDetails.json in Resources */,
 				776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */,
 				770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */,
 				776E036621919B6700989FB1 /* Main.storyboard in Resources */,
