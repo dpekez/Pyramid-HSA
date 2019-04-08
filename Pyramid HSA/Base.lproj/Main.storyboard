@@ -9,6 +9,70 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Floors Home-->
+        <scene sceneID="W9h-AQ-8uj">
+            <objects>
+                <viewController id="b35-Ge-45y" userLabel="Floors Home" customClass="FloorsAllViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBN-rU-srI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boB-pT-QDE">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCk-mB-c38">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eCk-mB-c38" firstAttribute="height" secondItem="boB-pT-QDE" secondAttribute="height" id="1Kg-yt-A6L"/>
+                                    <constraint firstAttribute="bottom" secondItem="eCk-mB-c38" secondAttribute="bottom" id="Fym-be-8kL"/>
+                                    <constraint firstItem="eCk-mB-c38" firstAttribute="top" secondItem="boB-pT-QDE" secondAttribute="top" id="Oo2-NL-hcj"/>
+                                    <constraint firstItem="eCk-mB-c38" firstAttribute="width" secondItem="boB-pT-QDE" secondAttribute="width" id="ZBS-Kc-SO8"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCk-mB-c38" secondAttribute="trailing" id="cii-Qq-EOR"/>
+                                    <constraint firstItem="eCk-mB-c38" firstAttribute="leading" secondItem="boB-pT-QDE" secondAttribute="leading" id="klQ-Yk-1aR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="boB-pT-QDE" firstAttribute="top" secondItem="wsB-di-2Q2" secondAttribute="top" id="F6r-T6-yep"/>
+                            <constraint firstItem="wsB-di-2Q2" firstAttribute="bottom" secondItem="boB-pT-QDE" secondAttribute="bottom" id="Uj7-9L-5Lt"/>
+                            <constraint firstItem="wsB-di-2Q2" firstAttribute="trailing" secondItem="boB-pT-QDE" secondAttribute="trailing" id="iBb-gm-WNS"/>
+                            <constraint firstItem="boB-pT-QDE" firstAttribute="leading" secondItem="wsB-di-2Q2" secondAttribute="leading" id="rHS-9E-gvW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wsB-di-2Q2"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="AJk-xK-R4Z">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="FnQ-fr-uTS">
+                            <rect key="frame" x="127" y="7" width="121" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="floorSCValueChanged:" destination="b35-Ge-45y" eventType="valueChanged" id="ksk-aA-kXb"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="SmX-PD-0v3">
+                            <connections>
+                                <segue destination="MRp-Gs-g3S" kind="unwind" unwindAction="partnerViewUnwindActionWithUnwindSegue:" id="9kH-EJ-gAE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="floorsSC" destination="FnQ-fr-uTS" id="cTS-Aw-Dmv"/>
+                        <outlet property="image" destination="eCk-mB-c38" id="5qv-vs-YMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ud6-uH-2MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MRp-Gs-g3S" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-695.20000000000005" y="1066.2561576354681"/>
+        </scene>
         <!--Pyramid 2019-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -182,11 +246,12 @@
                         <outlet property="countdownCircle" destination="M4A-P5-vik" id="ex0-wS-alI"/>
                         <outlet property="mapView" destination="O0c-Fg-230" id="CEN-aR-1i3"/>
                         <outlet property="partnerButton" destination="lIi-NT-CUm" id="VaC-4c-xbY"/>
+                        <segue destination="pkk-R8-Ylf" kind="presentation" identifier="floorDetailSegue" modalPresentationStyle="formSheet" id="FQw-Ug-0vv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2487.1999999999998" y="1644.3778110944529"/>
+            <point key="canvasLocation" x="-2487" y="1642"/>
         </scene>
         <!--About-->
         <scene sceneID="W2B-K1-CGc">
@@ -370,7 +435,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dC-f8-hJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oig-oV-Jwn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="1309"/>
+            <point key="canvasLocation" x="-660" y="2535"/>
         </scene>
         <!--Imprint-->
         <scene sceneID="8an-yN-O2G">
@@ -440,7 +505,7 @@ Designed by katemangostar / www.freepik.com
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRS-8h-zR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="1308"/>
+            <point key="canvasLocation" x="167" y="2535"/>
         </scene>
         <!--Partner-->
         <scene sceneID="doa-ac-WM5">
@@ -613,7 +678,7 @@ Designed by katemangostar / www.freepik.com
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-pn-28R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="biy-84-xdO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="2231"/>
+            <point key="canvasLocation" x="-660" y="1769"/>
         </scene>
         <!--Filter-->
         <scene sceneID="vhQ-Pv-cpM">
@@ -1074,7 +1139,7 @@ Designed by katemangostar / www.freepik.com
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35N-GN-X4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iiz-CV-f6U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4679" y="983"/>
+            <point key="canvasLocation" x="5444.53125" y="982.61718749999989"/>
         </scene>
         <!--Companies-->
         <scene sceneID="yzf-3x-Tg7">
@@ -1154,7 +1219,7 @@ Designed by katemangostar / www.freepik.com
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgh-MU-oMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="984"/>
+            <point key="canvasLocation" x="3806.25" y="983.78906249999989"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1756,7 +1821,7 @@ Schülestraße 1
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuC-de-1bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="1585"/>
+            <point key="canvasLocation" x="1113" y="1544"/>
         </scene>
         <!--Companies-->
         <scene sceneID="snW-sl-gZR">
@@ -1775,7 +1840,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zr-gv-V4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="983"/>
+            <point key="canvasLocation" x="2871.09375" y="982.61718749999989"/>
         </scene>
         <!--Company Detail NavVC-->
         <scene sceneID="mAz-9R-P1g">
@@ -1783,7 +1848,7 @@ Schülestraße 1
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JIJ-G1-PiF" userLabel="Company Detail NavVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M1W-sb-baj">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1956,7 +2021,7 @@ Schülestraße 1
         <!--Floors-->
         <scene sceneID="WHw-xy-b0a">
             <objects>
-                <viewController title="Raumplan" id="WG0-rK-d7f" userLabel="Floors" customClass="FloorsViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WG0-rK-d7f" userLabel="Floors" customClass="FloorsViewController" customModule="Pyramid_HSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AmU-QR-k6N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2068,7 +2133,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ke3-Ov-vCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="1309.2953523238382"/>
+            <point key="canvasLocation" x="-1460" y="2535"/>
         </scene>
         <!--Filter NavVC-->
         <scene sceneID="VIb-8S-MXo">
@@ -2086,7 +2151,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6a-ib-EkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3862" y="983"/>
+            <point key="canvasLocation" x="4627.34375" y="982.61718749999989"/>
         </scene>
         <!--Partner NavVC-->
         <scene sceneID="ja2-Tf-qqv">
@@ -2104,7 +2169,28 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rav-I9-5Cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1660" y="2140.4797601199402"/>
+            <point key="canvasLocation" x="-1460" y="1769"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="acI-X3-fqL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pkk-R8-Ylf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dPl-Rb-zjR">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vWp-Ta-FMg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="b35-Ge-45y" kind="relationship" relationship="rootViewController" id="Iy5-RS-vDD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2f-ep-NcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1460.15625" y="1066.9921875"/>
         </scene>
     </scenes>
     <resources>
@@ -2137,6 +2223,6 @@ Schülestraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TBs-sm-ehS"/>
+        <segue reference="ld7-hr-i8H"/>
     </inferredMetricsTieBreakers>
 </document>
