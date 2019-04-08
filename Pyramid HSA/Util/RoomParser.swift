@@ -10,7 +10,7 @@ import Foundation
 
 class RoomParser {
     
-    func getFloor(string: String) -> Floor {
+    func getFloorName(string: String) -> FloorName {
         let string = string.lowercased()
         
         if string.contains("zelt") {
@@ -36,5 +36,17 @@ class RoomParser {
         }
         
     }
+    
+}
+
+enum FloorName: String {
+    
+    case tentA = "Zelt A"
+    case tentB = "Zelt B"
+    case wMain = "W-Bau EG"
+    case wSecond = "W-Bau 2. OG"
+    case mMain = "M-Bau EG"
+    case mSecond = "M-Bau 1. OG"
+    case lMain = "L-Bau EG"
     
 }
