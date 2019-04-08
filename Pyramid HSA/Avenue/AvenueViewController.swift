@@ -9,23 +9,23 @@
 import UIKit
 import MapKit
 
-class AvenueViewController: UIViewController {
+class AvenueViewController: UIViewController, MKMapViewDelegate {
     
     let locationManager = CLLocationManager()
     let gMaps = URL(string: "https://www.google.de/maps/place/Hochschule+Augsburg/@48.3589748,10.9063944,18z/data=!4m5!3m4!1s0x0:0x8a16b7655d3bfdc5!8m2!3d48.3583307!4d10.9058189")
     let aMaps = URL(string: "https://maps.apple.com/?q=48.359260,10.906433&sll=48.359260,10.906433&sspn=0.001197,0.002547&t=m")
-    let gMapsRegistration = ""
-    let aMapsRegistration = ""
+
     let nearDist = CLLocationDistance(700)
     
     @IBOutlet weak var mapView: MapViewOverlays!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         setMapCamera()
-        mapView.createRegistrationPointAnnotation()
-        mapView.createParkingAnnotation()
-        mapView.createPublicTransportAnnotation()
+        createRegistrationPointAnnotation()
+        createParkingAnnotation()
+        createPublicTransportAnnotation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,6 +38,40 @@ class AvenueViewController: UIViewController {
         let dist = CLLocationDistance(2500)
     
         mapView.moveCamera(to: loc, atDistance: dist)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+            return nil
+        }
+        
+        let identifier = "avenue"
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+        }
+        
+        return view
+    }
+    
+    func createRegistrationPointAnnotation() {
+        mapView.addAnnotation(AvenueAnnotation(title: "Anmeldepunkt", subtitle: "Für Firmen", latitude: 48.35867, longitude: 10.90793))
+    }
+    
+    func createParkingAnnotation() {
+        mapView.addAnnotation(AvenueAnnotation(title: "Parkplatz", subtitle: "Frischstraße", latitude: 48.352311, longitude: 10.906202))
+        mapView.addAnnotation(AvenueAnnotation(title: "Parkplatz", subtitle: "Spickelbad", latitude: 48.355245, longitude: 10.914821))
+    }
+    
+    func createPublicTransportAnnotation() {
+        mapView.addAnnotation(AvenueAnnotation(title: "Tramlinien 2 und 3", subtitle: "Rotes Tor", latitude: 48.358190, longitude: 10.902142))
+        mapView.addAnnotation(AvenueAnnotation(title: "Bahnhof", subtitle: "Haunstetter Straße", latitude: 48.358190, longitude: 10.902142))
+        mapView.addAnnotation(AvenueAnnotation(title: "Tram 6, Bus 32/35", subtitle: "Hochschule", latitude: 48.358961, longitude: 10.905717))
     }
     
     @IBAction func centerMapButton(_ sender: UIButton) {
@@ -67,17 +101,17 @@ class AvenueViewController: UIViewController {
     }
     
     @IBAction func tramSixTapped(_ sender: UITapGestureRecognizer) {
-        let loc = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+        let loc = CLLocationCoordinate2D(latitude: 48.358961, longitude: 10.905717)
         mapView.moveCamera(to: loc, atDistance: nearDist)
     }
     
     @IBAction func bus32Tapped(_ sender: UITapGestureRecognizer) {
-        let loc = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+        let loc = CLLocationCoordinate2D(latitude: 48.358961, longitude: 10.905717)
         mapView.moveCamera(to: loc, atDistance: nearDist)
     }
     
     @IBAction func bus35Tapped(_ sender: UITapGestureRecognizer) {
-        let loc = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+        let loc = CLLocationCoordinate2D(latitude: 48.358961, longitude: 10.905717)
         mapView.moveCamera(to: loc, atDistance: nearDist)
     }
     
