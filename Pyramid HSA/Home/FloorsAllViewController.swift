@@ -64,7 +64,7 @@ class FloorsAllViewController: UIViewController {
         case .tentB:
             image.image = UIImage(named: "tentB")
         case .lMain:
-            image.image = UIImage(named: "mMainFloor")
+            image.image = UIImage(named: "lMainFloor")
         }
     }
     
