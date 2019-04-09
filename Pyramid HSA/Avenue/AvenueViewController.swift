@@ -70,7 +70,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     
     func createPublicTransportAnnotation() {
         mapView.addAnnotation(AvenueAnnotation(title: "Tramlinien 2 und 3", subtitle: "Rotes Tor", latitude: 48.358190, longitude: 10.902142))
-        mapView.addAnnotation(AvenueAnnotation(title: "Bahnhof", subtitle: "Haunstetter Straße", latitude: 48.358190, longitude: 10.902142))
+        mapView.addAnnotation(AvenueAnnotation(title: "Bahnhof", subtitle: "Haunstetter Straße", latitude: 48.355013, longitude: 10.901830))
         mapView.addAnnotation(AvenueAnnotation(title: "Tram 6, Bus 32/35", subtitle: "Hochschule", latitude: 48.358961, longitude: 10.905717))
     }
     
