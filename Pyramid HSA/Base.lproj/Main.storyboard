@@ -448,7 +448,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Firmenkontaktmesse Pyramid
+                                <mutableString key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
 
 An der Hochschule 1
@@ -486,8 +486,10 @@ Diese Website enthält auch Links oder Verweise auf Websites Dritter, die außer
 Glyphen:
 Good Boy License / icons8.com
 Eventbilder:
-Designed by katemangostar / www.freepik.com
-</string>
+Designed by katemangostar / freepik.com
+Premiumkrone:
+Made by Good Ware / flaticon.com/authors/good-ware
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
