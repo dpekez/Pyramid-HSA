@@ -38,6 +38,7 @@ class DetailViewParagraphs {
         let branchTitle = "Branchen: "
         let productTitle = "Produkte: "
         let subsidiaryTitle = "Standorte: "
+        let foreignCountryTitle = "Ausland: "
         let revenueTitle = "Umsatz: "
         let employeeCountTitle = "Mitarbeiterzahl: "
         let string = NSMutableAttributedString(string: detailSectionHeader, attributes: sectionHeaderStyle)
@@ -59,6 +60,10 @@ class DetailViewParagraphs {
             string.append(createDetailLine(withHeader: subsidiaryTitle, andDetail: companyDetail.subsidiary))
         }
         
+        if companyDetail.foreignCountry.count > 1 {
+            string.append(createDetailLine(withHeader: foreignCountryTitle, andDetail: companyDetail.foreignCountry))
+        }
+        
         if companyDetail.revenue > 0 {
             string.append(createDetailLine(withHeader: revenueTitle, andDetail: revenueFormatter(companyDetail.revenue)))
         }
@@ -74,7 +79,6 @@ class DetailViewParagraphs {
         let trainingSectionHeader = "Training\n"
         let entryAsTitle = "Einstiegsmöglichkeiten: "
         let qualificationTitle = "Zusatzqualifikation: "
-        let foreignCountryTitle = "Ausland: "
         let internshipTitle = "\nPraktika: "
         let internshipBenefitsTitle = "Praktika Vergütung: "
         let internshipInfoTitle = "Praktika Info: "
@@ -92,10 +96,6 @@ class DetailViewParagraphs {
         
         if companyDetail.qualification.count > 1 {
             string.append(createDetailLine(withHeader: qualificationTitle, andDetail: companyDetail.qualification))
-        }
-        
-        if companyDetail.foreignCountry.count > 1 {
-            string.append(createDetailLine(withHeader: foreignCountryTitle, andDetail: companyDetail.foreignCountry))
         }
         
         string.append(createDetailLine(withHeader: internshipTitle, andDetail: trainingFormatter(companyDetail.internship)))
@@ -125,11 +125,10 @@ class DetailViewParagraphs {
         
         let string = NSMutableAttributedString(string: contactSectionHeader, attributes: sectionHeaderStyle)
         
-        string.append(NSAttributedString(string: "HauptansprechpartnerIn\n", attributes: contactHeaderStyle))
         string.append(contactBuilder(companyDetail.primaryContactDict))
         
         if companyDetail.secondaryContactDict[.firstName]!.count > 1 {
-            string.append(NSAttributedString(string: "\nZweitansprechpartnerIn\n", attributes: contactHeaderStyle))
+            string.append(NSAttributedString(string: "\n", attributes: contactHeaderStyle))
             string.append(contactBuilder(companyDetail.secondaryContactDict))
         }
         
