@@ -60,7 +60,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     }
     
     func createRegistrationPointAnnotation() {
-        mapView.addAnnotation(AvenueAnnotation(title: "Anmeldepunkt", subtitle: "Für Firmen", latitude: 48.35867, longitude: 10.90793))
+        mapView.addAnnotation(AvenueAnnotation(title: "Anmeldepunkt", subtitle: "Für Firmen", latitude: 48.356074, longitude: 10.905529))
     }
     
     func createParkingAnnotation() {
@@ -141,7 +141,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     }
 
     @IBAction func registrationTapped(_ sender: UITapGestureRecognizer) {
-        let loc = CLLocationCoordinate2D(latitude: 48.35867, longitude: 10.90793)
+        let loc = CLLocationCoordinate2D(latitude: 48.356074, longitude: 10.905529)
         mapView.moveCamera(to: loc, atDistance: nearDist)
     }
     
