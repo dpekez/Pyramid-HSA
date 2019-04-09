@@ -1178,6 +1178,25 @@ Designed by katemangostar / www.freepik.com
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aw4-VY-Qia">
+                                            <rect key="frame" x="136" y="4" width="123" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-V2-zNR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="Xnx-X1-Sbx"/>
+                                                        <constraint firstAttribute="height" constant="16" id="mL9-bc-P8S"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premiumpartner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-hZ-Rpz">
+                                                    <rect key="frame" x="24" y="0.0" width="99" height="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.95572914841211387" green="0.71696167599213501" blue="0.17791763179140163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Lxd-wd-QEn" firstAttribute="centerY" secondItem="1HS-NE-DPy" secondAttribute="centerY" id="8T5-7g-08L"/>
@@ -1190,6 +1209,7 @@ Designed by katemangostar / www.freepik.com
                                 <connections>
                                     <outlet property="logoImageView" destination="8wG-dX-N9N" id="EoZ-o8-IIH"/>
                                     <outlet property="nameLabel" destination="Lxd-wd-QEn" id="6I7-zN-ZR7"/>
+                                    <outlet property="premiumTag" destination="Aw4-VY-Qia" id="LdF-T2-dHw"/>
                                     <segue destination="JIJ-G1-PiF" kind="showDetail" identifier="companyDetailSegue" id="TBs-sm-ehS">
                                         <segue key="commit" inheritsFrom="parent" id="oOd-Gh-ySv"/>
                                         <segue key="preview" inheritsFrom="commit" id="jMj-cR-Zj0"/>
@@ -1219,7 +1239,7 @@ Designed by katemangostar / www.freepik.com
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgh-MU-oMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806.25" y="983.78906249999989"/>
+            <point key="canvasLocation" x="3805.5999999999999" y="983.49753694581284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -2198,6 +2218,7 @@ Schülestraße 1
         <image name="aldi" width="100" height="120"/>
         <image name="bus" width="100" height="100"/>
         <image name="compass" width="30" height="30"/>
+        <image name="crown" width="32" height="32"/>
         <image name="digatus" width="100" height="20.333333969116211"/>
         <image name="dynamicengineering" width="100" height="30.666666030883789"/>
         <image name="erhardtleimer" width="150" height="30.666666030883789"/>

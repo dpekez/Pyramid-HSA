@@ -77,9 +77,9 @@ class CompaniesTableViewController: UITableViewController {
         cell.nameLabel.text = company.name
         cell.logoImageView.image = UIImage(named: "\(company.id)")
         
-        cell.backgroundColor = UIColor.white
-        if company.id == 274 || company.id == 296 { // colourize premium partners
-            cell.backgroundColor = .pyramidBrighterBlue
+        cell.premiumTag.isHidden = true
+        if company.id == 274 || company.id == 296 { // show tag for premium partners
+            cell.premiumTag.isHidden = false
         }
 
         return cell
