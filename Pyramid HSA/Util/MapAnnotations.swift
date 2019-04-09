@@ -12,11 +12,13 @@ import MapKit
 class BuildingAnnotation: NSObject, MKAnnotation {
     
     var title: String?
+    var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     var kind: FloorName
 
-    init(kind: FloorName ,title: String, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+    init(kind: FloorName ,title: String, subtitle: String? = nil, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         self.title = title
+        self.subtitle = subtitle
         self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         self.kind = kind
     }

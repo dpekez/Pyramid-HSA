@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
     
     private func createBuildingAnnotations() {
         mapView.addAnnotation(BuildingAnnotation(kind: .lMain, title: "L-Bau", latitude: 48.358908, longitude: 10.905958))
-        mapView.addAnnotation(BuildingAnnotation(kind: .mMain, title: "K-Bau", latitude: 48.358967, longitude: 10.906961))
+        mapView.addAnnotation(BuildingAnnotation(kind: .mMain, title: "K-Bau", subtitle: "Über M-Bau EG zu erreichen", latitude: 48.358967, longitude: 10.906961))
         mapView.addAnnotation(BuildingAnnotation(kind: .mMain, title: "M-Bau", latitude: 48.358564, longitude: 10.906355))
         mapView.addAnnotation(BuildingAnnotation(kind: .wMain, title: "W-Bau", latitude: 48.358496, longitude: 10.907053))
         mapView.addAnnotation(BuildingAnnotation(kind: .tentA, title: "Zelt A", latitude: 48.358602, longitude: 10.905878))
