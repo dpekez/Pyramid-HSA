@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7705483A2191A73F0008CB4B /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770548392191A73F0008CB4B /* CompanyTableViewCell.swift */; };
-		770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770A563321A83BED00BD4FB9 /* Assets.xcassets */; };
 		77104307220A258600344821 /* DetailViewParagraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77104306220A258600344821 /* DetailViewParagraphs.swift */; };
 		7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86321A49FA400DA424D /* FilterTableViewController.swift */; };
 		7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721A86521A4B6E900DA424D /* UserDefaultsController.swift */; };
@@ -39,6 +38,9 @@
 		77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */; };
 		77B249E62247B073000E9143 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B249E52247B073000E9143 /* AboutTableViewController.swift */; };
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
+		77D0A458225E09A50084EE49 /* SpiderGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0A457225E09A50084EE49 /* SpiderGraph.swift */; };
+		77D0A45A225E3C560084EE49 /* TKRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0A459225E3C560084EE49 /* TKRadarChart.swift */; };
+		77D0A45E225F61D70084EE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D0A45D225F61CE0084EE49 /* Assets.xcassets */; };
 		77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
 		77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE4D225A668E00369000 /* FloorsViewController.swift */; };
@@ -90,7 +92,6 @@
 
 /* Begin PBXFileReference section */
 		770548392191A73F0008CB4B /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
-		770A563321A83BED00BD4FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77104306220A258600344821 /* DetailViewParagraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewParagraphs.swift; sourceTree = "<group>"; };
 		7721A86321A49FA400DA424D /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
@@ -125,6 +126,9 @@
 		77AFF06F219219A300DAAE00 /* CompaniesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesTableViewController.swift; sourceTree = "<group>"; };
 		77B249E52247B073000E9143 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		77D0A457225E09A50084EE49 /* SpiderGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderGraph.swift; sourceTree = "<group>"; };
+		77D0A459225E3C560084EE49 /* TKRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
+		77D0A45D225F61CE0084EE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
 		77E9CE4D225A668E00369000 /* FloorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorsViewController.swift; sourceTree = "<group>"; };
 		77E9CE4F225A6B6F00369000 /* RoomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomParser.swift; sourceTree = "<group>"; };
@@ -257,7 +261,7 @@
 				777246CF2218B61300C40074 /* Home */,
 				77CC963321A2180C0048CF38 /* Util */,
 				7710A6FF21BD9FD0008DE062 /* Resources */,
-				770A563321A83BED00BD4FB9 /* Assets.xcassets */,
+				77D0A45D225F61CE0084EE49 /* Assets.xcassets */,
 				776E036421919B6700989FB1 /* Main.storyboard */,
 				776E036921919B6800989FB1 /* LaunchScreen.storyboard */,
 				776E036C21919B6800989FB1 /* Info.plist */,
@@ -309,6 +313,8 @@
 			children = (
 				7721A86321A49FA400DA424D /* FilterTableViewController.swift */,
 				777246D02218B86600C40074 /* CountdownCircleView.swift */,
+				77D0A457225E09A50084EE49 /* SpiderGraph.swift */,
+				77D0A459225E3C560084EE49 /* TKRadarChart.swift */,
 				7757CE2321CD6A6C00DDF260 /* CircularBars.swift */,
 				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
@@ -488,7 +494,7 @@
 			files = (
 				77E9CE56225BE15000369000 /* CompanyDetails.json in Resources */,
 				776E036B21919B6800989FB1 /* LaunchScreen.storyboard in Resources */,
-				770A563421A83BED00BD4FB9 /* Assets.xcassets in Resources */,
+				77D0A45E225F61D70084EE49 /* Assets.xcassets in Resources */,
 				776E036621919B6700989FB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +535,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E9CE52225AA0E100369000 /* MapAnnotations.swift in Sources */,
+				77D0A45A225E3C560084EE49 /* TKRadarChart.swift in Sources */,
+				77D0A458225E09A50084EE49 /* SpiderGraph.swift in Sources */,
 				7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */,
 				77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */,
 				7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */,
