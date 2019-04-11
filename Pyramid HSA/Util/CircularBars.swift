@@ -24,6 +24,10 @@ class CircularBars: UIView {
         .architecture, .electricalEngineering, .design, .computerScience, .mechanicalEngineering, .businessAdministration
     ]
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -42,7 +46,8 @@ class CircularBars: UIView {
         }
     }
     
-    func createCircularBars() {
+    func create() {
+        print()
         var stepper = 0
         for i in interest {
             let yPos = radiusOffset + radiusStep * CGFloat(stepper)
@@ -65,7 +70,7 @@ class CircularBars: UIView {
         }
     }
     
-    func createTextLayer(withInterest interest: String, color: CGColor, yPos: CGFloat) -> CATextLayer {
+    private func createTextLayer(withInterest interest: String, color: CGColor, yPos: CGFloat) -> CATextLayer {
         let textLayer = CATextLayer()
         textLayer.backgroundColor = UIColor.clear.cgColor
         textLayer.foregroundColor = color
@@ -104,6 +109,7 @@ class CircularBars: UIView {
             let animation = CABasicAnimation(keyPath: "strokeEnd")
             animation.fromValue = strokeStart
             animation.toValue = strokeEnd
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             animation.duration = animationDuration
             shapeLayer.add(animation, forKey: nil)
         }
