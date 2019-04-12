@@ -71,7 +71,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ud6-uH-2MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MRp-Gs-g3S" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-695.20000000000005" y="1066.2561576354681"/>
+            <point key="canvasLocation" x="-660" y="1066"/>
         </scene>
         <!--Pyramid 2019-->
         <scene sceneID="hNz-n2-bh7">
@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2487" y="1642"/>
+            <point key="canvasLocation" x="-2402" y="1769"/>
         </scene>
         <!--About-->
         <scene sceneID="W2B-K1-CGc">
@@ -448,7 +448,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Firmenkontaktmesse Pyramid
+                                <mutableString key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
 
 An der Hochschule 1
@@ -487,9 +487,11 @@ Glyphen:
 Good Boy License / icons8.com
 Eventbilder:
 Designed by katemangostar / freepik.com
-Premiumkrone:
+Designed by yanalya / freepik.com
+Happy Senior / imgflip.com
+Premiumpartner-Krone:
 Made by Good Ware / flaticon.com/authors/good-ware
-</string>
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -1141,7 +1143,7 @@ Made by Good Ware / flaticon.com/authors/good-ware
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35N-GN-X4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iiz-CV-f6U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5444.53125" y="982.61718749999989"/>
+            <point key="canvasLocation" x="4634" y="1068"/>
         </scene>
         <!--Companies-->
         <scene sceneID="yzf-3x-Tg7">
@@ -1241,7 +1243,7 @@ Made by Good Ware / flaticon.com/authors/good-ware
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgh-MU-oMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3805.5999999999999" y="983.49753694581284"/>
+            <point key="canvasLocation" x="2974" y="1068"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1720,7 +1722,7 @@ Schülestraße 1
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1112.8" y="-505.41871921182269"/>
+            <point key="canvasLocation" x="1113" y="-423"/>
         </scene>
         <!--Events-->
         <scene sceneID="DcM-3k-5Om">
@@ -1753,7 +1755,7 @@ Schülestraße 1
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-gO-DMd">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-gO-DMd">
                                                         <rect key="frame" x="8" y="6" width="288" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" id="zd6-uv-fHq"/>
@@ -1862,7 +1864,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zr-gv-V4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2871.09375" y="982.61718749999989"/>
+            <point key="canvasLocation" x="2105" y="1066"/>
         </scene>
         <!--Company Detail NavVC-->
         <scene sceneID="mAz-9R-P1g">
@@ -1883,7 +1885,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGZ-dM-V7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="1883"/>
+            <point key="canvasLocation" x="2105" y="1769"/>
         </scene>
         <!--Company Detail View Controller-->
         <scene sceneID="dn2-hx-poc">
@@ -1911,10 +1913,14 @@ Schülestraße 1
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-kC-BuI">
                                                         <rect key="frame" x="0.0" y="160" width="320" height="270"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="320" id="0Qc-hC-jiz"/>
                                                             <constraint firstAttribute="height" constant="270" id="qGZ-zk-XTx"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="py5-lw-wly" appends="YES" id="P7v-wk-yc0"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -2036,8 +2042,13 @@ Schülestraße 1
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqH-RM-l4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="py5-lw-wly">
+                    <connections>
+                        <action selector="graphTap:" destination="trq-P9-8xw" id="JUG-gf-oMB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3041" y="1884"/>
+            <point key="canvasLocation" x="2974" y="1769"/>
         </scene>
         <!--Floors-->
         <scene sceneID="WHw-xy-b0a">
@@ -2079,7 +2090,7 @@ Schülestraße 1
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTw-ZX-5Fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="2593.5960591133007"/>
+            <point key="canvasLocation" x="2974" y="2534"/>
         </scene>
         <!--Events-->
         <scene sceneID="9U9-B2-zl5">
@@ -2117,7 +2128,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMl-EE-qeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2486" y="748"/>
+            <point key="canvasLocation" x="-2402" y="757"/>
         </scene>
         <!--Venue-->
         <scene sceneID="69u-I3-G3y">
@@ -2172,7 +2183,7 @@ Schülestraße 1
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6a-ib-EkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4627.34375" y="982.61718749999989"/>
+            <point key="canvasLocation" x="3794" y="1066"/>
         </scene>
         <!--Partner NavVC-->
         <scene sceneID="ja2-Tf-qqv">
@@ -2245,6 +2256,6 @@ Schülestraße 1
         <image name="xitaso" width="100" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jMj-cR-Zj0"/>
+        <segue reference="TBs-sm-ehS"/>
     </inferredMetricsTieBreakers>
 </document>
