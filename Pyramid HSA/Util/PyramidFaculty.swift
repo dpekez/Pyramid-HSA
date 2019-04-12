@@ -1,5 +1,5 @@
 //
-//  PyramidFaculties.swift
+//  PyramidFaculty.swift
 //  Pyramid HSA
 //
 //  Created by Dejan Pekez on 11.02.19.
