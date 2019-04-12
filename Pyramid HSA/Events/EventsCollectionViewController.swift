@@ -17,6 +17,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "Studentenversorgung",
         "Gewinnspiel",
         "Bewerbungsfotos",
+        "Bewerbungsmappencheck",
         "Jobwall",
         "Catch it if you can"
     ]
@@ -26,6 +27,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "Auch für die Verpflegung ist gesorgt",
         "Bei unserem Gewinnspiel am FCA Stand warten viele großartige Preise auf dich",
         "Ihr erhaltet kostenlose Bewerbungsfotos von einem professionellen Fotografen",
+        "Lasst eure Bewerbungsunterlagen kostenlos von einem Profi checken",
         "An der Jobwall werden aktuelle Stellenangebote unserer Firmen veröffentlicht",
         "Lerne in Kurzvorstellungsgesprächen viele spannende Firmen kennen"
     ]
@@ -34,6 +36,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "13:00 Uhr | M1.01",
         "10-15 Uhr | L-Bau Foyer & W3.13",
         "10-15 Uhr | Zwischen W- und J-Bau",
+        "10-15 Uhr | M 1.02",
         "10-15 Uhr | M 1.02",
         "10-15 Uhr | Eingang M-Bau",
         "Nur mit Anmeldung | W3.01"
@@ -44,6 +47,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "food",
         "football",
         "shooting",
+        "harold",
         "jobs",
         "catchit"
     ]
