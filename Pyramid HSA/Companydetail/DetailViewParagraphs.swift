@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewParagraphs {
     let sectionHeaderStyle: [NSAttributedString.Key: Any] = [
-        .font: UIFont.boldSystemFont(ofSize: 36),
+        .font: UIFont.boldSystemFont(ofSize: 32),
         .foregroundColor: UIColor.pyramidBlue
     ]
     let titleHeaderStyle: [NSAttributedString.Key: Any] = [
