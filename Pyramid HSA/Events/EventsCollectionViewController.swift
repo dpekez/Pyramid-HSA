@@ -47,7 +47,7 @@ class EventsCollectionViewController: UICollectionViewController {
         "food",
         "football",
         "shooting",
-        "harold",
+        "mappe",
         "jobs",
         "catchit"
     ]
