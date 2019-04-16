@@ -8,11 +8,10 @@
 
 import UIKit
 
-class SpiderGraph: UIView {
+class SpiderGraph: Graph {
     
     private var width = CGFloat()
     private var height = CGFloat()
-    private var centerPoint = CGPoint()
     private var radiusOffset = CGFloat()
     private let barWidth: CGFloat = 1
     private var interestRatings = [PyramidFaculty: CGFloat]()
@@ -22,10 +21,8 @@ class SpiderGraph: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print(bounds)
         width = bounds.width
         height = bounds.height
-        centerPoint = CGPoint(x: width / 2, y: height / 2)
         radiusOffset = (height - 60) / 12
     }
     
@@ -36,11 +33,10 @@ class SpiderGraph: UIView {
     override func awakeFromNib() {
         width = bounds.width
         height = bounds.height
-        centerPoint = CGPoint(x: width / 2, y: height / 2)
         radiusOffset = (height - 60) / 12
     }
     
-    func setInterestRatings(interest: Dictionary<PyramidFaculty, Int>) {
+    override func setInterestRatings(interest: Dictionary<PyramidFaculty, Int>) {
         for (key, value) in interest {
             switch value {
             case 0: interestRatings[key] = radiusOffset
@@ -54,7 +50,7 @@ class SpiderGraph: UIView {
         }
     }
     
-    func create() {
+    override func create() {
         for i in 0...5 {
             let stepper = CGFloat(i)
             
@@ -74,8 +70,8 @@ class SpiderGraph: UIView {
     
     private func getPoint(forDistance dist: CGFloat, angle: CGFloat) -> CGPoint {
         let angleInRadians: CGFloat = angle * .pi / 180
-        let x = sin(angleInRadians) * dist + centerPoint.x
-        let y = -cos(angleInRadians) * dist + centerPoint.y
+        let x = sin(angleInRadians) * dist + center.x
+        let y = -cos(angleInRadians) * dist + center.y
         return CGPoint(x: x, y: y)
     }
     
@@ -85,7 +81,7 @@ class SpiderGraph: UIView {
         for i in 0...5 {
             let stepper = CGFloat(i)
             let path = UIBezierPath()
-            path.move(to: centerPoint)
+            path.move(to: center)
             path.addLine(to: getPoint(forDistance: radiusOffset * 7 + 1, angle: 60 * stepper))
             layer.addSublayer(createGridShapeLayer(withPath: path.cgPath))
         }
@@ -119,8 +115,9 @@ class SpiderGraph: UIView {
         shapeLayer.lineWidth = 1
         
         path.move(to: getPoint(forDistance: offset, angle: 0))
-        for i in 1...5 {
-            path.addLine(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)))
+        for i in 1...6 {
+            path.addQuadCurve(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)), controlPoint: getPoint(forDistance: offset - offset / 6, angle: CGFloat(i * 60) - 30))
+//            path.addLine(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)))
         }
         path.close()
         
@@ -131,21 +128,16 @@ class SpiderGraph: UIView {
     
     // MARK: data web
     
-    private func createInitialWebPath() -> CGPath {
-        let path = UIBezierPath()
-        path.move(to: centerPoint)
-        path.addLine(to: centerPoint)
-        
-        return path.cgPath
-    }
-    
     private func createInitialDataPath() -> CGPath {
         let path = UIBezierPath()
         let maxDist = radiusOffset * 7
-        path.move(to: getPoint(forDistance: maxDist, angle: 0))
+        let partitions = 6
+        let degreeJumps = 360 / partitions
+        let degreeOffset = -60
+        path.move(to: getPoint(forDistance: maxDist, angle: CGFloat(degreeOffset)))
         
-        for i in 0...6 {
-            path.addLine(to: getPoint(forDistance: maxDist, angle: CGFloat(i * 60)))
+        for i in 1...partitions {
+            path.addLine(to: getPoint(forDistance: maxDist, angle: CGFloat(i * degreeJumps + degreeOffset)))
         }
         
         path.close()
@@ -169,6 +161,7 @@ class SpiderGraph: UIView {
                 stepper += 1
                 continue
             }
+//            path.addQuadCurve(to: getPoint(forDistance: values[i]!, angle: CGFloat(stepper * 60)), controlPoint: getPoint(forDistance: values[i]! - values[i]! / 6, angle: CGFloat(stepper * 60) - 30))
             path.addLine(to: getPoint(forDistance: values[i]!, angle: CGFloat(stepper * 60)))
             stepper += 1
         }
@@ -179,7 +172,7 @@ class SpiderGraph: UIView {
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.fromValue = initialPath
         //        pathAnimation.toValue = path.cgPath
-        pathAnimation.duration = 2
+        pathAnimation.duration = 1
         pathAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
         shapeLayer.add(pathAnimation, forKey: "pathAnimation")

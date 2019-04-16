@@ -1,5 +1,5 @@
 //
-//  CircularBars.swift
+//  CircularGraph.swift
 //  Pyramid HSA
 //
 //  Created by Dejan Pekez on 21.12.18.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CircularBars: UIView {
-    private let viewCenter = CGPoint(x: 125, y: 125)
+class CircularGraph: Graph {
+    private var width = CGFloat()
+    private var height = CGFloat()
     private let radiusOffset: CGFloat = 20
     private let radiusStep: CGFloat = 20
     private let barWidth: CGFloat = 8
@@ -26,13 +27,15 @@ class CircularBars: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        width = bounds.width
+        height = bounds.height
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func setInterestRatings(interest: Dictionary<PyramidFaculty, Int>) {
+    override func setInterestRatings(interest: Dictionary<PyramidFaculty, Int>) {
         for (key, value) in interest {
             switch value {
             case 0: interestRatings[key] = 0
@@ -46,7 +49,7 @@ class CircularBars: UIView {
         }
     }
     
-    func create() {
+    override func create() {
         print()
         var stepper = 0
         for i in interest {
@@ -78,7 +81,7 @@ class CircularBars: UIView {
         textLayer.fontSize = 14.0
         textLayer.string = interest
         textLayer.alignmentMode = CATextLayerAlignmentMode.right
-        textLayer.frame = CGRect(x: 0, y: viewCenter.y - yPos - 11, width: self.frame.size.width / 2 - 10, height: 40.0)
+        textLayer.frame = CGRect(x: 0, y: center.y - yPos - 11, width: self.frame.size.width / 2 - 10, height: 40.0)
         textLayer.contentsScale = UIScreen.main.scale
         
         return textLayer
@@ -86,7 +89,7 @@ class CircularBars: UIView {
     
     private func createCircularPath(withRadius radius: CGFloat) -> CGPath {
         return UIBezierPath.init(
-            arcCenter: viewCenter,
+            arcCenter: center,
             radius: radius,
             startAngle: 3 * .pi / 2,
             endAngle: .pi,
