@@ -389,7 +389,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0.1 (25) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
+                            <tableViewSection footerTitle="Pyramid HSA, Version 1.0.1 (26) 🚀" id="Mbm-2l-RyY" userLabel="Imprint/Footer">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oh6-69-P3p">
                                         <rect key="frame" x="0.0" y="353" width="375" height="42"/>
@@ -448,7 +448,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bv9-1P-dpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Firmenkontaktmesse Pyramid
+                                <string key="text">Firmenkontaktmesse Pyramid
 Hochschule für Angewandte Wissenschaften Augsburg
 
 An der Hochschule 1
@@ -491,7 +491,7 @@ Designed by yanalya / freepik.com
 Designed by luis_molinero / freepik.com
 Premiumpartner-Krone:
 Made by Good Ware / flaticon.com/authors/good-ware
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -1550,7 +1550,7 @@ Schülestraße 1
                                                     <outletCollection property="gestureRecognizers" destination="IfY-FL-UE1" appends="YES" id="sgx-w9-aoF"/>
                                                 </connections>
                                             </stackView>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Anmeldepunkt ist beim Studentenparkplatz, Campus am Brunnenlech." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h3-lk-oh3">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Anmeldepunkt befindet sich beim Studentenparkplatz, Campus am Brunnenlech." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h3-lk-oh3">
                                                 <rect key="frame" x="8" y="687" width="359" height="36"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
