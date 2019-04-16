@@ -488,7 +488,7 @@ Good Boy License / icons8.com
 Eventbilder:
 Designed by katemangostar / freepik.com
 Designed by yanalya / freepik.com
-Happy Senior / imgflip.com
+Designed by luis_molinero / freepik.com
 Premiumpartner-Krone:
 Made by Good Ware / flaticon.com/authors/good-ware
 </mutableString>
@@ -2042,7 +2042,7 @@ Schülestraße 1
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqH-RM-l4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="py5-lw-wly">
+                <tapGestureRecognizer id="py5-lw-wly" userLabel="Graph Tap Gesture">
                     <connections>
                         <action selector="graphTap:" destination="trq-P9-8xw" id="JUG-gf-oMB"/>
                     </connections>

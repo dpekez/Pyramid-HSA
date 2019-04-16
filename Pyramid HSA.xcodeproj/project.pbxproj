@@ -16,7 +16,7 @@
 		7744694B224D7D8700D64F61 /* CountdownCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777246D02218B86600C40074 /* CountdownCircleView.swift */; };
 		7744694C224D7E8400D64F61 /* UIColor+PyramidColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */; };
 		7744694D224D7E9400D64F61 /* PyramidFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */; };
-		7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularBars.swift */; };
+		7757CE2421CD6A6C00DDF260 /* CircularGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2321CD6A6C00DDF260 /* CircularGraph.swift */; };
 		7757CE2621CD963E00DDF260 /* UIColor+PyramidColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */; };
 		7757CE3021CFBD9100DDF260 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */; };
 		7757CE3321CFBD9100DDF260 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757CE3221CFBD9100DDF260 /* TodayViewController.swift */; };
@@ -40,6 +40,7 @@
 		77CC962C21A1FDCC0048CF38 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */; };
 		77D0A458225E09A50084EE49 /* SpiderGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0A457225E09A50084EE49 /* SpiderGraph.swift */; };
 		77D0A45E225F61D70084EE49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77D0A45D225F61CE0084EE49 /* Assets.xcassets */; };
+		77D0A460225FFF900084EE49 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D0A45F225FFF900084EE49 /* Graph.swift */; };
 		77D591D2221D9CA0004D5A61 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F3D04C2219CDE800704DBA /* Countdown.swift */; };
 		77DE959821AF22240041B1A1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE959721AF22240041B1A1 /* JSONDeserializer.swift */; };
 		77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E9CE4D225A668E00369000 /* FloorsViewController.swift */; };
@@ -96,7 +97,7 @@
 		7721A86521A4B6E900DA424D /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		772234402242492500219CEC /* AvenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvenueViewController.swift; sourceTree = "<group>"; };
 		7734692D21BD9449001C2377 /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
-		7757CE2321CD6A6C00DDF260 /* CircularBars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBars.swift; sourceTree = "<group>"; };
+		7757CE2321CD6A6C00DDF260 /* CircularGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGraph.swift; sourceTree = "<group>"; };
 		7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+PyramidColors.swift"; sourceTree = "<group>"; };
 		7757CE2D21CFBD9100DDF260 /* Countdown Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Countdown Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7757CE2F21CFBD9100DDF260 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -127,6 +128,7 @@
 		77CC962B21A1FDCC0048CF38 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		77D0A457225E09A50084EE49 /* SpiderGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderGraph.swift; sourceTree = "<group>"; };
 		77D0A45D225F61CE0084EE49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77D0A45F225FFF900084EE49 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		77DE959721AF22240041B1A1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
 		77E9CE4D225A668E00369000 /* FloorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorsViewController.swift; sourceTree = "<group>"; };
 		77E9CE4F225A6B6F00369000 /* RoomParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomParser.swift; sourceTree = "<group>"; };
@@ -310,19 +312,20 @@
 			isa = PBXGroup;
 			children = (
 				7721A86321A49FA400DA424D /* FilterTableViewController.swift */,
-				777246D02218B86600C40074 /* CountdownCircleView.swift */,
-				77D0A457225E09A50084EE49 /* SpiderGraph.swift */,
-				7757CE2321CD6A6C00DDF260 /* CircularBars.swift */,
 				776ADCFF21ADD66600173150 /* CompanyDetail.swift */,
 				7764F2062211EC89009D7E9C /* CompanyDetailRearranged.swift */,
-				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
 				7721A86521A4B6E900DA424D /* UserDefaultsController.swift */,
+				77DE959721AF22240041B1A1 /* JSONDeserializer.swift */,
+				77E9CE4F225A6B6F00369000 /* RoomParser.swift */,
+				77F3D04C2219CDE800704DBA /* Countdown.swift */,
 				7757CE2521CD963E00DDF260 /* UIColor+PyramidColors.swift */,
 				7764F20E22122AFF009D7E9C /* PyramidFaculty.swift */,
-				77F3D04C2219CDE800704DBA /* Countdown.swift */,
 				77F3856E224AD46300CE322F /* MapViewOverlays.swift */,
-				77E9CE4F225A6B6F00369000 /* RoomParser.swift */,
 				77E9CE51225AA0E100369000 /* MapAnnotations.swift */,
+				777246D02218B86600C40074 /* CountdownCircleView.swift */,
+				77D0A457225E09A50084EE49 /* SpiderGraph.swift */,
+				7757CE2321CD6A6C00DDF260 /* CircularGraph.swift */,
+				77D0A45F225FFF900084EE49 /* Graph.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			files = (
 				77E9CE52225AA0E100369000 /* MapAnnotations.swift in Sources */,
 				77D0A458225E09A50084EE49 /* SpiderGraph.swift in Sources */,
+				77D0A460225FFF900084EE49 /* Graph.swift in Sources */,
 				7721A86421A49FA400DA424D /* FilterTableViewController.swift in Sources */,
 				77E9CE4E225A668E00369000 /* FloorsViewController.swift in Sources */,
 				7721A86621A4B6E900DA424D /* UserDefaultsController.swift in Sources */,
@@ -556,7 +560,7 @@
 				776E036121919B6700989FB1 /* HomeViewController.swift in Sources */,
 				777246CC221369C100C40074 /* EventsCollectionViewController.swift in Sources */,
 				77767AEA21AB0BE100C3BA14 /* CompaniesSplitViewController.swift in Sources */,
-				7757CE2421CD6A6C00DDF260 /* CircularBars.swift in Sources */,
+				7757CE2421CD6A6C00DDF260 /* CircularGraph.swift in Sources */,
 				77F3856F224AD46300CE322F /* MapViewOverlays.swift in Sources */,
 				77AFF070219219A300DAAE00 /* CompaniesTableViewController.swift in Sources */,
 			);
