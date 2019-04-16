@@ -9,7 +9,7 @@
 import UIKit
 
 class CompanyDetailViewController: UIViewController {
-    @IBOutlet weak var interestsGraph: CircularBars!
+    @IBOutlet weak var interestsGraph: Graph!
     @IBOutlet weak var topImage: UIImageView!
     @IBOutlet weak var detailsTextView: UITextView!
     @IBOutlet weak var trainingTextView: UITextView!
@@ -19,6 +19,8 @@ class CompanyDetailViewController: UIViewController {
     
     var companyDetail: CompanyDetailRearranged!
     var detailViewParagraphs: DetailViewParagraphs!
+    var spiderGraphChoosen = true
+    var currentGraph = Graph()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +52,15 @@ class CompanyDetailViewController: UIViewController {
     }
     
     private func createGraph() {
-        interestsGraph.setInterestRatings(interest: companyDetail!.interestDict)
-        interestsGraph.createCircularBars()
+        if spiderGraphChoosen {
+            currentGraph = SpiderGraph(frame: CGRect(x: 0, y: 0, width: 320, height: 270))
+        } else {
+            currentGraph = CircularGraph(frame: CGRect(x: 0, y: 0, width: 320, height: 270))
+        }
+        
+        currentGraph.setInterestRatings(interest: companyDetail!.interestDict)
+        currentGraph.create()
+        interestsGraph.addSubview(currentGraph)
     }
     
     @IBAction func roomButton(_ sender: UIButton) {
@@ -78,6 +87,16 @@ class CompanyDetailViewController: UIViewController {
         actionSheet.addAction(copyAction)
         actionSheet.addAction(UIAlertAction(title: "Abbrechen", style: .cancel))
         self.present(actionSheet, animated: true)
+    }
+    
+    @IBAction func graphTap(_ sender: UITapGestureRecognizer) {
+        if spiderGraphChoosen {
+            spiderGraphChoosen = false
+        } else {
+            spiderGraphChoosen = true
+        }
+        currentGraph.removeFromSuperview()
+        createGraph()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
