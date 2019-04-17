@@ -10,8 +10,6 @@ import UIKit
 
 class SpiderGraph: Graph {
     
-    private var width = CGFloat()
-    private var height = CGFloat()
     private var radiusOffset = CGFloat()
     private let barWidth: CGFloat = 1
     private var interestRatings = [PyramidFaculty: CGFloat]()
@@ -21,9 +19,7 @@ class SpiderGraph: Graph {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        width = bounds.width
-        height = bounds.height
-        radiusOffset = (height - 60) / 12
+        radiusOffset = (bounds.height - 60) / 12
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,9 +27,7 @@ class SpiderGraph: Graph {
     }
     
     override func awakeFromNib() {
-        width = bounds.width
-        height = bounds.height
-        radiusOffset = (height - 60) / 12
+        radiusOffset = (bounds.height - 60) / 12
     }
     
     override func setInterestRatings(interest: Dictionary<PyramidFaculty, Int>) {
@@ -72,9 +66,7 @@ class SpiderGraph: Graph {
         let y = -cos(angleInRadians) * dist + center.y
         return CGPoint(x: x, y: y)
     }
-    
-    // MARK: grid
-    
+        
     private func createBackgroundGrid(offset: CGFloat) {
         let shapeLayer = CAShapeLayer()
         let path = UIBezierPath()
@@ -91,8 +83,6 @@ class SpiderGraph: Graph {
         
         layer.addSublayer(shapeLayer)
     }
-    
-    // MARK: background web
     
     private func createBackgroundWeb(offset: CGFloat) {
         let path = UIBezierPath()
@@ -112,8 +102,6 @@ class SpiderGraph: Graph {
         
         layer.addSublayer(shapeLayer)
     }
-    
-    // MARK: data web
     
     private func createInitialDataPath() -> CGPath {
         let path = UIBezierPath()
@@ -164,8 +152,6 @@ class SpiderGraph: Graph {
         
         layer.addSublayer(shapeLayer)
     }
-    
-    // MARK: text layer
     
     private func createTextLayer(withInterest interest: PyramidFaculty, origin: CGPoint) {
         let textLayer = CATextLayer()
