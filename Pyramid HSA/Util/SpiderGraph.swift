@@ -54,17 +54,15 @@ class SpiderGraph: Graph {
         for i in 0...5 {
             let stepper = CGFloat(i)
             
-            let interestTextLayer = createTextLayer(withInterest: interest[i].rawValue, origin: getPoint(forDistance: radiusOffset * 8, angle: stepper * 60))
+            createTextLayer(withInterest: interest[i], origin: getPoint(forDistance: radiusOffset * 8, angle: stepper * 60))
             
-            layer.addSublayer(interestTextLayer)
+            createBackgroundGrid(offset: stepper)
         }
         
         for i in 1...7 {
             createBackgroundWeb(offset: radiusOffset * CGFloat(i))
         }
-        
-        createGrid()
-        
+
         createDataWeb(values: interestRatings)
     }
     
@@ -77,31 +75,21 @@ class SpiderGraph: Graph {
     
     // MARK: grid
     
-    private func createGrid() {
-        for i in 0...5 {
-            let stepper = CGFloat(i)
-            let path = UIBezierPath()
-            path.move(to: center)
-            path.addLine(to: getPoint(forDistance: radiusOffset * 7 + 1, angle: 60 * stepper))
-            layer.addSublayer(createGridShapeLayer(withPath: path.cgPath))
-        }
-    }
-    
-    private func createGridShapeLayer(withPath path: CGPath) -> CAShapeLayer {
-        let shape = CAShapeLayer()
-        shape.path = path
-        shape.fillColor = UIColor.clear.cgColor
-        shape.strokeColor = UIColor.lightGray.cgColor
-        shape.lineWidth = 1.5
-        shape.lineCap = .round
+    private func createBackgroundGrid(offset: CGFloat) {
+        let shapeLayer = CAShapeLayer()
+        let path = UIBezierPath()
         
-//        let animation = CABasicAnimation(keyPath: "strokeEnd")
-//        animation.fromValue = 0
-//        animation.toValue = 1
-//        animation.duration = 3
-//        shape.add(animation, forKey: nil)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.lineWidth = 1.5
+        shapeLayer.lineCap = .round
         
-        return shape
+        path.move(to: center)
+        path.addLine(to: getPoint(forDistance: radiusOffset * 7 + 1, angle: 60 * offset))
+        
+        shapeLayer.path = path.cgPath
+        
+        layer.addSublayer(shapeLayer)
     }
     
     // MARK: background web
@@ -116,8 +104,7 @@ class SpiderGraph: Graph {
         
         path.move(to: getPoint(forDistance: offset, angle: 0))
         for i in 1...6 {
-            path.addQuadCurve(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)), controlPoint: getPoint(forDistance: offset - offset / 6, angle: CGFloat(i * 60) - 30))
-//            path.addLine(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)))
+            path.addLine(to: getPoint(forDistance: offset, angle: CGFloat(i * 60)))
         }
         path.close()
         
@@ -161,7 +148,6 @@ class SpiderGraph: Graph {
                 stepper += 1
                 continue
             }
-//            path.addQuadCurve(to: getPoint(forDistance: values[i]!, angle: CGFloat(stepper * 60)), controlPoint: getPoint(forDistance: values[i]! - values[i]! / 6, angle: CGFloat(stepper * 60) - 30))
             path.addLine(to: getPoint(forDistance: values[i]!, angle: CGFloat(stepper * 60)))
             stepper += 1
         }
@@ -171,7 +157,6 @@ class SpiderGraph: Graph {
         
         let pathAnimation = CABasicAnimation(keyPath: "path")
         pathAnimation.fromValue = initialPath
-        //        pathAnimation.toValue = path.cgPath
         pathAnimation.duration = 1
         pathAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         
@@ -182,40 +167,26 @@ class SpiderGraph: Graph {
     
     // MARK: text layer
     
-    private func createTextLayer(withInterest interest: String, origin: CGPoint) -> CATextLayer {
+    private func createTextLayer(withInterest interest: PyramidFaculty, origin: CGPoint) {
         let textLayer = CATextLayer()
         textLayer.backgroundColor = UIColor.clear.cgColor
         textLayer.foregroundColor = UIColor.black.cgColor
         textLayer.font = UIFont(name: "Avenir", size: 8.0)
         textLayer.fontSize = 8.0
-        textLayer.string = interest
+        textLayer.string = interest.rawValue
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
+        textLayer.contentsScale = UIScreen.main.scale
         
         var y = origin.y
-        if interest == PyramidFaculty.computerScience.rawValue {
-            y -= 15
-        }
-        if interest == PyramidFaculty.architecture.rawValue {
-            y += 5
-        }
-        if interest == PyramidFaculty.electricalEngineering.rawValue {
-            y -= 10
-        }
-        if interest == PyramidFaculty.businessAdministration.rawValue {
+        if interest == .electricalEngineering ||
+            interest == .businessAdministration ||
+            interest == .computerScience {
             y -= 10
         }
         
         textLayer.frame = CGRect(origin: CGPoint(x: origin.x - 27, y: y), size: CGSize(width: 54, height: 10))
-        textLayer.contentsScale = UIScreen.main.scale
         
-        return textLayer
+        layer.addSublayer(textLayer)
     }
     
 }
-
-//        var pathTransform  = CGAffineTransform.identity
-//        pathTransform = pathTransform.translatedBy(x: centerPoint.x, y: centerPoint.y)
-//        pathTransform = pathTransform.rotated(by: CGFloat(-.pi / 2.0))
-//        pathTransform = pathTransform.translatedBy(x: -centerPoint.x, y: -centerPoint.y)
-//
-//        path.apply(pathTransform)

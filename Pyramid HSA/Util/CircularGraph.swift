@@ -9,8 +9,7 @@
 import UIKit
 
 class CircularGraph: Graph {
-    private var width = CGFloat()
-    private var height = CGFloat()
+    
     private let radiusOffset: CGFloat = 20
     private let radiusStep: CGFloat = 20
     private let barWidth: CGFloat = 8
@@ -27,8 +26,6 @@ class CircularGraph: Graph {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        width = bounds.width
-        height = bounds.height
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,30 +47,26 @@ class CircularGraph: Graph {
     }
     
     override func create() {
-        print()
         var stepper = 0
         for i in interest {
             let yPos = radiusOffset + radiusStep * CGFloat(stepper)
             var color = colors[stepper].cgColor
             
             let circularPath = createCircularPath(withRadius: yPos)
-            let shapeLayer = createShapeLayer(withPath: circularPath, color: color, strokeEnd: interestRatings[i]!, animated: true)
-            let backgroundLayer = createShapeLayer(withPath: circularPath, color: barBackgroundColor, strokeEnd: 1)
+            createShapeLayer(withPath: circularPath, color: color, strokeEnd: interestRatings[i]!, animated: true)
+            createShapeLayer(withPath: circularPath, color: barBackgroundColor, strokeEnd: 1)
             
             if interestRatings[i] == 0 {
                 color = barBackgroundColor
             }
             
-            let textLayer = createTextLayer(withInterest: i.rawValue, color: color, yPos: yPos)
+            createTextLayer(withInterest: i.rawValue, color: color, yPos: yPos)
             
-            layer.addSublayer(textLayer)
-            layer.addSublayer(backgroundLayer)
-            layer.addSublayer(shapeLayer)
             stepper += 1
         }
     }
     
-    private func createTextLayer(withInterest interest: String, color: CGColor, yPos: CGFloat) -> CATextLayer {
+    private func createTextLayer(withInterest interest: String, color: CGColor, yPos: CGFloat) {
         let textLayer = CATextLayer()
         textLayer.backgroundColor = UIColor.clear.cgColor
         textLayer.foregroundColor = color
@@ -84,7 +77,7 @@ class CircularGraph: Graph {
         textLayer.frame = CGRect(x: 0, y: center.y - yPos - 11, width: self.frame.size.width / 2 - 10, height: 40.0)
         textLayer.contentsScale = UIScreen.main.scale
         
-        return textLayer
+        layer.addSublayer(textLayer)
     }
     
     private func createCircularPath(withRadius radius: CGFloat) -> CGPath {
@@ -97,9 +90,8 @@ class CircularGraph: Graph {
             ).cgPath
     }
     
-    private func createShapeLayer(withPath path: CGPath, color: CGColor, strokeEnd: CGFloat, animated: Bool = false) -> CAShapeLayer {
+    private func createShapeLayer(withPath path: CGPath, color: CGColor, strokeEnd: CGFloat, animated: Bool = false) {
         let shapeLayer = CAShapeLayer()
-        
         shapeLayer.path = path
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = color
@@ -117,6 +109,7 @@ class CircularGraph: Graph {
             shapeLayer.add(animation, forKey: nil)
         }
         
-        return shapeLayer
+        layer.addSublayer(shapeLayer)
     }
+    
 }
