@@ -100,8 +100,8 @@ class CompaniesTableViewController: UITableViewController {
             
             shareContent += "\nDu hast die Pyramid-App noch nicht?\n"
             shareContent += "Jetzt für iOS oder Android herunterladen:\n"
-            shareContent += "iOS: https://itunes.apple.com/app/id1442865279"
-            shareContent += "\nAndroid: ;)"
+            shareContent += "iOS: https://itunes.apple.com/app/id1442865279?mt=8"
+            shareContent += "\nAndroid: https://play.google.com/store/apps/details?id=pyramid.hsa.de.pentachoron"
             
             let activityViewController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
             
