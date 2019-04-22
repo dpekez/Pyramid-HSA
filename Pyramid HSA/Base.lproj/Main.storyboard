@@ -131,11 +131,11 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mir-Fo-crf">
-                                                <rect key="frame" x="315" y="505.33333333333326" width="40" height="40"/>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mir-Fo-crf">
+                                                <rect key="frame" x="315" y="485.33333333333331" width="40" height="39.999999999999943"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-bN-UHA">
-                                                        <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                                        <rect key="frame" x="5" y="4.9999999999997158" width="30" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" image="worldwide_location"/>
                                                         <connections>
@@ -148,11 +148,6 @@
                                                     <constraint firstAttribute="height" constant="40" id="Uio-ly-WQE"/>
                                                     <constraint firstAttribute="width" constant="40" id="gyS-0X-nCi"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -167,7 +162,7 @@
                                             <constraint firstItem="3U9-me-BFF" firstAttribute="leading" secondItem="O0c-Fg-230" secondAttribute="leading" constant="10" id="hQs-AE-utf"/>
                                             <constraint firstAttribute="bottom" secondItem="O0c-Fg-230" secondAttribute="bottom" constant="80" id="k7a-c5-xRt"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3U9-me-BFF" secondAttribute="trailing" constant="20" symbolic="YES" id="mvw-Ls-RT7"/>
-                                            <constraint firstItem="O0c-Fg-230" firstAttribute="bottom" secondItem="mir-Fo-crf" secondAttribute="bottom" constant="20" id="uq5-gh-BUd"/>
+                                            <constraint firstItem="O0c-Fg-230" firstAttribute="bottom" secondItem="mir-Fo-crf" secondAttribute="bottom" constant="40" id="uq5-gh-BUd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -244,6 +239,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="countdownCircle" destination="M4A-P5-vik" id="ex0-wS-alI"/>
+                        <outlet property="mapCenterButton" destination="mir-Fo-crf" id="teS-Lo-6Ob"/>
                         <outlet property="mapView" destination="O0c-Fg-230" id="CEN-aR-1i3"/>
                         <outlet property="partnerButton" destination="lIi-NT-CUm" id="VaC-4c-xbY"/>
                         <segue destination="pkk-R8-Ylf" kind="presentation" identifier="floorDetailSegue" modalPresentationStyle="formSheet" id="FQw-Ug-0vv"/>
@@ -1617,7 +1613,7 @@ Schülestraße 1
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-kW-4VM" customClass="MapViewOverlays" customModule="Pyramid_HSA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze" userLabel="map center view">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-a6-qze" userLabel="map center view">
                                 <rect key="frame" x="325" y="346" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-bw-omK">
@@ -1635,11 +1631,6 @@ Schülestraße 1
                                     <constraint firstAttribute="width" constant="40" id="iuD-E9-EoV"/>
                                     <constraint firstAttribute="height" constant="40" id="zkJ-js-1hS"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1648,7 +1639,7 @@ Schülestraße 1
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="trailing" secondItem="foz-Rt-RJN" secondAttribute="trailing" id="5Lo-rp-KRW"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="leading" secondItem="2ZM-3E-ivd" secondAttribute="leading" id="DNm-yl-5TR"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" multiplier="0.5" id="FJC-qH-A3T"/>
-                            <constraint firstItem="QLh-a6-qze" firstAttribute="trailing" secondItem="4v1-kW-4VM" secondAttribute="trailing" constant="-10" id="Fwl-No-o4v"/>
+                            <constraint firstItem="QLh-a6-qze" firstAttribute="trailing" secondItem="2ZM-3E-ivd" secondAttribute="trailing" constant="-10" id="Fwl-No-o4v"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="leading" secondItem="foz-Rt-RJN" secondAttribute="leading" id="Gt8-8J-vYD"/>
                             <constraint firstItem="4v1-kW-4VM" firstAttribute="bottom" secondItem="QLh-a6-qze" secondAttribute="bottom" constant="20" id="PtF-Ad-4kU"/>
                             <constraint firstItem="Sax-LP-khE" firstAttribute="bottom" secondItem="foz-Rt-RJN" secondAttribute="bottom" id="U9d-c3-Gek"/>
@@ -1665,6 +1656,7 @@ Schülestraße 1
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapCenterButton" destination="QLh-a6-qze" id="0zg-pE-rNT"/>
                         <outlet property="mapView" destination="4v1-kW-4VM" id="x5x-IU-dFP"/>
                     </connections>
                 </viewController>

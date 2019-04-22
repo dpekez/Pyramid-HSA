@@ -15,7 +15,10 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     let gMaps = URL(string: "https://www.google.de/maps/place/Hochschule+Augsburg/@48.3589748,10.9063944,18z/data=!4m5!3m4!1s0x0:0x8a16b7655d3bfdc5!8m2!3d48.3583307!4d10.9058189")
     let aMaps = URL(string: "https://maps.apple.com/?q=48.359260,10.906433&sll=48.359260,10.906433&sspn=0.001197,0.002547&t=m")
 
+    @IBOutlet weak var mapCenterButton: UIView!
+    
     let nearDist = CLLocationDistance(700)
+    let defaultLocation = CLLocationCoordinate2D(latitude: 48.3559, longitude: 10.9080)
     
     @IBOutlet weak var mapView: MapViewOverlays!
     
@@ -26,6 +29,7 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
         createRegistrationPointAnnotation()
         createParkingAnnotation()
         createPublicTransportAnnotation()
+        setUpCenterButtonViewShadow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,10 +38,32 @@ class AvenueViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func setMapCamera() {
-        let loc = CLLocationCoordinate2D(latitude: 48.3559, longitude: 10.9080)
         let dist = CLLocationDistance(2500)
     
-        mapView.moveCamera(to: loc, atDistance: dist)
+        mapView.moveCamera(to: defaultLocation, atDistance: dist)
+    }
+    
+    private func setUpCenterButtonViewShadow() {
+        mapCenterButton.layer.cornerRadius = 2
+        
+        mapCenterButton.layer.shadowColor = UIColor.black.cgColor
+        mapCenterButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        mapCenterButton.layer.shadowRadius = 2
+        mapCenterButton.layer.shadowOpacity = 0.3
+        mapCenterButton.layer.masksToBounds = false
+        mapCenterButton.layer.shadowPath = UIBezierPath(roundedRect: mapCenterButton.bounds, cornerRadius: mapCenterButton.layer.cornerRadius).cgPath
+    }
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        let latDiff = fabs(mapView.centerCoordinate.latitude - defaultLocation.latitude)
+        let lonDiff = fabs(mapView.centerCoordinate.longitude - defaultLocation.longitude)
+        let epsilon = 0.0005
+        
+        if latDiff >= epsilon || lonDiff >= epsilon {
+            mapCenterButton.isHidden = false
+        } else {
+            mapCenterButton.isHidden = true
+        }
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

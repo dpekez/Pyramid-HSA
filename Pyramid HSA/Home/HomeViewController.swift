@@ -16,7 +16,10 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MapViewOverlays!
     @IBOutlet weak var countdownCircle: CountdownCircleView!
     @IBOutlet weak var partnerButton: UIButton!
-
+    @IBOutlet weak var mapCenterButton: UIView!
+    
+    let defaultLocation = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -30,12 +33,31 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         
         createBuildingAnnotations()
         setMapCamera()
+        setUpCenterButtonViewShadow()
     }
     
+    private func setUpCenterButtonViewShadow() {
+        mapCenterButton.layer.cornerRadius = 2
+        
+        mapCenterButton.layer.shadowColor = UIColor.black.cgColor
+        mapCenterButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        mapCenterButton.layer.shadowRadius = 2
+        mapCenterButton.layer.shadowOpacity = 0.3
+        mapCenterButton.layer.masksToBounds = false
+        mapCenterButton.layer.shadowPath = UIBezierPath(roundedRect: mapCenterButton.bounds, cornerRadius: mapCenterButton.layer.cornerRadius).cgPath
+    }
     
-    
-    
-    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        let latDiff = fabs(mapView.centerCoordinate.latitude - defaultLocation.latitude)
+        let lonDiff = fabs(mapView.centerCoordinate.longitude - defaultLocation.longitude)
+        let epsilon = 0.0005
+        
+        if latDiff >= epsilon || lonDiff >= epsilon {
+            mapCenterButton.isHidden = false
+        } else {
+            mapCenterButton.isHidden = true
+        }
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !annotation.isKind(of: MKUserLocation.self) else {
@@ -80,11 +102,9 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    
     private func setMapCamera() {
-        let loc = CLLocationCoordinate2D(latitude: 48.3588, longitude: 10.9065)
         let dist = CLLocationDistance(290)
-        mapView.moveCamera(to: loc, atDistance: dist)
+        mapView.moveCamera(to: defaultLocation, atDistance: dist)
     }
     
     private func runTimer() {
